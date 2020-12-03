@@ -1,6 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.tasks.bundling.BootJar
-
+import java.util.Properties
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 val phaseVersion = "4.26.1.00"
 
@@ -21,7 +23,7 @@ plugins {
     kotlin("plugin.jpa") version "1.3.61"
     id("org.springframework.boot") version "2.1.8.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
-//    id("com.gorylenko.gradle-git-properties") version "1.5.1"
+    id("com.gorylenko.gradle-git-properties") version "1.5.1"
 }
 
 //val ktlint: Configuration by configurations.creating
@@ -91,18 +93,18 @@ dependencies {
 }
 
 tasks.withType<KotlinCompile> {
-//    doFirst {
-//        val git = org.ajoberstar.grgit.Grgit.open {
-//            file(".")
-//        }
-//        val infoFile = file("${projectDir}/src/main/resources/build-info.properties")
-//        val properties = Properties()
-//        val localDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
-//        properties.setProperty("info.version", phaseVersion)
-//        properties.setProperty("info.git.hash", git.head().getAbbreviatedId(7))
-//        properties.setProperty("info.git.buildDate", localDateTime)
-//        properties.store(infoFile.writer(), "Build Information")
-//    }
+    doFirst {
+        val git = org.ajoberstar.grgit.Grgit.open {
+            file(".")
+        }
+        val infoFile = file("${projectDir}/src/main/resources/build-info.properties")
+        val properties = Properties()
+        val localDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+        properties.setProperty("info.version", phaseVersion)
+        properties.setProperty("info.git.hash", git.head().getAbbreviatedId(7))
+        properties.setProperty("info.git.buildDate", localDateTime)
+        properties.store(infoFile.writer(), "Build Information")
+    }
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
         jvmTarget = "1.8"
