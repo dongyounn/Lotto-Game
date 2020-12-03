@@ -29,7 +29,7 @@ spring:
 server:
   port: 10340
   servlet:
-    context-path: /cams
+    context-path: /dyshin
   undertow:
     io-threads: 32
     worker-threads: 256
