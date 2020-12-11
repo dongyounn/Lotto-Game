@@ -1,4 +1,4 @@
-package com.kotlin.boot.exception
+package com.kotlin.boot.global.exception
 
 
 data class ErrorResponse(

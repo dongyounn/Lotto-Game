@@ -22,6 +22,4 @@ class SampleApi(
     fun getTest(
             @RequestParam userId: String
     ) = sampleService.findData(userId)
-
-
 }

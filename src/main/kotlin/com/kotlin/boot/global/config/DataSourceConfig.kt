@@ -1,4 +1,4 @@
-package com.kotlin.boot.config
+package com.kotlin.boot.global.config
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource

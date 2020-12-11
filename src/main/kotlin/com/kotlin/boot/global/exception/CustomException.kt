@@ -1,4 +1,4 @@
-package com.kotlin.boot.exception
+package com.kotlin.boot.global.exception
 
 open class ApplicationException (
         val errorResponse: ErrorResponse

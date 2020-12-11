@@ -1,4 +1,4 @@
-package com.kotlin.boot.config
+package com.kotlin.boot.global.config
 
 import com.querydsl.jpa.impl.JPAQueryFactory
 import org.springframework.context.annotation.Bean

@@ -1,7 +1,7 @@
 package com.kotlin.boot.sample.service
 
-import com.kotlin.boot.exception.BadRequestException
-import com.kotlin.boot.exception.ErrorReason
+import com.kotlin.boot.global.exception.BadRequestException
+import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.sample.domain.SampleDomain
 import com.kotlin.boot.sample.infra.repository.SampleRepository
 import org.springframework.stereotype.Service
