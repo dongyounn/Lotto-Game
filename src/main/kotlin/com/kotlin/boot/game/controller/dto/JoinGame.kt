@@ -4,7 +4,6 @@ import javax.validation.constraints.Size
 
 data class JoinGameDto(
         val numbers: List<Long>?,
-        val autoYnEnum: AutoYnEnum,
         val phoneNumber: String,
         val playerName : String
 )

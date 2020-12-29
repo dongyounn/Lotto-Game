@@ -7,6 +7,6 @@ data class BaseResponse(
     val message: String? = null
 ){
     companion object {
-        fun of() = BaseResponse("SUCCESS")
+        fun of(message: String) = BaseResponse("SUCCESS", "응모 번호는 : $message")
     }
 }

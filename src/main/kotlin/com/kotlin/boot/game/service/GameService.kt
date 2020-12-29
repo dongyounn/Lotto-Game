@@ -18,43 +18,54 @@ class GameService(
 
     @Transactional
     fun playGame(joinGameDto: JoinGameDto): BaseResponse {
-
-
-        val numberList = when (joinGameDto.autoYnEnum) {
-            AutoYnEnum.N -> {
-                joinGameDto.numbers ?: throw BadRequestException(
-                    ErrorReason.INVALID_INPUT_DATA,
-                    "번호를 입력해주세요"
+        val entryNumberList = joinGameDto.numbers
+        val numberList = when {
+            entryNumberList.isNullOrEmpty() -> getAutoRandom(5)
+            entryNumberList.size < 6 -> {
+                checkInputNumbers(entryNumberList as ArrayList<Long>)
+                getHalfAutoRandom(
+                    (6 - entryNumberList.size).toLong(),
+                    entryNumberList
                 )
             }
-            AutoYnEnum.Y -> getAutoRandom(5)
+            else -> throw BadRequestException(
+                ErrorReason.INVALID_INPUT_DATA,
+                "번호는 5개만 입력해주세요"
+            )
         }
-
-        if (numberList.size > 5) throw BadRequestException(
-            ErrorReason.INVALID_INPUT_DATA,
-            "번호는 5개만 입력해주세요"
-        )
-
         val sb = StringBuilder()
-
         for (number in numberList) {
             if (number > 45 || number < 1) throw BadRequestException(
                 ErrorReason.INVALID_INPUT_DATA,
                 "번호 ::: 최소값 : 1 , 최대값 : 45"
             )
-
             sb.append("$number,")
         }
 
+        val submitNumbers = sb.substring(0, sb.length - 1).toString()
         gameRepository.save(
             GameEntity.of(
                 joinGameDto.phoneNumber.replace("-", "").toLong(),
                 joinGameDto.playerName,
-                sb.substring(0, sb.length - 1).toString()
+                submitNumbers
             )
         )
-        return BaseResponse.of()
+        return BaseResponse.of(submitNumbers)
 
+    }
+
+    fun checkInputNumbers(numberList: ArrayList<Long>) {
+        for (target in numberList) {
+            var count = 0
+            for (i in 0 until numberList.size) {
+                if (target == numberList[i]) count += 1
+            }
+            if (count > 1)
+                throw BadRequestException(
+                    ErrorReason.INVALID_INPUT_DATA,
+                    "번호 중복 :: $target"
+                )
+        }
     }
 
     fun getRandomNumber(length: Long): String {
@@ -75,7 +86,23 @@ class GameService(
         val random = Random()
         val numberList = ArrayList<Long>()
         for (i in 0 until count) {
-            numberList.add(random.nextInt(45).toLong())
+            var number: Long
+            do {
+                number = random.nextInt(45).toLong()
+            } while (numberList.contains(number))
+            numberList.add(number)
+        }
+        return numberList
+    }
+
+    private fun getHalfAutoRandom(count: Long, numberList: ArrayList<Long>): List<Long> {
+        val random = Random()
+        for (i in 0 until count) {
+            var number: Long
+            do {
+                number = random.nextInt(45).toLong()
+            } while (numberList.contains(number))
+            numberList.add(number)
         }
         return numberList
     }
