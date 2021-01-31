@@ -14,9 +14,7 @@ class SampleService(
     @Transactional
     fun saveData(userId: String) {
 
-        sampleRepository.save(SampleDomain(userId, "안녕"))
-
-        val a = "String"
+        sampleRepository.save(SampleDomain(userId, "Hello"))
     }
 
     fun findData(userId: String): SampleDomain {
