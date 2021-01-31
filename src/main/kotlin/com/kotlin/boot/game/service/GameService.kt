@@ -1,13 +1,14 @@
 package com.kotlin.boot.game.service
 
-import com.kotlin.boot.game.controller.dto.AutoYnEnum
 import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.domain.GameEntity
 import com.kotlin.boot.game.repository.infra.GameRepository
 import com.kotlin.boot.global.dto.BaseResponse
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
+import com.kotlin.boot.global.utils.convertYYYYmmDD
 import org.springframework.stereotype.Service
+import java.time.LocalDateTime
 import java.util.*
 import javax.transaction.Transactional
 
@@ -15,6 +16,15 @@ import javax.transaction.Transactional
 class GameService(
     private val gameRepository: GameRepository
 ) {
+
+    fun playLotto() {
+        val today = LocalDateTime.now().convertYYYYmmDD()
+
+        val randomNumbers = getAutoRandom(5)
+        val bonusNumber = getAutoRandom(1)
+
+
+    }
 
     @Transactional
     fun playGame(joinGameDto: JoinGameDto): BaseResponse {
@@ -30,14 +40,14 @@ class GameService(
             }
             else -> throw BadRequestException(
                 ErrorReason.INVALID_INPUT_DATA,
-                "번호는 5개만 입력해주세요"
+                "### 번호는 5개만 입력해주세요"
             )
         }
         val sb = StringBuilder()
         for (number in numberList) {
             if (number > 45 || number < 1) throw BadRequestException(
                 ErrorReason.INVALID_INPUT_DATA,
-                "번호 ::: 최소값 : 1 , 최대값 : 45"
+                "### 번호 -> 최소값 : 1 , 최대값 : 45"
             )
             sb.append("$number,")
         }
@@ -45,7 +55,7 @@ class GameService(
         val submitNumbers = sb.substring(0, sb.length - 1).toString()
         gameRepository.save(
             GameEntity.of(
-                joinGameDto.phoneNumber.replace("-", "").toLong(),
+                joinGameDto.phoneNumber.replace("-", ""),
                 joinGameDto.playerName,
                 submitNumbers
             )
@@ -63,7 +73,7 @@ class GameService(
             if (count > 1)
                 throw BadRequestException(
                     ErrorReason.INVALID_INPUT_DATA,
-                    "번호 중복 :: $target"
+                    "### 번호 중복 : $target"
                 )
         }
     }

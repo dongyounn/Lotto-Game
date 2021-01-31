@@ -19,4 +19,10 @@ class GameController(
     ): BaseResponse {
         return gameService.playGame(gameDto)
     }
+
+    @PostMapping("/play")
+    fun playGame() {
+
+    }
+
 }

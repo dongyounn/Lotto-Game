@@ -1,0 +1,705 @@
+2020-12-30 14:36:11.041.restartedMain> INFO  T[] U[] - Starting KotlinProjectKt on dyshin.local with PID 2087 (/Users/dongyoun_shin/IdeaProjects/KotlinStudy/build/classes/kotlin/main started by dongyoun_shin in /Users/dongyoun_shin/IdeaProjects/KotlinStudy)
+2020-12-30 14:36:11.064.restartedMain> DEBUG T[] U[] - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-12-30 14:36:11.064.restartedMain> INFO  T[] U[] - No active profile set, falling back to default profiles: default
+2020-12-30 14:36:15.410.restartedMain> WARN  T[] U[] - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-12-30 14:36:15.428.restartedMain> DEBUG T[] U[] - Setting default session timeout to 1800
+2020-12-30 14:36:15.439.restartedMain> INFO  T[] U[] - Initializing Spring embedded WebApplicationContext
+2020-12-30 14:36:16.029.restartedMain> DEBUG T[] U[] - Driver class oracle.jdbc.OracleDriver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5ec2b95b
+2020-12-30 14:36:16.057.restartedMain> WARN  T[] U[] - HikariPool-1 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.
+2020-12-30 14:36:16.057.restartedMain> DEBUG T[] U[] - HikariPool-1 - configuration:
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - allowPoolSuspension.............false
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - autoCommit......................true
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - catalog.........................none
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - connectionInitSql...............none
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - connectionTestQuery.............none
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - connectionTimeout...............30000
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - dataSource......................none
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - dataSourceClassName.............none
+2020-12-30 14:36:16.060.restartedMain> DEBUG T[] U[] - dataSourceJNDI..................none
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - dataSourceProperties............{password=<masked>}
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - driverClassName................."oracle.jdbc.OracleDriver"
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - healthCheckProperties...........{}
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - healthCheckRegistry.............none
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - idleTimeout.....................600000
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - initializationFailTimeout.......1
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - isolateInternalQueries..........false
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - jdbcUrl.........................jdbc:oracle:thin:@localhost:1521:XE
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - leakDetectionThreshold..........0
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - maxLifetime.....................1800000
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - maximumPoolSize.................50
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - metricRegistry..................none
+2020-12-30 14:36:16.061.restartedMain> DEBUG T[] U[] - metricsTrackerFactory...........none
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - minimumIdle.....................50
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - password........................<masked>
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - poolName........................"HikariPool-1"
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - readOnly........................false
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - registerMbeans..................false
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - scheduledExecutor...............none
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - schema..........................none
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - threadFactory...................internal
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - transactionIsolation............default
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - username........................"springboot"
+2020-12-30 14:36:16.062.restartedMain> DEBUG T[] U[] - validationTimeout...............10000
+2020-12-30 14:36:16.064.restartedMain> INFO  T[] U[] - HikariPool-1 - Starting...
+2020-12-30 14:36:16.356.restartedMain> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2633059b
+2020-12-30 14:36:16.359.restartedMain> INFO  T[] U[] - HikariPool-1 - Start completed.
+2020-12-30 14:36:16.459.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2020-12-30 14:36:16.502.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2693f6df
+2020-12-30 14:36:16.541.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6f1ffc91
+2020-12-30 14:36:16.597.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@78103ab
+2020-12-30 14:36:16.638.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@c5caef0
+2020-12-30 14:36:16.673.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3bdd2c98
+2020-12-30 14:36:16.718.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@766a5ba3
+2020-12-30 14:36:16.754.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@459c186b
+2020-12-30 14:36:16.790.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@632b3322
+2020-12-30 14:36:16.833.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@d57444
+2020-12-30 14:36:16.873.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@20e1f8c8
+2020-12-30 14:36:16.911.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@28a8ceaa
+2020-12-30 14:36:16.914.restartedMain> DEBUG T[] U[] - Registered session listener io.undertow.servlet.core.SessionListenerBridge@42a4e821
+2020-12-30 14:36:16.945.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4599609d
+2020-12-30 14:36:16.954.restartedMain> DEBUG T[] U[] - Setting default session timeout to 1800
+2020-12-30 14:36:16.980.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7f3e2f31
+2020-12-30 14:36:17.022.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7f98152a
+2020-12-30 14:36:17.064.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1c6a138a
+2020-12-30 14:36:17.126.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@daa326
+2020-12-30 14:36:17.169.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@26a8573c
+2020-12-30 14:36:17.208.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7208117b
+2020-12-30 14:36:17.245.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@b46c261
+2020-12-30 14:36:17.286.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4c6dff7
+2020-12-30 14:36:17.324.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1e77d8bb
+2020-12-30 14:36:17.366.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@565f4142
+2020-12-30 14:36:17.400.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@23926f8f
+2020-12-30 14:36:17.435.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@18e31ba4
+2020-12-30 14:36:17.476.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5ab7dfc2
+2020-12-30 14:36:17.514.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@e6a502d
+2020-12-30 14:36:17.561.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@33990cb1
+2020-12-30 14:36:17.603.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@572dbdcd
+2020-12-30 14:36:17.643.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1e61c7f7
+2020-12-30 14:36:17.681.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@71150959
+2020-12-30 14:36:17.724.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@58c7363e
+2020-12-30 14:36:17.769.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@39ec6e39
+2020-12-30 14:36:17.820.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@462265f9
+2020-12-30 14:36:17.864.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@149aa592
+2020-12-30 14:36:17.905.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@53900796
+2020-12-30 14:36:17.947.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@10f57ad4
+2020-12-30 14:36:17.984.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5c91077f
+2020-12-30 14:36:18.107.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@11993a7c
+2020-12-30 14:36:18.183.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@78cec6c5
+2020-12-30 14:36:18.338.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7a1586d5
+2020-12-30 14:36:18.394.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3214b6a7
+2020-12-30 14:36:18.438.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@e5d9e17
+2020-12-30 14:36:18.485.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@46a83493
+2020-12-30 14:36:18.521.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4f57432b
+2020-12-30 14:36:18.564.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4bf42acf
+2020-12-30 14:36:18.611.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@96eb754
+2020-12-30 14:36:18.672.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6c3c2510
+2020-12-30 14:36:18.722.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2157d226
+2020-12-30 14:36:18.758.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7e70e833
+2020-12-30 14:36:18.759.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - After adding stats (total=50, active=1, idle=49, waiting=0)
+2020-12-30 14:36:19.708.restartedMain> WARN  T[] U[] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [player_phone_number] in table [play_game_info]; found [varchar2 (Types#VARCHAR)], but expecting [number(19,0) (Types#BIGINT)]
+2020-12-30 14:36:19.708.restartedMain> INFO  T[] U[] - HikariPool-1 - Shutdown initiated...
+2020-12-30 14:36:19.708.restartedMain> DEBUG T[] U[] - HikariPool-1 - Before shutdown stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:36:19.709.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2633059b: (connection evicted)
+2020-12-30 14:36:19.713.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2693f6df: (connection evicted)
+2020-12-30 14:36:19.716.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6f1ffc91: (connection evicted)
+2020-12-30 14:36:19.720.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@78103ab: (connection evicted)
+2020-12-30 14:36:19.727.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@c5caef0: (connection evicted)
+2020-12-30 14:36:19.732.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3bdd2c98: (connection evicted)
+2020-12-30 14:36:19.736.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@766a5ba3: (connection evicted)
+2020-12-30 14:36:19.745.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@459c186b: (connection evicted)
+2020-12-30 14:36:19.752.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@632b3322: (connection evicted)
+2020-12-30 14:36:19.756.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@d57444: (connection evicted)
+2020-12-30 14:36:19.764.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@20e1f8c8: (connection evicted)
+2020-12-30 14:36:19.767.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@28a8ceaa: (connection evicted)
+2020-12-30 14:36:19.770.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4599609d: (connection evicted)
+2020-12-30 14:36:19.774.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7f3e2f31: (connection evicted)
+2020-12-30 14:36:19.777.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7f98152a: (connection evicted)
+2020-12-30 14:36:19.782.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1c6a138a: (connection evicted)
+2020-12-30 14:36:19.785.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@daa326: (connection evicted)
+2020-12-30 14:36:19.788.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@26a8573c: (connection evicted)
+2020-12-30 14:36:19.790.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7208117b: (connection evicted)
+2020-12-30 14:36:19.793.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@b46c261: (connection evicted)
+2020-12-30 14:36:19.796.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4c6dff7: (connection evicted)
+2020-12-30 14:36:19.798.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1e77d8bb: (connection evicted)
+2020-12-30 14:36:19.801.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@565f4142: (connection evicted)
+2020-12-30 14:36:19.804.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@23926f8f: (connection evicted)
+2020-12-30 14:36:19.807.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@18e31ba4: (connection evicted)
+2020-12-30 14:36:19.810.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5ab7dfc2: (connection evicted)
+2020-12-30 14:36:19.813.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@e6a502d: (connection evicted)
+2020-12-30 14:36:19.816.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@33990cb1: (connection evicted)
+2020-12-30 14:36:19.818.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@572dbdcd: (connection evicted)
+2020-12-30 14:36:19.821.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1e61c7f7: (connection evicted)
+2020-12-30 14:36:19.824.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@71150959: (connection evicted)
+2020-12-30 14:36:19.827.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@58c7363e: (connection evicted)
+2020-12-30 14:36:19.830.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@39ec6e39: (connection evicted)
+2020-12-30 14:36:19.833.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@462265f9: (connection evicted)
+2020-12-30 14:36:19.835.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@149aa592: (connection evicted)
+2020-12-30 14:36:19.838.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@53900796: (connection evicted)
+2020-12-30 14:36:19.841.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@10f57ad4: (connection evicted)
+2020-12-30 14:36:19.843.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5c91077f: (connection evicted)
+2020-12-30 14:36:19.846.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@11993a7c: (connection evicted)
+2020-12-30 14:36:19.849.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@78cec6c5: (connection evicted)
+2020-12-30 14:36:19.851.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7a1586d5: (connection evicted)
+2020-12-30 14:36:19.854.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3214b6a7: (connection evicted)
+2020-12-30 14:36:19.859.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@e5d9e17: (connection evicted)
+2020-12-30 14:36:19.861.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@46a83493: (connection evicted)
+2020-12-30 14:36:19.863.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4f57432b: (connection evicted)
+2020-12-30 14:36:19.866.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4bf42acf: (connection evicted)
+2020-12-30 14:36:19.869.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@96eb754: (connection evicted)
+2020-12-30 14:36:19.871.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6c3c2510: (connection evicted)
+2020-12-30 14:36:19.874.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2157d226: (connection evicted)
+2020-12-30 14:36:19.877.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7e70e833: (connection evicted)
+2020-12-30 14:36:19.880.restartedMain> DEBUG T[] U[] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2020-12-30 14:36:19.880.restartedMain> INFO  T[] U[] - HikariPool-1 - Shutdown completed.
+2020-12-30 14:36:19.907.restartedMain> ERROR T[] U[] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [player_phone_number] in table [play_game_info]; found [varchar2 (Types#VARCHAR)], but expecting [number(19,0) (Types#BIGINT)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.kotlin.boot.KotlinProjectKt.main(KotlinProject.kt:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [player_phone_number] in table [play_game_info]; found [varchar2 (Types#VARCHAR)], but expecting [number(19,0) (Types#BIGINT)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 21 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [player_phone_number] in table [play_game_info]; found [varchar2 (Types#VARCHAR)], but expecting [number(19,0) (Types#BIGINT)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:159)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:143)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:89)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 25 common frames omitted
+2020-12-30 14:38:06.128.restartedMain> INFO  T[] U[] - Starting KotlinProjectKt on dyshin.local with PID 2175 (/Users/dongyoun_shin/IdeaProjects/KotlinStudy/build/classes/kotlin/main started by dongyoun_shin in /Users/dongyoun_shin/IdeaProjects/KotlinStudy)
+2020-12-30 14:38:06.133.restartedMain> DEBUG T[] U[] - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2020-12-30 14:38:06.134.restartedMain> INFO  T[] U[] - No active profile set, falling back to default profiles: default
+2020-12-30 14:38:09.853.restartedMain> WARN  T[] U[] - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-12-30 14:38:09.871.restartedMain> DEBUG T[] U[] - Setting default session timeout to 1800
+2020-12-30 14:38:09.883.restartedMain> INFO  T[] U[] - Initializing Spring embedded WebApplicationContext
+2020-12-30 14:38:10.357.restartedMain> DEBUG T[] U[] - Driver class oracle.jdbc.OracleDriver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5bc2445d
+2020-12-30 14:38:10.384.restartedMain> WARN  T[] U[] - HikariPool-1 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.
+2020-12-30 14:38:10.384.restartedMain> DEBUG T[] U[] - HikariPool-1 - configuration:
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - allowPoolSuspension.............false
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - autoCommit......................true
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - catalog.........................none
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - connectionInitSql...............none
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - connectionTestQuery.............none
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - connectionTimeout...............30000
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - dataSource......................none
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - dataSourceClassName.............none
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - dataSourceJNDI..................none
+2020-12-30 14:38:10.387.restartedMain> DEBUG T[] U[] - dataSourceProperties............{password=<masked>}
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - driverClassName................."oracle.jdbc.OracleDriver"
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - healthCheckProperties...........{}
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - healthCheckRegistry.............none
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - idleTimeout.....................600000
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - initializationFailTimeout.......1
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - isolateInternalQueries..........false
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - jdbcUrl.........................jdbc:oracle:thin:@localhost:1521:XE
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - leakDetectionThreshold..........0
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - maxLifetime.....................1800000
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - maximumPoolSize.................50
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - metricRegistry..................none
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - metricsTrackerFactory...........none
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - minimumIdle.....................50
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - password........................<masked>
+2020-12-30 14:38:10.388.restartedMain> DEBUG T[] U[] - poolName........................"HikariPool-1"
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - readOnly........................false
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - registerMbeans..................false
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - scheduledExecutor...............none
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - schema..........................none
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - threadFactory...................internal
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - transactionIsolation............default
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - username........................"springboot"
+2020-12-30 14:38:10.389.restartedMain> DEBUG T[] U[] - validationTimeout...............10000
+2020-12-30 14:38:10.390.restartedMain> INFO  T[] U[] - HikariPool-1 - Starting...
+2020-12-30 14:38:10.663.restartedMain> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@32108f58
+2020-12-30 14:38:10.665.restartedMain> INFO  T[] U[] - HikariPool-1 - Start completed.
+2020-12-30 14:38:10.779.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2020-12-30 14:38:10.875.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@364b9fc0
+2020-12-30 14:38:10.965.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2c94dcca
+2020-12-30 14:38:11.008.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@17596ab4
+2020-12-30 14:38:11.045.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4f475ed2
+2020-12-30 14:38:11.085.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5ecbc957
+2020-12-30 14:38:11.125.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@38f524b4
+2020-12-30 14:38:11.167.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@634ae57
+2020-12-30 14:38:11.199.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6bf1d01f
+2020-12-30 14:38:11.238.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@608473b3
+2020-12-30 14:38:11.247.restartedMain> DEBUG T[] U[] - Registered session listener io.undertow.servlet.core.SessionListenerBridge@b58face
+2020-12-30 14:38:11.275.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7bacaa04
+2020-12-30 14:38:11.291.restartedMain> DEBUG T[] U[] - Setting default session timeout to 1800
+2020-12-30 14:38:11.314.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5f80deaa
+2020-12-30 14:38:11.359.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@44efffc5
+2020-12-30 14:38:11.403.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@39e28bfb
+2020-12-30 14:38:11.448.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7c5e12a7
+2020-12-30 14:38:11.487.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3d367cd5
+2020-12-30 14:38:11.525.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7ea769e8
+2020-12-30 14:38:11.575.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3f28c099
+2020-12-30 14:38:11.611.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5b3d16f2
+2020-12-30 14:38:11.649.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5b7c5203
+2020-12-30 14:38:11.682.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2837d1d4
+2020-12-30 14:38:11.714.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6b7b1547
+2020-12-30 14:38:11.749.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@44974810
+2020-12-30 14:38:11.791.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@53395409
+2020-12-30 14:38:11.825.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2d2d591a
+2020-12-30 14:38:11.867.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2d210221
+2020-12-30 14:38:11.906.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@565bfef9
+2020-12-30 14:38:11.941.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7eda3533
+2020-12-30 14:38:11.980.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5285519a
+2020-12-30 14:38:12.021.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@21893edc
+2020-12-30 14:38:12.058.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@706d5113
+2020-12-30 14:38:12.093.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3f756871
+2020-12-30 14:38:12.128.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@268df860
+2020-12-30 14:38:12.179.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@55887ce7
+2020-12-30 14:38:12.223.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@544b6076
+2020-12-30 14:38:12.264.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@27de4b95
+2020-12-30 14:38:12.299.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@17445e8c
+2020-12-30 14:38:12.333.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@520c5248
+2020-12-30 14:38:12.366.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@8678c12
+2020-12-30 14:38:12.403.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@61e2cc12
+2020-12-30 14:38:12.444.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@516d285f
+2020-12-30 14:38:12.486.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@49820289
+2020-12-30 14:38:12.531.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@303e152a
+2020-12-30 14:38:12.574.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4f977f5a
+2020-12-30 14:38:12.620.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6c935fb
+2020-12-30 14:38:12.670.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5c92624b
+2020-12-30 14:38:12.746.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7e9acc01
+2020-12-30 14:38:12.812.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1d7d2f8b
+2020-12-30 14:38:12.851.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@74042207
+2020-12-30 14:38:13.055.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@981edf5
+2020-12-30 14:38:13.056.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - After adding stats (total=50, active=1, idle=49, waiting=0)
+2020-12-30 14:38:14.939.restartedMain> WARN  T[] U[] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 14:38:15.799.restartedMain> DEBUG T[] U[] - initialising the handler methods
+2020-12-30 14:38:15.800.restartedMain> INFO  T[] U[] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-12-30 14:38:16.623.restartedMain> DEBUG T[] U[] - Using Slf4j logging framework
+2020-12-30 14:38:16.623.restartedMain> DEBUG T[] U[] - Enabling stacktrace debugging via onOperatorDebug
+2020-12-30 14:38:16.704.restartedMain> DEBUG T[] U[] - [http] resources will use the default LoopResources: DefaultLoopResources {prefix=reactor-http, daemon=true, selectCount=8, workerCount=8}
+2020-12-30 14:38:16.704.restartedMain> DEBUG T[] U[] - [http] resources will use the default ConnectionProvider: PooledConnectionProvider {name=http, poolFactory=reactor.netty.resources.ConnectionProvider$$Lambda$938/1663326862@3549bd33}
+2020-12-30 14:38:16.897.restartedMain> INFO  T[] U[] - Context refreshed
+2020-12-30 14:38:16.917.restartedMain> INFO  T[] U[] - Found 1 custom documentation plugin(s)
+2020-12-30 14:38:16.936.restartedMain> DEBUG T[] U[] - Total number of request handlers 13
+2020-12-30 14:38:16.937.restartedMain> DEBUG T[] U[] - Adding key: [/actuator/health/{component}/{instance}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/health/{component}/{instance}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/actuator/health/{component}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/health/{component}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/actuator/health], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/health], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/actuator/info], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/info], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/actuator], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/db/get], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/db/get], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/db/post], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/db/post], supportedMethods=[POST], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/error], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/error], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/error], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/error], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[text/html]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/game/join], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/game/join], supportedMethods=[POST], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/swagger-resources/configuration/security], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/security], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/swagger-resources/configuration/ui], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/ui], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2020-12-30 14:38:16.938.restartedMain> DEBUG T[] U[] - Adding key: [/swagger-resources], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2020-12-30 14:38:16.949.restartedMain> DEBUG T[] U[] - Combined number of request handlers 13
+2020-12-30 14:38:16.950.restartedMain> INFO  T[] U[] - Scanning for api listing references
+2020-12-30 14:38:16.963.restartedMain> DEBUG T[] U[] - Adding return parameter of type Lcom/kotlin/boot/global/dto/BaseResponse;
+2020-12-30 14:38:16.963.restartedMain> DEBUG T[] U[] - Reading parameters models for handlerMethod |joinGame|
+2020-12-30 14:38:16.972.restartedMain> DEBUG T[] U[] - Finished reading parameters models for handlerMethod |joinGame|
+2020-12-30 14:38:16.974.restartedMain> DEBUG T[] U[] - Reading parameters models for handlerMethod |joinGame|
+2020-12-30 14:38:17.011.restartedMain> DEBUG T[] U[] - Reading property reason
+2020-12-30 14:38:17.015.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2020-12-30 14:38:17.016.restartedMain> DEBUG T[] U[] - Name 'reason' renamed to 'reason'
+2020-12-30 14:38:17.016.restartedMain> DEBUG T[] U[] - Adding property reason to model
+2020-12-30 14:38:17.017.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2020-12-30 14:38:17.017.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2020-12-30 14:38:17.017.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2020-12-30 14:38:17.029.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2020-12-30 14:38:17.032.restartedMain> DEBUG T[] U[] - Reading property message
+2020-12-30 14:38:17.032.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2020-12-30 14:38:17.033.restartedMain> DEBUG T[] U[] - Name 'message' renamed to 'message'
+2020-12-30 14:38:17.033.restartedMain> DEBUG T[] U[] - Adding property message to model
+2020-12-30 14:38:17.033.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2020-12-30 14:38:17.033.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2020-12-30 14:38:17.033.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2020-12-30 14:38:17.033.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2020-12-30 14:38:17.040.restartedMain> DEBUG T[] U[] - Inferred 2 properties. Properties found message, reason
+2020-12-30 14:38:17.043.restartedMain> DEBUG T[] U[] - Generated parameter model id: BaseResponse, name: BaseResponse, schema: {} models
+2020-12-30 14:38:17.044.restartedMain> DEBUG T[] U[] - Adding a new model with key BaseResponse
+2020-12-30 14:38:17.056.restartedMain> DEBUG T[] U[] - Expanding parameter type: com.kotlin.boot.game.controller.dto.JoinGameDto
+2020-12-30 14:38:17.062.restartedMain> DEBUG T[] U[] - Attempting to expand expandable property: numbers
+2020-12-30 14:38:17.064.restartedMain> DEBUG T[] U[] - Expanding parameter type: java.util.List<java.lang.Long>
+2020-12-30 14:38:17.065.restartedMain> DEBUG T[] U[] - Attempting to expand collection/array field: numbers
+2020-12-30 14:38:17.065.restartedMain> DEBUG T[] U[] - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@719dda9f
+2020-12-30 14:38:17.066.restartedMain> DEBUG T[] U[] - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@719dda9f, with type: 
+2020-12-30 14:38:17.069.restartedMain> DEBUG T[] U[] - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@7fb0d65a
+2020-12-30 14:38:17.069.restartedMain> DEBUG T[] U[] - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@7fb0d65a, with type: 
+2020-12-30 14:38:17.069.restartedMain> DEBUG T[] U[] - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@6c898cf8
+2020-12-30 14:38:17.069.restartedMain> DEBUG T[] U[] - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@6c898cf8, with type: 
+2020-12-30 14:38:17.070.restartedMain> DEBUG T[] U[] - Setting spring response class to: BaseResponse
+2020-12-30 14:38:17.071.restartedMain> DEBUG T[] U[] - Setting response class to:BaseResponse
+2020-12-30 14:38:17.071.restartedMain> DEBUG T[] U[] - Authorization count 0 for method joinGame
+2020-12-30 14:38:17.097.restartedMain> DEBUG T[] U[] - Adding return parameter of type Lcom/kotlin/boot/sample/domain/SampleDomain;
+2020-12-30 14:38:17.097.restartedMain> DEBUG T[] U[] - Reading parameters models for handlerMethod |getTest|
+2020-12-30 14:38:17.101.restartedMain> DEBUG T[] U[] - Finished reading parameters models for handlerMethod |getTest|
+2020-12-30 14:38:17.101.restartedMain> DEBUG T[] U[] - Reading parameters models for handlerMethod |getTest|
+2020-12-30 14:38:17.104.restartedMain> DEBUG T[] U[] - Reading property userId
+2020-12-30 14:38:17.104.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2020-12-30 14:38:17.104.restartedMain> DEBUG T[] U[] - Name 'userId' renamed to 'userId'
+2020-12-30 14:38:17.104.restartedMain> DEBUG T[] U[] - Adding property userId to model
+2020-12-30 14:38:17.104.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2020-12-30 14:38:17.104.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2020-12-30 14:38:17.104.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2020-12-30 14:38:17.106.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2020-12-30 14:38:17.106.restartedMain> DEBUG T[] U[] - Reading property name
+2020-12-30 14:38:17.107.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2020-12-30 14:38:17.107.restartedMain> DEBUG T[] U[] - Name 'name' renamed to 'name'
+2020-12-30 14:38:17.107.restartedMain> DEBUG T[] U[] - Adding property name to model
+2020-12-30 14:38:17.107.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2020-12-30 14:38:17.107.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2020-12-30 14:38:17.107.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2020-12-30 14:38:17.107.restartedMain> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2020-12-30 14:38:17.108.restartedMain> DEBUG T[] U[] - Inferred 2 properties. Properties found name, userId
+2020-12-30 14:38:17.108.restartedMain> DEBUG T[] U[] - Generated parameter model id: SampleDomain, name: SampleDomain, schema: {} models
+2020-12-30 14:38:17.108.restartedMain> DEBUG T[] U[] - Adding a new model with key SampleDomain
+2020-12-30 14:38:17.115.restartedMain> DEBUG T[] U[] - Setting spring response class to: SampleDomain
+2020-12-30 14:38:17.115.restartedMain> DEBUG T[] U[] - Setting response class to:SampleDomain
+2020-12-30 14:38:17.116.restartedMain> DEBUG T[] U[] - Authorization count 0 for method getTest
+2020-12-30 14:38:17.117.restartedMain> DEBUG T[] U[] - Adding return parameter of type V
+2020-12-30 14:38:17.117.restartedMain> DEBUG T[] U[] - Reading parameters models for handlerMethod |postTest|
+2020-12-30 14:38:17.117.restartedMain> DEBUG T[] U[] - Finished reading parameters models for handlerMethod |postTest|
+2020-12-30 14:38:17.117.restartedMain> DEBUG T[] U[] - Reading parameters models for handlerMethod |postTest|
+2020-12-30 14:38:17.117.restartedMain> DEBUG T[] U[] - Skipping model of type V as its either a container type, map, enum or base type, or its already been handled
+2020-12-30 14:38:17.118.restartedMain> DEBUG T[] U[] - Did not find any parameter models for void
+2020-12-30 14:38:17.119.restartedMain> DEBUG T[] U[] - Setting spring response class to: null
+2020-12-30 14:38:17.119.restartedMain> DEBUG T[] U[] - Authorization count 0 for method postTest
+2020-12-30 14:38:17.157.restartedMain> DEBUG T[] U[] - starting undertow server io.undertow.Undertow@12ecd6b4
+2020-12-30 14:38:17.167.restartedMain> INFO  T[] U[] - XNIO version 3.3.8.Final
+2020-12-30 14:38:17.181.restartedMain> INFO  T[] U[] - XNIO NIO Implementation Version 3.3.8.Final
+2020-12-30 14:38:17.218.XNIO-1 I/O-2> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-2', selector sun.nio.ch.KQueueSelectorImpl@61ca40d
+2020-12-30 14:38:17.218.XNIO-1 I/O-1> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@18b1c03f
+2020-12-30 14:38:17.218.XNIO-1 I/O-4> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-4', selector sun.nio.ch.KQueueSelectorImpl@58fb477
+2020-12-30 14:38:17.218.XNIO-1 I/O-3> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-3', selector sun.nio.ch.KQueueSelectorImpl@afc7aa8
+2020-12-30 14:38:17.219.XNIO-1 I/O-5> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-5', selector sun.nio.ch.KQueueSelectorImpl@187116bd
+2020-12-30 14:38:17.219.XNIO-1 I/O-6> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-6', selector sun.nio.ch.KQueueSelectorImpl@179cee59
+2020-12-30 14:38:17.219.XNIO-1 I/O-7> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-7', selector sun.nio.ch.KQueueSelectorImpl@4aa798d2
+2020-12-30 14:38:17.219.XNIO-1 I/O-8> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-8', selector sun.nio.ch.KQueueSelectorImpl@59e350f2
+2020-12-30 14:38:17.219.XNIO-1 I/O-9> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-9', selector sun.nio.ch.KQueueSelectorImpl@3db89c4
+2020-12-30 14:38:17.219.XNIO-1 I/O-10> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-10', selector sun.nio.ch.KQueueSelectorImpl@e363cd1
+2020-12-30 14:38:17.219.XNIO-1 I/O-11> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-11', selector sun.nio.ch.KQueueSelectorImpl@13e3fb34
+2020-12-30 14:38:17.219.XNIO-1 I/O-12> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-12', selector sun.nio.ch.KQueueSelectorImpl@3e847371
+2020-12-30 14:38:17.219.XNIO-1 I/O-13> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-13', selector sun.nio.ch.KQueueSelectorImpl@6b0f888e
+2020-12-30 14:38:17.219.XNIO-1 I/O-14> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-14', selector sun.nio.ch.KQueueSelectorImpl@1ac873be
+2020-12-30 14:38:17.220.XNIO-1 I/O-16> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-16', selector sun.nio.ch.KQueueSelectorImpl@5b56c2af
+2020-12-30 14:38:17.220.XNIO-1 I/O-17> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-17', selector sun.nio.ch.KQueueSelectorImpl@3a80dc6
+2020-12-30 14:38:17.220.XNIO-1 I/O-15> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-15', selector sun.nio.ch.KQueueSelectorImpl@28a8abee
+2020-12-30 14:38:17.220.XNIO-1 I/O-18> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-18', selector sun.nio.ch.KQueueSelectorImpl@1ea297fa
+2020-12-30 14:38:17.220.XNIO-1 I/O-19> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-19', selector sun.nio.ch.KQueueSelectorImpl@52d2bbc4
+2020-12-30 14:38:17.220.XNIO-1 I/O-20> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-20', selector sun.nio.ch.KQueueSelectorImpl@61f22a79
+2020-12-30 14:38:17.220.XNIO-1 I/O-21> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-21', selector sun.nio.ch.KQueueSelectorImpl@4ffda1de
+2020-12-30 14:38:17.220.XNIO-1 I/O-22> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-22', selector sun.nio.ch.KQueueSelectorImpl@12662da4
+2020-12-30 14:38:17.220.XNIO-1 I/O-23> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-23', selector sun.nio.ch.KQueueSelectorImpl@4d604d8d
+2020-12-30 14:38:17.220.XNIO-1 I/O-24> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-24', selector sun.nio.ch.KQueueSelectorImpl@5ff0858
+2020-12-30 14:38:17.220.XNIO-1 I/O-25> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-25', selector sun.nio.ch.KQueueSelectorImpl@798b1b48
+2020-12-30 14:38:17.220.XNIO-1 I/O-26> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-26', selector sun.nio.ch.KQueueSelectorImpl@4761872
+2020-12-30 14:38:17.221.XNIO-1 I/O-27> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-27', selector sun.nio.ch.KQueueSelectorImpl@15ac9dc0
+2020-12-30 14:38:17.221.XNIO-1 I/O-28> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-28', selector sun.nio.ch.KQueueSelectorImpl@6ac279d5
+2020-12-30 14:38:17.221.XNIO-1 I/O-29> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-29', selector sun.nio.ch.KQueueSelectorImpl@641f7620
+2020-12-30 14:38:17.221.XNIO-1 I/O-30> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-30', selector sun.nio.ch.KQueueSelectorImpl@61407a21
+2020-12-30 14:38:17.240.XNIO-1 I/O-31> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-31', selector sun.nio.ch.KQueueSelectorImpl@77d1aff
+2020-12-30 14:38:17.240.restartedMain> DEBUG T[] U[] - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 10340
+2020-12-30 14:38:17.260.XNIO-1 I/O-32> DEBUG T[] U[] - Started channel thread 'XNIO-1 I/O-32', selector sun.nio.ch.KQueueSelectorImpl@2a4aad1c
+2020-12-30 14:38:17.279.XNIO-1 Accept> DEBUG T[] U[] - Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@d821256
+2020-12-30 14:38:17.339.restartedMain> INFO  T[] U[] - Started KotlinProjectKt in 11.898 seconds (JVM running for 13.117)
+2020-12-30 14:38:17.736.RMI TCP Connection(1)-127.0.0.1> INFO  T[] U[] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 14:38:36.509.XNIO-1 I/O-23> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/swagger-ui.html
+2020-12-30 14:38:36.535.XNIO-1 task-1> DEBUG T[] U[] - Attempting to authenticate /dyshin/swagger-ui.html, authentication required: false
+2020-12-30 14:38:36.540.XNIO-1 task-1> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/swagger-ui.html
+2020-12-30 14:38:36.540.XNIO-1 task-1> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/swagger-ui.html
+2020-12-30 14:38:36.576.XNIO-1 task-1> DEBUG T[] U[] - looking up handler for path: /swagger-ui.html
+2020-12-30 14:38:36.643.XNIO-1 I/O-9> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/springfox.css
+2020-12-30 14:38:36.643.XNIO-1 I/O-32> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/swagger-ui.css
+2020-12-30 14:38:36.644.XNIO-1 task-3> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/swagger-ui.css, authentication required: false
+2020-12-30 14:38:36.644.XNIO-1 task-2> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/springfox.css, authentication required: false
+2020-12-30 14:38:36.645.XNIO-1 task-2> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/springfox.css
+2020-12-30 14:38:36.645.XNIO-1 task-3> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/swagger-ui.css
+2020-12-30 14:38:36.645.XNIO-1 task-2> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/springfox.css
+2020-12-30 14:38:36.645.XNIO-1 task-3> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/swagger-ui.css
+2020-12-30 14:38:36.645.XNIO-1 task-2> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/springfox.css
+2020-12-30 14:38:36.645.XNIO-1 task-3> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/swagger-ui.css
+2020-12-30 14:38:36.661.XNIO-1 I/O-9> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/swagger-ui-bundle.js
+2020-12-30 14:38:36.662.XNIO-1 I/O-23> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js
+2020-12-30 14:38:36.664.XNIO-1 task-4> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/swagger-ui-bundle.js, authentication required: false
+2020-12-30 14:38:36.664.XNIO-1 task-4> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/swagger-ui-bundle.js
+2020-12-30 14:38:36.664.XNIO-1 task-4> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/swagger-ui-bundle.js
+2020-12-30 14:38:36.664.XNIO-1 task-5> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js, authentication required: false
+2020-12-30 14:38:36.665.XNIO-1 I/O-15> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/springfox.js
+2020-12-30 14:38:36.665.XNIO-1 task-5> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js
+2020-12-30 14:38:36.665.XNIO-1 task-5> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js
+2020-12-30 14:38:36.665.XNIO-1 task-4> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/swagger-ui-bundle.js
+2020-12-30 14:38:36.666.XNIO-1 task-5> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js
+2020-12-30 14:38:36.666.XNIO-1 task-6> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/springfox.js, authentication required: false
+2020-12-30 14:38:36.666.XNIO-1 task-6> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/springfox.js
+2020-12-30 14:38:36.667.XNIO-1 task-6> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/springfox.js
+2020-12-30 14:38:36.667.XNIO-1 task-6> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/springfox.js
+2020-12-30 14:38:36.958.XNIO-1 I/O-9> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/swagger-resources/configuration/ui
+2020-12-30 14:38:36.959.XNIO-1 task-7> DEBUG T[] U[] - Attempting to authenticate /dyshin/swagger-resources/configuration/ui, authentication required: false
+2020-12-30 14:38:36.959.XNIO-1 task-7> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/swagger-resources/configuration/ui
+2020-12-30 14:38:36.959.XNIO-1 task-7> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/swagger-resources/configuration/ui
+2020-12-30 14:38:36.961.XNIO-1 task-7> DEBUG T[] U[] - looking up handler for path: /swagger-resources/configuration/ui
+2020-12-30 14:38:36.984.XNIO-1 I/O-6> DEBUG T[] U[] - Matched default handler path /apple-touch-icon-precomposed.png
+2020-12-30 14:38:36.989.XNIO-1 I/O-6> DEBUG T[] U[] - Matched default handler path /apple-touch-icon.png
+2020-12-30 14:38:37.090.XNIO-1 I/O-9> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/swagger-resources/configuration/security
+2020-12-30 14:38:37.091.XNIO-1 task-8> DEBUG T[] U[] - Attempting to authenticate /dyshin/swagger-resources/configuration/security, authentication required: false
+2020-12-30 14:38:37.091.XNIO-1 task-8> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/swagger-resources/configuration/security
+2020-12-30 14:38:37.092.XNIO-1 task-8> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/swagger-resources/configuration/security
+2020-12-30 14:38:37.092.XNIO-1 task-8> DEBUG T[] U[] - looking up handler for path: /swagger-resources/configuration/security
+2020-12-30 14:38:37.104.XNIO-1 I/O-9> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/swagger-resources
+2020-12-30 14:38:37.105.XNIO-1 task-9> DEBUG T[] U[] - Attempting to authenticate /dyshin/swagger-resources, authentication required: false
+2020-12-30 14:38:37.105.XNIO-1 task-9> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/swagger-resources
+2020-12-30 14:38:37.105.XNIO-1 task-9> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/swagger-resources
+2020-12-30 14:38:37.106.XNIO-1 task-9> DEBUG T[] U[] - looking up handler for path: /swagger-resources
+2020-12-30 14:38:37.165.XNIO-1 I/O-9> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/v2/api-docs
+2020-12-30 14:38:37.168.XNIO-1 I/O-32> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/
+2020-12-30 14:38:37.174.XNIO-1 task-10> DEBUG T[] U[] - Attempting to authenticate /dyshin/v2/api-docs, authentication required: false
+2020-12-30 14:38:37.174.XNIO-1 task-10> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/v2/api-docs
+2020-12-30 14:38:37.175.XNIO-1 task-10> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/v2/api-docs
+2020-12-30 14:38:37.178.XNIO-1 task-10> DEBUG T[] U[] - looking up handler for path: /v2/api-docs
+2020-12-30 14:38:37.182.XNIO-1 task-10> DEBUG T[] U[] - Mapped to public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2020-12-30 14:38:37.210.XNIO-1 task-11> DEBUG T[] U[] - Attempting to authenticate /dyshin/, authentication required: false
+2020-12-30 14:38:37.211.XNIO-1 task-11> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/
+2020-12-30 14:38:37.212.XNIO-1 task-11> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/
+2020-12-30 14:38:37.213.XNIO-1 task-11> DEBUG T[] U[] - looking up handler for path: /
+2020-12-30 14:38:37.276.XNIO-1 task-11> ERROR T[] U[] - UT005023: Exception handling request to /dyshin/
+javax.servlet.ServletException: No adapter for handler [com.kotlin.boot.sample.controller.SampleApi@4ad31147]: The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler
+	at org.springframework.web.servlet.DispatcherServlet.getHandlerAdapter(DispatcherServlet.java:1273)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1022)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:376)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-30 14:38:37.280.XNIO-1 task-11> DEBUG T[] U[] - Setting error code 500 for exchange HttpServerExchange{ GET /dyshin/}
+java.lang.RuntimeException: null
+	at io.undertow.server.HttpServerExchange.setStatusCode(HttpServerExchange.java:1410)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:299)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:376)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-30 14:38:37.284.XNIO-1 task-11> DEBUG T[] U[] - looking up handler for path: /error
+2020-12-30 14:38:37.289.XNIO-1 task-11> DEBUG T[] U[] - Setting error code 500 for exchange HttpServerExchange{ GET /dyshin/error}
+java.lang.RuntimeException: null
+	at io.undertow.server.HttpServerExchange.setStatusCode(HttpServerExchange.java:1410)
+	at io.undertow.servlet.spec.HttpServletResponseImpl.setStatus(HttpServletResponseImpl.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:205)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:122)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:81)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:251)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchToPath(ServletInitialHandler.java:186)
+	at io.undertow.servlet.spec.RequestDispatcherImpl.error(RequestDispatcherImpl.java:501)
+	at io.undertow.servlet.spec.RequestDispatcherImpl.error(RequestDispatcherImpl.java:427)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:308)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:376)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-30 14:38:37.379.XNIO-1 I/O-29> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/csrf
+2020-12-30 14:38:37.381.XNIO-1 I/O-20> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2
+2020-12-30 14:38:37.383.XNIO-1 task-12> DEBUG T[] U[] - Attempting to authenticate /dyshin/csrf, authentication required: false
+2020-12-30 14:38:37.383.XNIO-1 task-12> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/csrf
+2020-12-30 14:38:37.383.XNIO-1 task-12> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/csrf
+2020-12-30 14:38:37.383.XNIO-1 I/O-11> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2
+2020-12-30 14:38:37.384.XNIO-1 task-13> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2, authentication required: false
+2020-12-30 14:38:37.384.XNIO-1 task-13> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2
+2020-12-30 14:38:37.384.XNIO-1 task-13> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2
+2020-12-30 14:38:37.385.XNIO-1 task-13> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2
+2020-12-30 14:38:37.385.XNIO-1 task-12> DEBUG T[] U[] - looking up handler for path: /csrf
+2020-12-30 14:38:37.387.XNIO-1 task-14> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2, authentication required: false
+2020-12-30 14:38:37.387.XNIO-1 task-14> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2
+2020-12-30 14:38:37.387.XNIO-1 task-14> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2
+2020-12-30 14:38:37.389.XNIO-1 task-14> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2
+2020-12-30 14:38:37.395.XNIO-1 task-12> DEBUG T[] U[] - looking up handler for path: /error
+2020-12-30 14:38:37.662.XNIO-1 I/O-20> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2
+2020-12-30 14:38:37.662.XNIO-1 I/O-29> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2
+2020-12-30 14:38:37.663.XNIO-1 task-16> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2, authentication required: false
+2020-12-30 14:38:37.663.XNIO-1 task-16> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2
+2020-12-30 14:38:37.663.XNIO-1 task-16> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2
+2020-12-30 14:38:37.663.XNIO-1 task-15> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2, authentication required: false
+2020-12-30 14:38:37.664.XNIO-1 task-15> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2
+2020-12-30 14:38:37.664.XNIO-1 task-16> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2
+2020-12-30 14:38:37.664.XNIO-1 task-15> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2
+2020-12-30 14:38:37.665.XNIO-1 task-15> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2
+2020-12-30 14:38:39.773.XNIO-1 I/O-29> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-600.woff2
+2020-12-30 14:38:39.774.XNIO-1 task-17> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-600.woff2, authentication required: false
+2020-12-30 14:38:39.775.XNIO-1 task-17> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-600.woff2
+2020-12-30 14:38:39.775.XNIO-1 task-17> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-600.woff2
+2020-12-30 14:38:39.776.XNIO-1 task-17> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-600.woff2
+2020-12-30 14:38:39.868.XNIO-1 I/O-29> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-regular.woff2
+2020-12-30 14:38:39.870.XNIO-1 task-18> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-regular.woff2, authentication required: false
+2020-12-30 14:38:39.870.XNIO-1 task-18> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-regular.woff2
+2020-12-30 14:38:39.870.XNIO-1 task-18> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-regular.woff2
+2020-12-30 14:38:39.870.XNIO-1 task-18> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-regular.woff2
+2020-12-30 14:38:40.788.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:38:48.711.XNIO-1 I/O-29> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/game/join
+2020-12-30 14:38:48.713.XNIO-1 task-19> DEBUG T[] U[] - Attempting to authenticate /dyshin/game/join, authentication required: false
+2020-12-30 14:38:48.713.XNIO-1 task-19> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/game/join
+2020-12-30 14:38:48.713.XNIO-1 task-19> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/game/join
+2020-12-30 14:38:48.714.XNIO-1 task-19> DEBUG T[] U[] - looking up handler for path: /game/join
+2020-12-30 14:38:48.999.XNIO-1 I/O-29> DEBUG T[] U[] - Matched prefix path /dyshin for path /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2
+2020-12-30 14:38:49.001.XNIO-1 task-20> DEBUG T[] U[] - Attempting to authenticate /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2, authentication required: false
+2020-12-30 14:38:49.001.XNIO-1 task-20> DEBUG T[] U[] - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@5c15527 for /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2
+2020-12-30 14:38:49.001.XNIO-1 task-20> DEBUG T[] U[] - Authentication result was ATTEMPTED for /dyshin/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2
+2020-12-30 14:38:49.001.XNIO-1 task-20> DEBUG T[] U[] - looking up handler for path: /webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2
+2020-12-30 14:39:10.788.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:39:37.350.XNIO-1 I/O-32> DEBUG T[] U[] - Timing out idle connection from /0:0:0:0:0:0:0:1:50821
+2020-12-30 14:39:37.580.XNIO-1 I/O-9> DEBUG T[] U[] - Timing out idle connection from /0:0:0:0:0:0:0:1:50820
+2020-12-30 14:39:40.789.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:40:10.790.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:40:40.792.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:41:10.794.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:41:40.796.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:42:10.801.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:42:40.804.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:43:10.803.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:43:40.805.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:44:10.808.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:44:40.811.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:45:10.812.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:45:40.815.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:46:10.818.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:46:40.819.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:47:10.823.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:47:40.823.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:48:10.826.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:48:40.826.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:49:10.827.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:49:40.828.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:50:10.830.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:50:40.830.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:51:10.832.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:51:40.836.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:52:10.835.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:52:40.836.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:53:10.842.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:53:40.842.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:54:10.845.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:54:40.848.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:55:10.848.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:55:40.854.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:56:10.855.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:56:40.856.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:57:10.857.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 14:57:41.017.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)

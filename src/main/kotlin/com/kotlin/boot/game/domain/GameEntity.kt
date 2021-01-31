@@ -10,7 +10,7 @@ import javax.persistence.Table
 data class GameEntity(
         @Id
         @Column(name = "PLAYER_PHONE_NUMBER")
-        val phoneNumber: Long,
+        val phoneNumber: String,
         @Column(name = "PLAYER_USER_NAME")
         val realName: String,
         @Column(name = "PLAYER_GAME_NUMBER")
@@ -18,7 +18,7 @@ data class GameEntity(
 ){
         companion object{
                 fun of(
-                        phoneNumber: Long,
+                        phoneNumber: String,
                         realName: String,
                         gameNumber: String
                 ) = GameEntity(phoneNumber, realName, gameNumber)

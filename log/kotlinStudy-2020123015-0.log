@@ -1,0 +1,6 @@
+2020-12-30 15:28:05.072.HikariPool-1 housekeeper> WARN  T[] U[] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m24s51ms).
+2020-12-30 15:28:05.088.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 15:28:35.088.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 15:44:33.357.HikariPool-1 housekeeper> WARN  T[] U[] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m58s268ms).
+2020-12-30 15:44:33.359.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
+2020-12-30 15:45:03.391.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=50, active=0, idle=50, waiting=0)
