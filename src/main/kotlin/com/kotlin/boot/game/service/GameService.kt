@@ -17,14 +17,12 @@ class GameService(
     private val gameRepository: GameRepository
 ) {
 
-    fun playLotto() {
+/*    fun playLotto() {
         val today = LocalDateTime.now().convertYYYYmmDD()
 
         val randomNumbers = getAutoRandom(5)
         val bonusNumber = getAutoRandom(1)
-
-
-    }
+    }*/
 
     @Transactional
     fun playGame(joinGameDto: JoinGameDto): BaseResponse {
@@ -78,7 +76,7 @@ class GameService(
         }
     }
 
-    fun getRandomNumber(length: Long): String {
+/*    fun getRandomNumber(length: Long): String {
         val random = Random()
         val sb = StringBuilder()
         for (i in 0 until length) {
@@ -90,7 +88,7 @@ class GameService(
     private fun getRandom(): Long {
         val random = Random()
         return random.nextInt(45).toLong()
-    }
+    }*/
 
     private fun getAutoRandom(count: Long): List<Long> {
         val random = Random()
