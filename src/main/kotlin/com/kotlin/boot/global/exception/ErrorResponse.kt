@@ -10,7 +10,7 @@ data class ErrorResponse(
     }
 }
 
-private const val COMPONENT_CAMS = "01"
+private const val COMPONENT_DYK = "01"
 const val REASON_SUCCESS = "000"
 
 enum class ErrorReason(
@@ -21,5 +21,5 @@ enum class ErrorReason(
     INVALID_CARD_APPLY_NO("0001", "002"),
     ;
 
-    fun toReason() = "${COMPONENT_CAMS}_${feature}_${reason}"
+    fun toReason() = "${COMPONENT_DYK}_${feature}_${reason}"
 }

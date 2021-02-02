@@ -26,21 +26,6 @@
         </encoder>
     </appender>
 
-<!--    <timestamp key="timestamp" datePattern="yyyyMMdd"/>-->
-<!--    <appender name="batchDelivery" class="ch.qos.logback.core.FileAppender">-->
-<!--        <file>./home/cams/delivery/KOWCD01${timestamp}</file>-->
-<!--        <append>true</append>-->
-<!--        <encoder>-->
-<!--            <pattern>%msg%n</pattern>-->
-<!--            <charset>EUC-KR</charset>-->
-<!--        </encoder>-->
-<!--    </appender>-->
-
-<!--    <logger name="DELIVERY_LOG" additivity="true">-->
-<!--        <level value="INFO" />-->
-<!--        <appender-ref ref="batchDelivery" />-->
-<!--    </logger>-->
-
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.hibernate" level="WARN"/>
     <logger name="io.netty" level="WARN"/>
