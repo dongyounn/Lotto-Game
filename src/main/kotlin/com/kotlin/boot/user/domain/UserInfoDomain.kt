@@ -2,6 +2,7 @@ package com.kotlin.boot.user.domain
 
 import com.kotlin.boot.global.dto.BaseDomain
 import com.kotlin.boot.global.dto.YesOrNoEnum
+import com.kotlin.boot.user.controller.dto.JoinUserInfo
 import javax.persistence.Entity
 import javax.persistence.EnumType
 import javax.persistence.Enumerated
@@ -20,11 +21,9 @@ data class PlayGameUser(
     companion object {
         fun of(
             userId: String,
-            dob: String,
-            userName: String,
-            phoneNumber: String
+            joinUserInfo: JoinUserInfo
         ) = PlayGameUser(
-            userId, dob, userName, phoneNumber
+            userId, joinUserInfo.dob, joinUserInfo.name, joinUserInfo.phoneNumber
         )
     }
 }

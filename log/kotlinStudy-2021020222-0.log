@@ -1,0 +1,765 @@
+2021-02-02 22:19:02.669.Test worker> INFO  T[] U[] - Starting PlayGameUserServiceTest on dyshin.local with PID 27852 (started by dongyoun_shin in /Users/dongyoun_shin/IdeaProjects/KotlinStudy)
+2021-02-02 22:19:02.674.Test worker> DEBUG T[] U[] - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2021-02-02 22:19:02.675.Test worker> INFO  T[] U[] - No active profile set, falling back to default profiles: default
+2021-02-02 22:19:06.385.Test worker> DEBUG T[] U[] - Driver class oracle.jdbc.OracleDriver found in Thread context class loader sun.misc.Launcher$AppClassLoader@73d16e93
+2021-02-02 22:19:06.485.Test worker> WARN  T[] U[] - HikariPool-1 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.
+2021-02-02 22:19:06.486.Test worker> DEBUG T[] U[] - HikariPool-1 - configuration:
+2021-02-02 22:19:06.489.Test worker> DEBUG T[] U[] - allowPoolSuspension.............false
+2021-02-02 22:19:06.490.Test worker> DEBUG T[] U[] - autoCommit......................true
+2021-02-02 22:19:06.490.Test worker> DEBUG T[] U[] - catalog.........................none
+2021-02-02 22:19:06.490.Test worker> DEBUG T[] U[] - connectionInitSql...............none
+2021-02-02 22:19:06.490.Test worker> DEBUG T[] U[] - connectionTestQuery.............none
+2021-02-02 22:19:06.491.Test worker> DEBUG T[] U[] - connectionTimeout...............30000
+2021-02-02 22:19:06.491.Test worker> DEBUG T[] U[] - dataSource......................none
+2021-02-02 22:19:06.491.Test worker> DEBUG T[] U[] - dataSourceClassName.............none
+2021-02-02 22:19:06.491.Test worker> DEBUG T[] U[] - dataSourceJNDI..................none
+2021-02-02 22:19:06.492.Test worker> DEBUG T[] U[] - dataSourceProperties............{password=<masked>}
+2021-02-02 22:19:06.493.Test worker> DEBUG T[] U[] - driverClassName................."oracle.jdbc.OracleDriver"
+2021-02-02 22:19:06.493.Test worker> DEBUG T[] U[] - healthCheckProperties...........{}
+2021-02-02 22:19:06.493.Test worker> DEBUG T[] U[] - healthCheckRegistry.............none
+2021-02-02 22:19:06.493.Test worker> DEBUG T[] U[] - idleTimeout.....................600000
+2021-02-02 22:19:06.493.Test worker> DEBUG T[] U[] - initializationFailTimeout.......1
+2021-02-02 22:19:06.494.Test worker> DEBUG T[] U[] - isolateInternalQueries..........false
+2021-02-02 22:19:06.494.Test worker> DEBUG T[] U[] - jdbcUrl.........................jdbc:oracle:thin:@localhost:1521:XE
+2021-02-02 22:19:06.494.Test worker> DEBUG T[] U[] - leakDetectionThreshold..........0
+2021-02-02 22:19:06.494.Test worker> DEBUG T[] U[] - maxLifetime.....................1800000
+2021-02-02 22:19:06.495.Test worker> DEBUG T[] U[] - maximumPoolSize.................50
+2021-02-02 22:19:06.495.Test worker> DEBUG T[] U[] - metricRegistry..................none
+2021-02-02 22:19:06.495.Test worker> DEBUG T[] U[] - metricsTrackerFactory...........none
+2021-02-02 22:19:06.495.Test worker> DEBUG T[] U[] - minimumIdle.....................50
+2021-02-02 22:19:06.495.Test worker> DEBUG T[] U[] - password........................<masked>
+2021-02-02 22:19:06.496.Test worker> DEBUG T[] U[] - poolName........................"HikariPool-1"
+2021-02-02 22:19:06.496.Test worker> DEBUG T[] U[] - readOnly........................false
+2021-02-02 22:19:06.496.Test worker> DEBUG T[] U[] - registerMbeans..................false
+2021-02-02 22:19:06.497.Test worker> DEBUG T[] U[] - scheduledExecutor...............none
+2021-02-02 22:19:06.497.Test worker> DEBUG T[] U[] - schema..........................none
+2021-02-02 22:19:06.497.Test worker> DEBUG T[] U[] - threadFactory...................internal
+2021-02-02 22:19:06.497.Test worker> DEBUG T[] U[] - transactionIsolation............default
+2021-02-02 22:19:06.497.Test worker> DEBUG T[] U[] - username........................"springboot"
+2021-02-02 22:19:06.498.Test worker> DEBUG T[] U[] - validationTimeout...............10000
+2021-02-02 22:19:06.500.Test worker> INFO  T[] U[] - HikariPool-1 - Starting...
+2021-02-02 22:19:07.262.Test worker> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@72b56d29
+2021-02-02 22:19:07.265.Test worker> INFO  T[] U[] - HikariPool-1 - Start completed.
+2021-02-02 22:19:07.366.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2021-02-02 22:19:07.472.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@598f5b54
+2021-02-02 22:19:07.583.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@18b2516f
+2021-02-02 22:19:07.694.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@29600c8e
+2021-02-02 22:19:07.778.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@789dae20
+2021-02-02 22:19:07.871.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6e82f76c
+2021-02-02 22:19:07.971.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7cd3b21c
+2021-02-02 22:19:08.049.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3e3c5026
+2021-02-02 22:19:08.133.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6167c4c5
+2021-02-02 22:19:08.240.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1deb26ca
+2021-02-02 22:19:08.329.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6cb22a65
+2021-02-02 22:19:08.421.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3e2a0f2f
+2021-02-02 22:19:08.514.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@14c40a46
+2021-02-02 22:19:08.624.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1df35c39
+2021-02-02 22:19:08.723.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@ece7bd
+2021-02-02 22:19:08.796.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@21bf7cbb
+2021-02-02 22:19:08.856.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@122b7852
+2021-02-02 22:19:08.912.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4784a0d7
+2021-02-02 22:19:08.984.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@77072530
+2021-02-02 22:19:09.222.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3ef55e13
+2021-02-02 22:19:09.288.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@77af3bec
+2021-02-02 22:19:09.347.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@11a3b68b
+2021-02-02 22:19:09.399.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5bec57cd
+2021-02-02 22:19:09.473.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@417c94a4
+2021-02-02 22:19:09.538.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3ef5f3f4
+2021-02-02 22:19:09.621.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6dbbd843
+2021-02-02 22:19:09.738.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@f5a20c4
+2021-02-02 22:19:09.841.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@49405642
+2021-02-02 22:19:09.953.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1a05e4f
+2021-02-02 22:19:10.044.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@673a018f
+2021-02-02 22:19:10.138.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2b4de40c
+2021-02-02 22:19:10.229.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2dfec6af
+2021-02-02 22:19:10.328.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@252ca47b
+2021-02-02 22:19:10.424.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@18f5588f
+2021-02-02 22:19:10.521.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@13faf06a
+2021-02-02 22:19:10.614.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4bd99356
+2021-02-02 22:19:10.702.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7066f9b6
+2021-02-02 22:19:10.788.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5abba5bf
+2021-02-02 22:19:10.892.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@70d6a899
+2021-02-02 22:19:10.993.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@54681d1d
+2021-02-02 22:19:11.099.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7484e996
+2021-02-02 22:19:11.197.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7d904e92
+2021-02-02 22:19:11.262.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@79bc69f
+2021-02-02 22:19:11.316.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@30fe2560
+2021-02-02 22:19:11.370.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3fb00d0b
+2021-02-02 22:19:11.428.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1910346e
+2021-02-02 22:19:11.492.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@74607690
+2021-02-02 22:19:11.574.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1248e4d6
+2021-02-02 22:19:11.705.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@110d5890
+2021-02-02 22:19:11.800.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5652046c
+2021-02-02 22:19:11.800.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - After adding stats (total=50, active=1, idle=49, waiting=0)
+2021-02-02 22:19:12.083.Test worker> WARN  T[] U[] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_at] in table [play_game_user]
+2021-02-02 22:19:12.084.Test worker> INFO  T[] U[] - HikariPool-1 - Shutdown initiated...
+2021-02-02 22:19:12.084.Test worker> DEBUG T[] U[] - HikariPool-1 - Before shutdown stats (total=50, active=0, idle=50, waiting=0)
+2021-02-02 22:19:12.085.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@72b56d29: (connection evicted)
+2021-02-02 22:19:12.090.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@598f5b54: (connection evicted)
+2021-02-02 22:19:12.094.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@18b2516f: (connection evicted)
+2021-02-02 22:19:12.097.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@29600c8e: (connection evicted)
+2021-02-02 22:19:12.101.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@789dae20: (connection evicted)
+2021-02-02 22:19:12.105.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6e82f76c: (connection evicted)
+2021-02-02 22:19:12.109.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7cd3b21c: (connection evicted)
+2021-02-02 22:19:12.114.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3e3c5026: (connection evicted)
+2021-02-02 22:19:12.118.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6167c4c5: (connection evicted)
+2021-02-02 22:19:12.122.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1deb26ca: (connection evicted)
+2021-02-02 22:19:12.127.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6cb22a65: (connection evicted)
+2021-02-02 22:19:12.131.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3e2a0f2f: (connection evicted)
+2021-02-02 22:19:12.136.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@14c40a46: (connection evicted)
+2021-02-02 22:19:12.140.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1df35c39: (connection evicted)
+2021-02-02 22:19:12.147.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@ece7bd: (connection evicted)
+2021-02-02 22:19:12.151.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@21bf7cbb: (connection evicted)
+2021-02-02 22:19:12.155.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@122b7852: (connection evicted)
+2021-02-02 22:19:12.159.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4784a0d7: (connection evicted)
+2021-02-02 22:19:12.162.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@77072530: (connection evicted)
+2021-02-02 22:19:12.166.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3ef55e13: (connection evicted)
+2021-02-02 22:19:12.171.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@77af3bec: (connection evicted)
+2021-02-02 22:19:12.178.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@11a3b68b: (connection evicted)
+2021-02-02 22:19:12.181.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5bec57cd: (connection evicted)
+2021-02-02 22:19:12.185.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@417c94a4: (connection evicted)
+2021-02-02 22:19:12.189.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3ef5f3f4: (connection evicted)
+2021-02-02 22:19:12.194.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6dbbd843: (connection evicted)
+2021-02-02 22:19:12.197.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@f5a20c4: (connection evicted)
+2021-02-02 22:19:12.201.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@49405642: (connection evicted)
+2021-02-02 22:19:12.206.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1a05e4f: (connection evicted)
+2021-02-02 22:19:12.210.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@673a018f: (connection evicted)
+2021-02-02 22:19:12.215.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2b4de40c: (connection evicted)
+2021-02-02 22:19:12.222.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2dfec6af: (connection evicted)
+2021-02-02 22:19:12.229.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@252ca47b: (connection evicted)
+2021-02-02 22:19:12.235.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@18f5588f: (connection evicted)
+2021-02-02 22:19:12.239.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@13faf06a: (connection evicted)
+2021-02-02 22:19:12.242.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4bd99356: (connection evicted)
+2021-02-02 22:19:12.246.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7066f9b6: (connection evicted)
+2021-02-02 22:19:12.250.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5abba5bf: (connection evicted)
+2021-02-02 22:19:12.253.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@70d6a899: (connection evicted)
+2021-02-02 22:19:12.257.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@54681d1d: (connection evicted)
+2021-02-02 22:19:12.261.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7484e996: (connection evicted)
+2021-02-02 22:19:12.264.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7d904e92: (connection evicted)
+2021-02-02 22:19:12.268.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@79bc69f: (connection evicted)
+2021-02-02 22:19:12.272.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@30fe2560: (connection evicted)
+2021-02-02 22:19:12.276.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3fb00d0b: (connection evicted)
+2021-02-02 22:19:12.280.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1910346e: (connection evicted)
+2021-02-02 22:19:12.284.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@74607690: (connection evicted)
+2021-02-02 22:19:12.290.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1248e4d6: (connection evicted)
+2021-02-02 22:19:12.294.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@110d5890: (connection evicted)
+2021-02-02 22:19:12.302.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5652046c: (connection evicted)
+2021-02-02 22:19:12.305.Test worker> DEBUG T[] U[] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-02-02 22:19:12.306.Test worker> INFO  T[] U[] - HikariPool-1 - Shutdown completed.
+2021-02-02 22:19:12.331.Test worker> ERROR T[] U[] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_at] in table [play_game_user]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getApplicationContext(SpringExtension.java:191)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.resolveParameter(SpringExtension.java:178)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameter(ExecutableInvoker.java:207)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:174)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:135)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:61)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestClassConstructor(ClassTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:281)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:82)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:83)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:83)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:69)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:102)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:82)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:78)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_at] in table [play_game_user]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 85 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_at] in table [play_game_user]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:136)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:89)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 89 common frames omitted
+2021-02-02 22:20:04.713.Test worker> INFO  T[] U[] - Starting PlayGameUserServiceTest on dyshin.local with PID 27910 (started by dongyoun_shin in /Users/dongyoun_shin/IdeaProjects/KotlinStudy)
+2021-02-02 22:20:04.716.Test worker> DEBUG T[] U[] - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2021-02-02 22:20:04.717.Test worker> INFO  T[] U[] - No active profile set, falling back to default profiles: default
+2021-02-02 22:20:07.528.Test worker> DEBUG T[] U[] - Driver class oracle.jdbc.OracleDriver found in Thread context class loader sun.misc.Launcher$AppClassLoader@73d16e93
+2021-02-02 22:20:07.627.Test worker> WARN  T[] U[] - HikariPool-1 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.
+2021-02-02 22:20:07.628.Test worker> DEBUG T[] U[] - HikariPool-1 - configuration:
+2021-02-02 22:20:07.630.Test worker> DEBUG T[] U[] - allowPoolSuspension.............false
+2021-02-02 22:20:07.631.Test worker> DEBUG T[] U[] - autoCommit......................true
+2021-02-02 22:20:07.631.Test worker> DEBUG T[] U[] - catalog.........................none
+2021-02-02 22:20:07.631.Test worker> DEBUG T[] U[] - connectionInitSql...............none
+2021-02-02 22:20:07.631.Test worker> DEBUG T[] U[] - connectionTestQuery.............none
+2021-02-02 22:20:07.632.Test worker> DEBUG T[] U[] - connectionTimeout...............30000
+2021-02-02 22:20:07.632.Test worker> DEBUG T[] U[] - dataSource......................none
+2021-02-02 22:20:07.632.Test worker> DEBUG T[] U[] - dataSourceClassName.............none
+2021-02-02 22:20:07.632.Test worker> DEBUG T[] U[] - dataSourceJNDI..................none
+2021-02-02 22:20:07.633.Test worker> DEBUG T[] U[] - dataSourceProperties............{password=<masked>}
+2021-02-02 22:20:07.633.Test worker> DEBUG T[] U[] - driverClassName................."oracle.jdbc.OracleDriver"
+2021-02-02 22:20:07.633.Test worker> DEBUG T[] U[] - healthCheckProperties...........{}
+2021-02-02 22:20:07.634.Test worker> DEBUG T[] U[] - healthCheckRegistry.............none
+2021-02-02 22:20:07.634.Test worker> DEBUG T[] U[] - idleTimeout.....................600000
+2021-02-02 22:20:07.634.Test worker> DEBUG T[] U[] - initializationFailTimeout.......1
+2021-02-02 22:20:07.634.Test worker> DEBUG T[] U[] - isolateInternalQueries..........false
+2021-02-02 22:20:07.634.Test worker> DEBUG T[] U[] - jdbcUrl.........................jdbc:oracle:thin:@localhost:1521:XE
+2021-02-02 22:20:07.635.Test worker> DEBUG T[] U[] - leakDetectionThreshold..........0
+2021-02-02 22:20:07.635.Test worker> DEBUG T[] U[] - maxLifetime.....................1800000
+2021-02-02 22:20:07.635.Test worker> DEBUG T[] U[] - maximumPoolSize.................50
+2021-02-02 22:20:07.635.Test worker> DEBUG T[] U[] - metricRegistry..................none
+2021-02-02 22:20:07.635.Test worker> DEBUG T[] U[] - metricsTrackerFactory...........none
+2021-02-02 22:20:07.635.Test worker> DEBUG T[] U[] - minimumIdle.....................50
+2021-02-02 22:20:07.636.Test worker> DEBUG T[] U[] - password........................<masked>
+2021-02-02 22:20:07.636.Test worker> DEBUG T[] U[] - poolName........................"HikariPool-1"
+2021-02-02 22:20:07.636.Test worker> DEBUG T[] U[] - readOnly........................false
+2021-02-02 22:20:07.637.Test worker> DEBUG T[] U[] - registerMbeans..................false
+2021-02-02 22:20:07.637.Test worker> DEBUG T[] U[] - scheduledExecutor...............none
+2021-02-02 22:20:07.637.Test worker> DEBUG T[] U[] - schema..........................none
+2021-02-02 22:20:07.637.Test worker> DEBUG T[] U[] - threadFactory...................internal
+2021-02-02 22:20:07.637.Test worker> DEBUG T[] U[] - transactionIsolation............default
+2021-02-02 22:20:07.637.Test worker> DEBUG T[] U[] - username........................"springboot"
+2021-02-02 22:20:07.637.Test worker> DEBUG T[] U[] - validationTimeout...............10000
+2021-02-02 22:20:07.639.Test worker> INFO  T[] U[] - HikariPool-1 - Starting...
+2021-02-02 22:20:08.083.Test worker> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@29046f77
+2021-02-02 22:20:08.087.Test worker> INFO  T[] U[] - HikariPool-1 - Start completed.
+2021-02-02 22:20:08.188.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2021-02-02 22:20:08.259.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@14145a9
+2021-02-02 22:20:08.321.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@407c4f92
+2021-02-02 22:20:08.380.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@71f68ca0
+2021-02-02 22:20:08.449.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2053b0dd
+2021-02-02 22:20:08.511.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@10f3e0cb
+2021-02-02 22:20:08.568.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@241dec3f
+2021-02-02 22:20:08.645.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5192cc3c
+2021-02-02 22:20:08.714.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2876111b
+2021-02-02 22:20:08.777.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@75e4eb47
+2021-02-02 22:20:08.825.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5018f68
+2021-02-02 22:20:08.884.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@641e6e45
+2021-02-02 22:20:08.935.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4df2ebfc
+2021-02-02 22:20:08.990.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7c7572c2
+2021-02-02 22:20:09.036.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2675104d
+2021-02-02 22:20:09.082.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@41e0f8f4
+2021-02-02 22:20:09.153.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2410ac9
+2021-02-02 22:20:09.204.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@567e4dd5
+2021-02-02 22:20:09.260.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@72788ff7
+2021-02-02 22:20:09.465.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4b07a8f5
+2021-02-02 22:20:09.519.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2b2e09c3
+2021-02-02 22:20:09.566.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@285fad75
+2021-02-02 22:20:09.638.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@17cab028
+2021-02-02 22:20:09.693.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@53e1d622
+2021-02-02 22:20:09.741.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@53982f38
+2021-02-02 22:20:09.791.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@fa8720e
+2021-02-02 22:20:09.838.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@e1ceaa
+2021-02-02 22:20:09.885.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@313835b3
+2021-02-02 22:20:09.935.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3b251612
+2021-02-02 22:20:09.994.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5611d100
+2021-02-02 22:20:10.052.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@8b1a233
+2021-02-02 22:20:10.115.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@516b0d7c
+2021-02-02 22:20:10.172.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7249984e
+2021-02-02 22:20:10.229.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2015f429
+2021-02-02 22:20:10.287.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@9be400a
+2021-02-02 22:20:10.354.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4fb46de6
+2021-02-02 22:20:10.411.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5a3e22a5
+2021-02-02 22:20:10.473.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@dd6ba6a
+2021-02-02 22:20:10.536.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5b9433f5
+2021-02-02 22:20:10.606.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@b276fd1
+2021-02-02 22:20:10.660.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2170cf3f
+2021-02-02 22:20:10.805.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@76d55054
+2021-02-02 22:20:10.905.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@8a188f
+2021-02-02 22:20:11.007.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7da9ec65
+2021-02-02 22:20:11.102.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2b06cf15
+2021-02-02 22:20:11.216.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2a907d4b
+2021-02-02 22:20:11.335.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@b23399c
+2021-02-02 22:20:11.449.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7944ca2b
+2021-02-02 22:20:11.607.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7c7f3d22
+2021-02-02 22:20:11.700.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4f34ed7b
+2021-02-02 22:20:11.700.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - After adding stats (total=50, active=1, idle=49, waiting=0)
+2021-02-02 22:20:11.752.Test worker> WARN  T[] U[] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [verify] in table [play_game_user]; found [varchar2 (Types#VARCHAR)], but expecting [number(10,0) (Types#INTEGER)]
+2021-02-02 22:20:11.752.Test worker> INFO  T[] U[] - HikariPool-1 - Shutdown initiated...
+2021-02-02 22:20:11.753.Test worker> DEBUG T[] U[] - HikariPool-1 - Before shutdown stats (total=50, active=0, idle=50, waiting=0)
+2021-02-02 22:20:11.754.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@29046f77: (connection evicted)
+2021-02-02 22:20:11.758.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@14145a9: (connection evicted)
+2021-02-02 22:20:11.762.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@407c4f92: (connection evicted)
+2021-02-02 22:20:11.768.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@71f68ca0: (connection evicted)
+2021-02-02 22:20:11.772.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2053b0dd: (connection evicted)
+2021-02-02 22:20:11.776.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@10f3e0cb: (connection evicted)
+2021-02-02 22:20:11.783.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@241dec3f: (connection evicted)
+2021-02-02 22:20:11.787.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5192cc3c: (connection evicted)
+2021-02-02 22:20:11.791.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2876111b: (connection evicted)
+2021-02-02 22:20:11.795.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@75e4eb47: (connection evicted)
+2021-02-02 22:20:11.799.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5018f68: (connection evicted)
+2021-02-02 22:20:11.803.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@641e6e45: (connection evicted)
+2021-02-02 22:20:11.808.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4df2ebfc: (connection evicted)
+2021-02-02 22:20:11.812.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7c7572c2: (connection evicted)
+2021-02-02 22:20:11.818.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2675104d: (connection evicted)
+2021-02-02 22:20:11.824.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@41e0f8f4: (connection evicted)
+2021-02-02 22:20:11.828.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2410ac9: (connection evicted)
+2021-02-02 22:20:11.833.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@567e4dd5: (connection evicted)
+2021-02-02 22:20:11.838.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@72788ff7: (connection evicted)
+2021-02-02 22:20:11.846.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4b07a8f5: (connection evicted)
+2021-02-02 22:20:11.849.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2b2e09c3: (connection evicted)
+2021-02-02 22:20:11.852.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@285fad75: (connection evicted)
+2021-02-02 22:20:11.855.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@17cab028: (connection evicted)
+2021-02-02 22:20:11.859.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@53e1d622: (connection evicted)
+2021-02-02 22:20:11.862.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@53982f38: (connection evicted)
+2021-02-02 22:20:11.866.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@fa8720e: (connection evicted)
+2021-02-02 22:20:11.870.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@e1ceaa: (connection evicted)
+2021-02-02 22:20:11.873.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@313835b3: (connection evicted)
+2021-02-02 22:20:11.876.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3b251612: (connection evicted)
+2021-02-02 22:20:11.885.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5611d100: (connection evicted)
+2021-02-02 22:20:11.889.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@8b1a233: (connection evicted)
+2021-02-02 22:20:11.892.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@516b0d7c: (connection evicted)
+2021-02-02 22:20:11.896.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7249984e: (connection evicted)
+2021-02-02 22:20:11.899.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2015f429: (connection evicted)
+2021-02-02 22:20:11.903.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@9be400a: (connection evicted)
+2021-02-02 22:20:11.907.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4fb46de6: (connection evicted)
+2021-02-02 22:20:11.911.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5a3e22a5: (connection evicted)
+2021-02-02 22:20:11.917.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@dd6ba6a: (connection evicted)
+2021-02-02 22:20:11.926.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5b9433f5: (connection evicted)
+2021-02-02 22:20:11.931.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@b276fd1: (connection evicted)
+2021-02-02 22:20:11.934.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2170cf3f: (connection evicted)
+2021-02-02 22:20:11.938.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@76d55054: (connection evicted)
+2021-02-02 22:20:11.946.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@8a188f: (connection evicted)
+2021-02-02 22:20:11.948.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7da9ec65: (connection evicted)
+2021-02-02 22:20:11.953.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2b06cf15: (connection evicted)
+2021-02-02 22:20:11.958.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2a907d4b: (connection evicted)
+2021-02-02 22:20:11.963.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@b23399c: (connection evicted)
+2021-02-02 22:20:11.966.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7944ca2b: (connection evicted)
+2021-02-02 22:20:11.970.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7c7f3d22: (connection evicted)
+2021-02-02 22:20:11.974.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4f34ed7b: (connection evicted)
+2021-02-02 22:20:11.980.Test worker> DEBUG T[] U[] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-02-02 22:20:11.980.Test worker> INFO  T[] U[] - HikariPool-1 - Shutdown completed.
+2021-02-02 22:20:12.006.Test worker> ERROR T[] U[] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [verify] in table [play_game_user]; found [varchar2 (Types#VARCHAR)], but expecting [number(10,0) (Types#INTEGER)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getApplicationContext(SpringExtension.java:191)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.resolveParameter(SpringExtension.java:178)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameter(ExecutableInvoker.java:207)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:174)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:135)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:61)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestClassConstructor(ClassTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:281)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:82)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$0(NodeTestTask.java:83)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:83)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:69)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$4(NodeTestTask.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:98)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:74)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:102)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:82)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:78)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [verify] in table [play_game_user]; found [varchar2 (Types#VARCHAR)], but expecting [number(10,0) (Types#INTEGER)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 85 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [verify] in table [play_game_user]; found [varchar2 (Types#VARCHAR)], but expecting [number(10,0) (Types#INTEGER)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:159)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:143)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:89)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 89 common frames omitted
+2021-02-02 22:20:52.719.Test worker> INFO  T[] U[] - Starting PlayGameUserServiceTest on dyshin.local with PID 27960 (started by dongyoun_shin in /Users/dongyoun_shin/IdeaProjects/KotlinStudy)
+2021-02-02 22:20:52.722.Test worker> DEBUG T[] U[] - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2021-02-02 22:20:52.723.Test worker> INFO  T[] U[] - No active profile set, falling back to default profiles: default
+2021-02-02 22:20:55.658.Test worker> DEBUG T[] U[] - Driver class oracle.jdbc.OracleDriver found in Thread context class loader sun.misc.Launcher$AppClassLoader@73d16e93
+2021-02-02 22:20:55.743.Test worker> WARN  T[] U[] - HikariPool-1 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.
+2021-02-02 22:20:55.744.Test worker> DEBUG T[] U[] - HikariPool-1 - configuration:
+2021-02-02 22:20:55.747.Test worker> DEBUG T[] U[] - allowPoolSuspension.............false
+2021-02-02 22:20:55.747.Test worker> DEBUG T[] U[] - autoCommit......................true
+2021-02-02 22:20:55.747.Test worker> DEBUG T[] U[] - catalog.........................none
+2021-02-02 22:20:55.747.Test worker> DEBUG T[] U[] - connectionInitSql...............none
+2021-02-02 22:20:55.748.Test worker> DEBUG T[] U[] - connectionTestQuery.............none
+2021-02-02 22:20:55.748.Test worker> DEBUG T[] U[] - connectionTimeout...............30000
+2021-02-02 22:20:55.748.Test worker> DEBUG T[] U[] - dataSource......................none
+2021-02-02 22:20:55.748.Test worker> DEBUG T[] U[] - dataSourceClassName.............none
+2021-02-02 22:20:55.748.Test worker> DEBUG T[] U[] - dataSourceJNDI..................none
+2021-02-02 22:20:55.749.Test worker> DEBUG T[] U[] - dataSourceProperties............{password=<masked>}
+2021-02-02 22:20:55.749.Test worker> DEBUG T[] U[] - driverClassName................."oracle.jdbc.OracleDriver"
+2021-02-02 22:20:55.749.Test worker> DEBUG T[] U[] - healthCheckProperties...........{}
+2021-02-02 22:20:55.750.Test worker> DEBUG T[] U[] - healthCheckRegistry.............none
+2021-02-02 22:20:55.750.Test worker> DEBUG T[] U[] - idleTimeout.....................600000
+2021-02-02 22:20:55.750.Test worker> DEBUG T[] U[] - initializationFailTimeout.......1
+2021-02-02 22:20:55.750.Test worker> DEBUG T[] U[] - isolateInternalQueries..........false
+2021-02-02 22:20:55.750.Test worker> DEBUG T[] U[] - jdbcUrl.........................jdbc:oracle:thin:@localhost:1521:XE
+2021-02-02 22:20:55.751.Test worker> DEBUG T[] U[] - leakDetectionThreshold..........0
+2021-02-02 22:20:55.751.Test worker> DEBUG T[] U[] - maxLifetime.....................1800000
+2021-02-02 22:20:55.751.Test worker> DEBUG T[] U[] - maximumPoolSize.................50
+2021-02-02 22:20:55.751.Test worker> DEBUG T[] U[] - metricRegistry..................none
+2021-02-02 22:20:55.751.Test worker> DEBUG T[] U[] - metricsTrackerFactory...........none
+2021-02-02 22:20:55.751.Test worker> DEBUG T[] U[] - minimumIdle.....................50
+2021-02-02 22:20:55.752.Test worker> DEBUG T[] U[] - password........................<masked>
+2021-02-02 22:20:55.752.Test worker> DEBUG T[] U[] - poolName........................"HikariPool-1"
+2021-02-02 22:20:55.752.Test worker> DEBUG T[] U[] - readOnly........................false
+2021-02-02 22:20:55.752.Test worker> DEBUG T[] U[] - registerMbeans..................false
+2021-02-02 22:20:55.752.Test worker> DEBUG T[] U[] - scheduledExecutor...............none
+2021-02-02 22:20:55.753.Test worker> DEBUG T[] U[] - schema..........................none
+2021-02-02 22:20:55.753.Test worker> DEBUG T[] U[] - threadFactory...................internal
+2021-02-02 22:20:55.753.Test worker> DEBUG T[] U[] - transactionIsolation............default
+2021-02-02 22:20:55.753.Test worker> DEBUG T[] U[] - username........................"springboot"
+2021-02-02 22:20:55.753.Test worker> DEBUG T[] U[] - validationTimeout...............10000
+2021-02-02 22:20:55.755.Test worker> INFO  T[] U[] - HikariPool-1 - Starting...
+2021-02-02 22:20:56.193.Test worker> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@62673013
+2021-02-02 22:20:56.196.Test worker> INFO  T[] U[] - HikariPool-1 - Start completed.
+2021-02-02 22:20:56.297.HikariPool-1 housekeeper> DEBUG T[] U[] - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2021-02-02 22:20:56.365.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@75229145
+2021-02-02 22:20:56.428.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@341f9b7e
+2021-02-02 22:20:56.494.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@561cfe5
+2021-02-02 22:20:56.546.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@54306431
+2021-02-02 22:20:56.604.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7dbb975e
+2021-02-02 22:20:56.657.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@507edca0
+2021-02-02 22:20:56.714.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7471380d
+2021-02-02 22:20:56.766.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@14bea2c4
+2021-02-02 22:20:56.820.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@36d80946
+2021-02-02 22:20:56.874.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7a2099ed
+2021-02-02 22:20:56.929.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@603799cc
+2021-02-02 22:20:56.990.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@481f6251
+2021-02-02 22:20:57.043.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1be55b0e
+2021-02-02 22:20:57.094.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1953ff8e
+2021-02-02 22:20:57.159.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5d4a7f60
+2021-02-02 22:20:57.208.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@41e81f3e
+2021-02-02 22:20:57.256.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@23525620
+2021-02-02 22:20:57.306.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2fe3b6a5
+2021-02-02 22:20:57.522.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2c17a568
+2021-02-02 22:20:57.580.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@2ad97871
+2021-02-02 22:20:57.658.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@e19dcd4
+2021-02-02 22:20:57.710.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1a305469
+2021-02-02 22:20:57.764.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6531bfe7
+2021-02-02 22:20:57.811.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5b5bca66
+2021-02-02 22:20:57.858.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@67e08823
+2021-02-02 22:20:57.913.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@23975cec
+2021-02-02 22:20:57.970.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@792fb1c3
+2021-02-02 22:20:58.057.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@137a1e75
+2021-02-02 22:20:58.114.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@61dd8799
+2021-02-02 22:20:58.173.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@328b4dd5
+2021-02-02 22:20:58.232.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1ea47614
+2021-02-02 22:20:58.294.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@cf3554d
+2021-02-02 22:20:58.358.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6492020f
+2021-02-02 22:20:58.415.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@64fa8c10
+2021-02-02 22:20:58.481.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@176f1bf8
+2021-02-02 22:20:58.539.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7a1c44af
+2021-02-02 22:20:58.619.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@39094374
+2021-02-02 22:20:58.680.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@5dbd4373
+2021-02-02 22:20:58.822.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4979a6d7
+2021-02-02 22:20:58.915.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@59a17703
+2021-02-02 22:20:59.049.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@258a691d
+2021-02-02 22:20:59.132.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@192466af
+2021-02-02 22:20:59.215.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@479e5a02
+2021-02-02 22:20:59.352.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@4e249806
+2021-02-02 22:20:59.464.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@1a698084
+2021-02-02 22:20:59.525.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@78a9a23c
+2021-02-02 22:20:59.618.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@15b212a3
+2021-02-02 22:20:59.675.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@d53f07a
+2021-02-02 22:20:59.737.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@54a0d75
+2021-02-02 22:20:59.737.HikariPool-1 connection adder> DEBUG T[] U[] - HikariPool-1 - After adding stats (total=50, active=0, idle=50, waiting=0)
+2021-02-02 22:21:01.509.Test worker> WARN  T[] U[] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-02 22:21:02.879.Test worker> DEBUG T[] U[] - initialising the handler methods
+2021-02-02 22:21:02.882.Test worker> INFO  T[] U[] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-02-02 22:21:04.683.Test worker> DEBUG T[] U[] - Using Slf4j logging framework
+2021-02-02 22:21:04.748.Test worker> DEBUG T[] U[] - [http] resources will use the default LoopResources: DefaultLoopResources {prefix=reactor-http, daemon=true, selectCount=8, workerCount=8}
+2021-02-02 22:21:04.748.Test worker> DEBUG T[] U[] - [http] resources will use the default ConnectionProvider: PooledConnectionProvider {name=http, poolFactory=reactor.netty.resources.ConnectionProvider$$Lambda$1080/1831654964@486b7a70}
+2021-02-02 22:21:05.029.Test worker> INFO  T[] U[] - Context refreshed
+2021-02-02 22:21:05.072.Test worker> INFO  T[] U[] - Found 1 custom documentation plugin(s)
+2021-02-02 22:21:05.108.Test worker> DEBUG T[] U[] - Total number of request handlers 14
+2021-02-02 22:21:05.109.Test worker> DEBUG T[] U[] - Adding key: [/actuator/health/{component}/{instance}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/health/{component}/{instance}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2021-02-02 22:21:05.111.Test worker> DEBUG T[] U[] - Adding key: [/actuator/health/{component}], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/health/{component}], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2021-02-02 22:21:05.111.Test worker> DEBUG T[] U[] - Adding key: [/actuator/health], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/health], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2021-02-02 22:21:05.111.Test worker> DEBUG T[] U[] - Adding key: [/actuator/info], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator/info], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2021-02-02 22:21:05.111.Test worker> DEBUG T[] U[] - Adding key: [/actuator], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/actuator], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[application/vnd.spring-boot.actuator.v2+json, application/json]}}
+2021-02-02 22:21:05.111.Test worker> DEBUG T[] U[] - Adding key: [/db/get], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/db/get], supportedMethods=[GET], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.111.Test worker> DEBUG T[] U[] - Adding key: [/db/post], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/db/post], supportedMethods=[POST], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.112.Test worker> DEBUG T[] U[] - Adding key: [/error], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/error], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.112.Test worker> DEBUG T[] U[] - Adding key: [/error], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/error], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[text/html]}}
+2021-02-02 22:21:05.112.Test worker> DEBUG T[] U[] - Adding key: [/game/join], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/game/join], supportedMethods=[POST], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.112.Test worker> DEBUG T[] U[] - Adding key: [/game/play], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/game/play], supportedMethods=[POST], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.112.Test worker> DEBUG T[] U[] - Adding key: [/swagger-resources/configuration/security], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/security], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.112.Test worker> DEBUG T[] U[] - Adding key: [/swagger-resources/configuration/ui], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources/configuration/ui], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.113.Test worker> DEBUG T[] U[] - Adding key: [/swagger-resources], WebMvcRequestHandler{key=RequestHandlerKey{pathMappings=[/swagger-resources], supportedMethods=[], supportedMediaTypes=[], producibleMediaTypes=[]}}
+2021-02-02 22:21:05.128.Test worker> DEBUG T[] U[] - Combined number of request handlers 14
+2021-02-02 22:21:05.130.Test worker> INFO  T[] U[] - Scanning for api listing references
+2021-02-02 22:21:05.146.Test worker> DEBUG T[] U[] - Adding return parameter of type Lcom/kotlin/boot/global/dto/BaseResponse;
+2021-02-02 22:21:05.147.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |joinGame|
+2021-02-02 22:21:05.157.Test worker> DEBUG T[] U[] - Finished reading parameters models for handlerMethod |joinGame|
+2021-02-02 22:21:05.159.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |joinGame|
+2021-02-02 22:21:05.266.Test worker> DEBUG T[] U[] - Reading property reason
+2021-02-02 22:21:05.271.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2021-02-02 22:21:05.272.Test worker> DEBUG T[] U[] - Name 'reason' renamed to 'reason'
+2021-02-02 22:21:05.272.Test worker> DEBUG T[] U[] - Adding property reason to model
+2021-02-02 22:21:05.274.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2021-02-02 22:21:05.274.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2021-02-02 22:21:05.274.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2021-02-02 22:21:05.291.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getReason
+2021-02-02 22:21:05.296.Test worker> DEBUG T[] U[] - Reading property message
+2021-02-02 22:21:05.297.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2021-02-02 22:21:05.297.Test worker> DEBUG T[] U[] - Name 'message' renamed to 'message'
+2021-02-02 22:21:05.297.Test worker> DEBUG T[] U[] - Adding property message to model
+2021-02-02 22:21:05.297.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2021-02-02 22:21:05.297.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2021-02-02 22:21:05.297.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2021-02-02 22:21:05.298.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getMessage
+2021-02-02 22:21:05.309.Test worker> DEBUG T[] U[] - Inferred 2 properties. Properties found message, reason
+2021-02-02 22:21:05.314.Test worker> DEBUG T[] U[] - Generated parameter model id: BaseResponse, name: BaseResponse, schema: {} models
+2021-02-02 22:21:05.314.Test worker> DEBUG T[] U[] - Adding a new model with key BaseResponse
+2021-02-02 22:21:05.333.Test worker> DEBUG T[] U[] - Expanding parameter type: com.kotlin.boot.game.controller.dto.JoinGameDto
+2021-02-02 22:21:05.341.Test worker> DEBUG T[] U[] - Attempting to expand expandable property: numbers
+2021-02-02 22:21:05.344.Test worker> DEBUG T[] U[] - Expanding parameter type: java.util.List<java.lang.Long>
+2021-02-02 22:21:05.346.Test worker> DEBUG T[] U[] - Attempting to expand collection/array field: numbers
+2021-02-02 22:21:05.347.Test worker> DEBUG T[] U[] - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@39a71ed3
+2021-02-02 22:21:05.347.Test worker> DEBUG T[] U[] - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@39a71ed3, with type: 
+2021-02-02 22:21:05.351.Test worker> DEBUG T[] U[] - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@2f5684fb
+2021-02-02 22:21:05.351.Test worker> DEBUG T[] U[] - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@2f5684fb, with type: 
+2021-02-02 22:21:05.351.Test worker> DEBUG T[] U[] - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@6274131d
+2021-02-02 22:21:05.352.Test worker> DEBUG T[] U[] - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@6274131d, with type: 
+2021-02-02 22:21:05.354.Test worker> DEBUG T[] U[] - Setting spring response class to: BaseResponse
+2021-02-02 22:21:05.355.Test worker> DEBUG T[] U[] - Setting response class to:BaseResponse
+2021-02-02 22:21:05.356.Test worker> DEBUG T[] U[] - Authorization count 0 for method joinGame
+2021-02-02 22:21:05.368.Test worker> DEBUG T[] U[] - Adding return parameter of type V
+2021-02-02 22:21:05.368.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |playGame|
+2021-02-02 22:21:05.368.Test worker> DEBUG T[] U[] - Finished reading parameters models for handlerMethod |playGame|
+2021-02-02 22:21:05.368.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |playGame|
+2021-02-02 22:21:05.369.Test worker> DEBUG T[] U[] - Skipping model of type V as its either a container type, map, enum or base type, or its already been handled
+2021-02-02 22:21:05.369.Test worker> DEBUG T[] U[] - Did not find any parameter models for void
+2021-02-02 22:21:05.370.Test worker> DEBUG T[] U[] - Setting spring response class to: null
+2021-02-02 22:21:05.370.Test worker> DEBUG T[] U[] - Authorization count 0 for method playGame
+2021-02-02 22:21:05.405.Test worker> DEBUG T[] U[] - Adding return parameter of type Lcom/kotlin/boot/sample/domain/SampleDomain;
+2021-02-02 22:21:05.405.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |getTest|
+2021-02-02 22:21:05.410.Test worker> DEBUG T[] U[] - Finished reading parameters models for handlerMethod |getTest|
+2021-02-02 22:21:05.411.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |getTest|
+2021-02-02 22:21:05.413.Test worker> DEBUG T[] U[] - Reading property userId
+2021-02-02 22:21:05.414.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2021-02-02 22:21:05.414.Test worker> DEBUG T[] U[] - Name 'userId' renamed to 'userId'
+2021-02-02 22:21:05.414.Test worker> DEBUG T[] U[] - Adding property userId to model
+2021-02-02 22:21:05.414.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2021-02-02 22:21:05.414.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2021-02-02 22:21:05.415.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2021-02-02 22:21:05.417.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getUserId
+2021-02-02 22:21:05.417.Test worker> DEBUG T[] U[] - Reading property name
+2021-02-02 22:21:05.417.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2021-02-02 22:21:05.417.Test worker> DEBUG T[] U[] - Name 'name' renamed to 'name'
+2021-02-02 22:21:05.418.Test worker> DEBUG T[] U[] - Adding property name to model
+2021-02-02 22:21:05.418.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2021-02-02 22:21:05.418.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2021-02-02 22:21:05.418.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2021-02-02 22:21:05.418.Test worker> DEBUG T[] U[] - Evaluating unwrapped getter for member getName
+2021-02-02 22:21:05.419.Test worker> DEBUG T[] U[] - Inferred 2 properties. Properties found name, userId
+2021-02-02 22:21:05.419.Test worker> DEBUG T[] U[] - Generated parameter model id: SampleDomain, name: SampleDomain, schema: {} models
+2021-02-02 22:21:05.419.Test worker> DEBUG T[] U[] - Adding a new model with key SampleDomain
+2021-02-02 22:21:05.426.Test worker> DEBUG T[] U[] - Setting spring response class to: SampleDomain
+2021-02-02 22:21:05.426.Test worker> DEBUG T[] U[] - Setting response class to:SampleDomain
+2021-02-02 22:21:05.427.Test worker> DEBUG T[] U[] - Authorization count 0 for method getTest
+2021-02-02 22:21:05.428.Test worker> DEBUG T[] U[] - Adding return parameter of type V
+2021-02-02 22:21:05.428.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |postTest|
+2021-02-02 22:21:05.428.Test worker> DEBUG T[] U[] - Finished reading parameters models for handlerMethod |postTest|
+2021-02-02 22:21:05.429.Test worker> DEBUG T[] U[] - Reading parameters models for handlerMethod |postTest|
+2021-02-02 22:21:05.429.Test worker> DEBUG T[] U[] - Did not find any parameter models for void
+2021-02-02 22:21:05.430.Test worker> DEBUG T[] U[] - Setting spring response class to: null
+2021-02-02 22:21:05.430.Test worker> DEBUG T[] U[] - Authorization count 0 for method postTest
+2021-02-02 22:21:05.463.Test worker> INFO  T[] U[] - Started PlayGameUserServiceTest in 13.085 seconds (JVM running for 14.902)
+2021-02-02 22:21:05.882.Thread-8> INFO  T[] U[] - HikariPool-1 - Shutdown initiated...
+2021-02-02 22:21:05.882.Thread-8> DEBUG T[] U[] - HikariPool-1 - Before shutdown stats (total=50, active=0, idle=50, waiting=0)
+2021-02-02 22:21:05.884.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@62673013: (connection evicted)
+2021-02-02 22:21:05.892.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@75229145: (connection evicted)
+2021-02-02 22:21:05.900.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@341f9b7e: (connection evicted)
+2021-02-02 22:21:05.910.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@561cfe5: (connection evicted)
+2021-02-02 22:21:05.915.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@54306431: (connection evicted)
+2021-02-02 22:21:05.928.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7dbb975e: (connection evicted)
+2021-02-02 22:21:05.937.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@507edca0: (connection evicted)
+2021-02-02 22:21:05.946.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7471380d: (connection evicted)
+2021-02-02 22:21:05.951.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@14bea2c4: (connection evicted)
+2021-02-02 22:21:05.957.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@36d80946: (connection evicted)
+2021-02-02 22:21:05.965.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7a2099ed: (connection evicted)
+2021-02-02 22:21:05.973.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@603799cc: (connection evicted)
+2021-02-02 22:21:05.979.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@481f6251: (connection evicted)
+2021-02-02 22:21:05.983.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1be55b0e: (connection evicted)
+2021-02-02 22:21:05.988.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1953ff8e: (connection evicted)
+2021-02-02 22:21:05.992.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5d4a7f60: (connection evicted)
+2021-02-02 22:21:05.998.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@41e81f3e: (connection evicted)
+2021-02-02 22:21:06.004.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@23525620: (connection evicted)
+2021-02-02 22:21:06.015.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2fe3b6a5: (connection evicted)
+2021-02-02 22:21:06.021.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2c17a568: (connection evicted)
+2021-02-02 22:21:06.026.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@2ad97871: (connection evicted)
+2021-02-02 22:21:06.032.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@e19dcd4: (connection evicted)
+2021-02-02 22:21:06.035.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1a305469: (connection evicted)
+2021-02-02 22:21:06.042.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6531bfe7: (connection evicted)
+2021-02-02 22:21:06.048.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5b5bca66: (connection evicted)
+2021-02-02 22:21:06.055.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@67e08823: (connection evicted)
+2021-02-02 22:21:06.059.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@23975cec: (connection evicted)
+2021-02-02 22:21:06.066.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@792fb1c3: (connection evicted)
+2021-02-02 22:21:06.070.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@137a1e75: (connection evicted)
+2021-02-02 22:21:06.077.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@61dd8799: (connection evicted)
+2021-02-02 22:21:06.086.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@328b4dd5: (connection evicted)
+2021-02-02 22:21:06.093.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1ea47614: (connection evicted)
+2021-02-02 22:21:06.098.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@cf3554d: (connection evicted)
+2021-02-02 22:21:06.104.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@6492020f: (connection evicted)
+2021-02-02 22:21:06.109.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@64fa8c10: (connection evicted)
+2021-02-02 22:21:06.117.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@176f1bf8: (connection evicted)
+2021-02-02 22:21:06.124.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@7a1c44af: (connection evicted)
+2021-02-02 22:21:06.134.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@39094374: (connection evicted)
+2021-02-02 22:21:06.147.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@5dbd4373: (connection evicted)
+2021-02-02 22:21:06.162.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4979a6d7: (connection evicted)
+2021-02-02 22:21:06.167.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@59a17703: (connection evicted)
+2021-02-02 22:21:06.173.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@258a691d: (connection evicted)
+2021-02-02 22:21:06.177.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@192466af: (connection evicted)
+2021-02-02 22:21:06.184.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@479e5a02: (connection evicted)
+2021-02-02 22:21:06.189.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4e249806: (connection evicted)
+2021-02-02 22:21:06.196.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1a698084: (connection evicted)
+2021-02-02 22:21:06.200.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@78a9a23c: (connection evicted)
+2021-02-02 22:21:06.205.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@15b212a3: (connection evicted)
+2021-02-02 22:21:06.211.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@d53f07a: (connection evicted)
+2021-02-02 22:21:06.215.HikariPool-1 connection closer> DEBUG T[] U[] - HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@54a0d75: (connection evicted)
+2021-02-02 22:21:06.218.Thread-8> DEBUG T[] U[] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-02-02 22:21:06.218.Thread-8> INFO  T[] U[] - HikariPool-1 - Shutdown completed.
