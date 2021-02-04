@@ -1,6 +1,6 @@
 package com.kotlin.boot.user.controller
 
-import com.kotlin.boot.user.controller.dto.JoinUserInfo
+import com.kotlin.boot.user.controller.dto.RegeditUserInfo
 import com.kotlin.boot.user.service.PlayGameUserService
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.PostMapping
@@ -14,6 +14,6 @@ class UserInfoController(
 ) {
     @PostMapping("join")
     fun joinNewUser(
-        @Validated joinUserInfo: JoinUserInfo
-    ) = playGameUserService.createNewUser(joinUserInfo)
+        @Validated regeditUserInfo: RegeditUserInfo
+    ) = playGameUserService.createNewUser(regeditUserInfo)
 }

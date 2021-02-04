@@ -2,7 +2,8 @@ package com.kotlin.boot.user.domain
 
 import com.kotlin.boot.global.dto.BaseDomain
 import com.kotlin.boot.global.dto.YesOrNoEnum
-import com.kotlin.boot.user.controller.dto.JoinUserInfo
+import com.kotlin.boot.user.controller.dto.ChangeUserInfo
+import com.kotlin.boot.user.controller.dto.RegeditUserInfo
 import javax.persistence.Entity
 import javax.persistence.EnumType
 import javax.persistence.Enumerated
@@ -12,8 +13,9 @@ import javax.persistence.Id
 data class PlayGameUser(
     @Id
     val userId: String,
-    val dob: String,
-    val userName: String,
+    var dob: String,
+    var userName: String,
+    var nickName: String,
     val phoneNumber: String,
     @Enumerated(EnumType.STRING)
     var verify: YesOrNoEnum = YesOrNoEnum.N
@@ -21,9 +23,17 @@ data class PlayGameUser(
     companion object {
         fun of(
             userId: String,
-            joinUserInfo: JoinUserInfo
+            regeditUserInfo: RegeditUserInfo
         ) = PlayGameUser(
-            userId, joinUserInfo.dob, joinUserInfo.name, joinUserInfo.phoneNumber
+            userId, regeditUserInfo.dob, regeditUserInfo.name, regeditUserInfo.phoneNumber, regeditUserInfo.nickName
         )
+    }
+
+    fun changeUserInfo(
+        request: ChangeUserInfo
+    ) {
+        this.dob = request.dob ?: this.dob
+        this.userName = request.name ?: this.userName
+        this.nickName = request.nickName ?: this.nickName
     }
 }
