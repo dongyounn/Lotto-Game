@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/game/")
+@RequestMapping("/lotto/")
 class GameController(
     private val gameService: GameService
 ) {
-    @PostMapping("/join")
+    @PostMapping("/join/game")
     fun joinGame(
         @ModelAttribute gameDto: JoinGameDto
     ): BaseResponse {

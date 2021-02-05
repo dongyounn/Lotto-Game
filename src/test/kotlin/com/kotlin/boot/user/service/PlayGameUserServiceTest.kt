@@ -1,6 +1,7 @@
 package com.kotlin.boot.user.service
 
 import com.kotlin.boot.global.sequence.CustomSequenceRepository
+import com.kotlin.boot.user.controller.dto.RegeditUserInfo
 import com.kotlin.boot.user.domain.PlayGameUser
 import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import org.junit.jupiter.api.Assertions
@@ -23,9 +24,12 @@ internal class PlayGameUserServiceTest(
         playGameUserRepository.save(
             PlayGameUser.of(
                 "1234",
-                "990101",
-                "테스트",
-                "01011111111"
+                RegeditUserInfo(
+                    "990101",
+                    "테스트",
+                    "01011111111",
+                    "똥개"
+                )
             )
         )
     }
@@ -46,9 +50,12 @@ internal class PlayGameUserServiceTest(
         playGameUserRepository.save(
             PlayGameUser.of(
                 customSequenceRepository.nextUserId(),
-                "940110",
-                "테스투",
-                "01011111111"
+                RegeditUserInfo(
+                    "990101",
+                    "테스트",
+                    "01011111111",
+                    "똥개"
+                )
             )
         )
     }

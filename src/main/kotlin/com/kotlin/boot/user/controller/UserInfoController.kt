@@ -1,19 +1,32 @@
 package com.kotlin.boot.user.controller
 
+import com.kotlin.boot.global.utils.CustomPageRequest
+import com.kotlin.boot.user.controller.dto.ChangeUserInfo
+import com.kotlin.boot.user.controller.dto.GetUserInfo
 import com.kotlin.boot.user.controller.dto.RegeditUserInfo
 import com.kotlin.boot.user.service.PlayGameUserService
 import org.springframework.validation.annotation.Validated
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/user")
 class UserInfoController(
     private val playGameUserService: PlayGameUserService
 ) {
-    @PostMapping("join")
+    @PostMapping("/join")
     fun joinNewUser(
-        @Validated regeditUserInfo: RegeditUserInfo
+        @Validated @RequestBody regeditUserInfo: RegeditUserInfo
     ) = playGameUserService.createNewUser(regeditUserInfo)
+
+    @PostMapping("/change/info")
+    fun updateUserInfo(
+        @Validated @RequestBody updateUserInfo: ChangeUserInfo
+    ) = playGameUserService.updateUserInfo(updateUserInfo)
+
+    @GetMapping("/user/infos")
+    fun getUserInfos(
+        @Validated @ModelAttribute getUserInfo: GetUserInfo,
+        @ModelAttribute customPageRequest: CustomPageRequest
+    ) = playGameUserService.getUserInfo(getUserInfo, customPageRequest)
+
 }

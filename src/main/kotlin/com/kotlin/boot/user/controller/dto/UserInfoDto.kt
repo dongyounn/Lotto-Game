@@ -28,3 +28,15 @@ data class ChangeUserInfo(
     @ApiModelProperty(value = "닉네임", required = true)
     val nickName: String?
 )
+
+data class GetUserInfo(
+    @ApiModelProperty(value = "생년월일 YYYYMMDD", required = false)
+    @Length(min = 6, max = 6)
+    val dob: String?,
+    @ApiModelProperty(value = "이름", required = false)
+    val name: String?,
+    @ApiModelProperty(value = "휴대전화번호", required = false)
+    val phoneNumber: String?,
+    @ApiModelProperty(value = "닉네임", required = false)
+    val nickName: String?
+)
