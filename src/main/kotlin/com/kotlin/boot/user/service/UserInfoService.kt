@@ -43,7 +43,7 @@ class PlayGameUserService(
         } ?: throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "USER INFO NOT FOUND")
     }
 
-    fun getUserInfo(
+    fun getUserInfos(
         request: GetUserInfo,
         pageRequest: CustomPageRequest
     ) = userInfoQueryFactory.getUserInfos(request, pageRequest.of())

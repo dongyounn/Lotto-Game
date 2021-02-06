@@ -27,6 +27,6 @@ class UserInfoController(
     fun getUserInfos(
         @Validated @ModelAttribute getUserInfo: GetUserInfo,
         @ModelAttribute customPageRequest: CustomPageRequest
-    ) = playGameUserService.getUserInfo(getUserInfo, customPageRequest)
+    ) = playGameUserService.getUserInfos(getUserInfo, customPageRequest)
 
 }

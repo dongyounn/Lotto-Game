@@ -25,7 +25,7 @@ data class PlayGameUser(
             userId: String,
             regeditUserInfo: RegeditUserInfo
         ) = PlayGameUser(
-            userId, regeditUserInfo.dob, regeditUserInfo.name, regeditUserInfo.phoneNumber, regeditUserInfo.nickName
+            userId, regeditUserInfo.dob, regeditUserInfo.name, regeditUserInfo.nickName, regeditUserInfo.phoneNumber
         )
     }
 
