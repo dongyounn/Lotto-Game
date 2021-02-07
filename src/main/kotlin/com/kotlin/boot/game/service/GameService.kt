@@ -7,6 +7,7 @@ import com.kotlin.boot.global.dto.BaseResponse
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.global.utils.convertYYYYmmDD
+import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 import java.util.*
@@ -14,7 +15,8 @@ import javax.transaction.Transactional
 
 @Service
 class GameService(
-    private val gameRepository: GameRepository
+    private val gameRepository: GameRepository,
+    private val gameUserRepository: PlayGameUserRepository
 ) {
 
 /*    fun playLotto() {
@@ -51,15 +53,22 @@ class GameService(
         }
 
         val submitNumbers = sb.substring(0, sb.length - 1).toString()
-        gameRepository.save(
-            GameEntity.of(
-                joinGameDto.phoneNumber.replace("-", ""),
-                joinGameDto.playerName,
-                submitNumbers
+        //회원 정보 조회
+        gameUserRepository.findByPhoneNumber(joinGameDto.phoneNumber)?.let {
+            gameRepository.save(
+                GameEntity.of(
+                    it,
+                    submitNumbers,
+                    //TODO Round 관리하는 정책 필요하다.
+                    1
+                )
             )
+        } ?: throw BadRequestException(
+            ErrorReason.USER_INFO_NOT_FOUND,
+            "### 유저 정보를 찾을 수 없습니다. 해당 번호로 가입 먼저 진행하세요."
         )
-        return BaseResponse.of(submitNumbers)
 
+        return BaseResponse.of(submitNumbers)
     }
 
     fun checkInputNumbers(numberList: ArrayList<Long>) {

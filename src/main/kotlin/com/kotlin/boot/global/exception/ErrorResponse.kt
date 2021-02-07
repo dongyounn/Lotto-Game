@@ -18,7 +18,7 @@ enum class ErrorReason(
         private val reason: String
 ) {
     INVALID_INPUT_DATA("0001", "001"),
-    INVALID_CARD_APPLY_NO("0001", "002"),
+    USER_INFO_NOT_FOUND("0001", "002"),
     ;
 
     fun toReason() = "${COMPONENT_DYK}_${feature}_${reason}"
