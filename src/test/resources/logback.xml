@@ -6,7 +6,7 @@
         </filter>
         <encoder>
             <pattern>
-                %d{yyyy-MM-dd HH:mm:ss.SSS}.%thread> %-5level T[%X{correlationId}] U[%X{userId}] - %msg%n
+                %d{yyyy-MM-dd HH:mm:ss.SSS}.%thread> %-5level - %msg%n
             </pattern>
         </encoder>
     </appender>
@@ -21,14 +21,16 @@
         </rollingPolicy>
         <encoder>
             <pattern>
-                %d{yyyy-MM-dd HH:mm:ss.SSS}.%thread> %-5level T[%X{correlationId}] U[%X{userId}] - %msg%n
+                %d{yyyy-MM-dd HH:mm:ss.SSS}.%thread> %-5level - %msg%n
             </pattern>
         </encoder>
     </appender>
+
     <logger name="org.springframework" level="WARN"/>
-    <logger name="org.hibernate" level="DEBUG"/>
+    <logger name="org.hibernate" level="WARN"/>
     <logger name="io.netty" level="WARN"/>
     <logger name="org.aspectj.weaver" level="WARN"/>
+    <logger name="com.konasl.commonlib.springweb.resttemplate.monitor.PoolLogScheduled" level="DEBUG"/>
 
     <root level="DEBUG">
         <appender-ref ref="FILE"/>
