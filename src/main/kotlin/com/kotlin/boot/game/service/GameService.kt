@@ -19,12 +19,12 @@ class GameService(
     private val gameUserRepository: PlayGameUserRepository
 ) {
 
-/*    fun playLotto() {
+    fun playLotto() {
         val today = LocalDateTime.now().convertYYYYmmDD()
 
         val randomNumbers = getAutoRandom(5)
         val bonusNumber = getAutoRandom(1)
-    }*/
+    }
 
     @Transactional
     fun playGame(joinGameDto: JoinGameDto): BaseResponse {
