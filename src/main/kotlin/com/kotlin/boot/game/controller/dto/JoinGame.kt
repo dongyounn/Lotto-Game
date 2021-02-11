@@ -10,3 +10,7 @@ data class JoinGameDto(
 enum class AutoYnEnum{
         Y,N
 }
+
+enum class GameStatusEnum{
+        ACTIVE, TERMINATED
+}

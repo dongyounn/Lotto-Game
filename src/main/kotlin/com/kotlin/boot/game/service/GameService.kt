@@ -2,7 +2,9 @@ package com.kotlin.boot.game.service
 
 import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.domain.GameEntity
+import com.kotlin.boot.game.domain.GameResultEntity
 import com.kotlin.boot.game.repository.infra.GameRepository
+import com.kotlin.boot.game.repository.infra.GameResultRepository
 import com.kotlin.boot.global.dto.BaseResponse
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
@@ -16,7 +18,8 @@ import javax.transaction.Transactional
 @Service
 class GameService(
     private val gameRepository: GameRepository,
-    private val gameUserRepository: PlayGameUserRepository
+    private val gameUserRepository: PlayGameUserRepository,
+    private val gameResultRepository: GameResultRepository
 ) {
 
     fun playLotto() {
@@ -24,6 +27,16 @@ class GameService(
 
         val randomNumbers = getAutoRandom(5)
         val bonusNumber = getAutoRandom(1)
+        //todo policy 관리하지 말고 이거 게임 수행 하고 나면 자동으로 터미네이트 하고 다음 게임 생성하도록
+
+        gameResultRepository.save(GameResultEntity.ofAutoStart())
+    }
+
+    @Transactional
+    fun createGameRound() {
+        gameResultRepository.findByStatus()?.let {
+            throw BadRequestException(ErrorReason.ACTIVE_GAME_IS_EXIST, "ACTIVE GAME IS EXIST")
+        } ?: gameResultRepository.save(GameResultEntity.ofAutoStart())
     }
 
     @Transactional
@@ -55,19 +68,22 @@ class GameService(
         val submitNumbers = sb.substring(0, sb.length - 1).toString()
         //회원 정보 조회
         gameUserRepository.findByPhoneNumber(joinGameDto.phoneNumber)?.let {
+            val currentRoundInfo = gameResultRepository.findByStatus() ?: throw BadRequestException(
+                ErrorReason.CURRENT_ROUND_GAME_NOT_FOUND,
+                "CURRENT_ROUND_GAME_NOT_FOUND"
+            )
             gameRepository.save(
                 GameEntity.of(
                     it,
                     submitNumbers,
-                    //TODO Round 관리하는 정책 필요하다.
-                    1
+                    currentRoundInfo.id!!
                 )
             )
+            currentRoundInfo.plusPlayerNo()
         } ?: throw BadRequestException(
             ErrorReason.USER_INFO_NOT_FOUND,
             "### 유저 정보를 찾을 수 없습니다. 해당 번호로 가입 먼저 진행하세요."
         )
-
         return BaseResponse.of(submitNumbers)
     }
 

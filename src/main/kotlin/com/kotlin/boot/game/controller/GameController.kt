@@ -25,4 +25,6 @@ class GameController(
 
     }
 
+    @PostMapping("/create/game/round")
+    fun createGameRound() = gameService.createGameRound()
 }
