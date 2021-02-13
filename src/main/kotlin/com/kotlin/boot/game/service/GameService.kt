@@ -36,8 +36,11 @@ class GameService(
     @Transactional(readOnly = true)
     fun getPlayerParticipantInfo(round: Long?, phoneNumber: String): List<GameEntity> {
         gameUserRepository.findByPhoneNumber(phoneNumber)?.let {
-            return gameRepository.findByUserIdAndPlayRound(it.userId, round ?: (gameResultRepository.findByStatus()?.id!!))
-        }?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND,"휴대전화번호를 확인 하세요.")
+            return gameRepository.findByUserIdAndPlayRound(
+                it.userId,
+                round ?: (gameResultRepository.findByStatus()?.id!!)
+            )
+        } ?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND, "휴대전화번호를 확인 하세요.")
     }
 
     @Transactional
@@ -65,15 +68,15 @@ class GameService(
             )
         }
         val sb = StringBuilder()
-        for (number in numberList) {
-            if (number > 45 || number < 1) throw BadRequestException(
+        numberList.sorted().forEach {
+            if (it > 45 || it < 1) throw BadRequestException(
                 ErrorReason.INVALID_INPUT_DATA,
                 "### 번호 -> 최소값 : 1 , 최대값 : 45"
             )
-            sb.append("$number,")
+            sb.append("$it,")
         }
 
-        val submitNumbers = sb.substring(0, sb.length - 1).toString()
+        val submitNumbers = sb.toString().removeSuffix(".")
         //회원 정보 조회
         gameUserRepository.findByPhoneNumber(joinGameDto.phoneNumber)?.let {
             val currentRoundInfo = gameResultRepository.findByStatus() ?: throw BadRequestException(

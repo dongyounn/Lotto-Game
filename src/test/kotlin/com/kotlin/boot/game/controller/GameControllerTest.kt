@@ -22,7 +22,7 @@ class GameControllerTest(
 ) {
 
     @Test
-//    @Transactional
+    @Transactional
     fun createRound() {
         mvc.perform(
             MockMvcRequestBuilders.post("/lotto/create/game/round")
