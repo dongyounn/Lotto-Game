@@ -11,9 +11,9 @@ import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.global.utils.convertYYYYmmDD
 import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDateTime
 import java.util.*
-import javax.transaction.Transactional
 
 @Service
 class GameService(
@@ -22,6 +22,7 @@ class GameService(
     private val gameResultRepository: GameResultRepository
 ) {
 
+    @Transactional
     fun playLotto() {
         val today = LocalDateTime.now().convertYYYYmmDD()
 
@@ -30,6 +31,13 @@ class GameService(
         //todo policy 관리하지 말고 이거 게임 수행 하고 나면 자동으로 터미네이트 하고 다음 게임 생성하도록
 
         gameResultRepository.save(GameResultEntity.ofAutoStart())
+    }
+
+    @Transactional(readOnly = true)
+    fun getPlayerParticipantInfo(round: Long?, phoneNumber: String): List<GameEntity> {
+        gameUserRepository.findByPhoneNumber(phoneNumber)?.let {
+            return gameRepository.findByUserIdAndPlayRound(it.userId, round ?: (gameResultRepository.findByStatus()?.id!!))
+        }?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND,"휴대전화번호를 확인 하세요.")
     }
 
     @Transactional
