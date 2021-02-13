@@ -11,7 +11,8 @@ import com.kotlin.boot.user.domain.PlayGameUser
 import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import com.kotlin.boot.user.infra.repository.UserInfoQueryFactory
 import org.springframework.stereotype.Service
-import javax.transaction.Transactional
+import org.springframework.transaction.annotation.Transactional
+
 
 @Service
 class PlayGameUserService(
@@ -38,9 +39,8 @@ class PlayGameUserService(
 
     @Transactional
     fun updateUserInfo(request: ChangeUserInfo) {
-        playGameUserRepository.findByPhoneNumber(request.phoneNumber)?.let {
-            it.changeUserInfo(request)
-        } ?: throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "USER INFO NOT FOUND")
+        playGameUserRepository.findByPhoneNumber(request.phoneNumber)?.changeUserInfo(request)
+            ?: throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "USER INFO NOT FOUND")
     }
 
     fun getUserInfos(

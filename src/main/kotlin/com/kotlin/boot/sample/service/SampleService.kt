@@ -5,11 +5,11 @@ import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.sample.domain.SampleDomain
 import com.kotlin.boot.sample.infra.repository.SampleRepository
 import org.springframework.stereotype.Service
-import javax.transaction.Transactional
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class SampleService(
-        private val sampleRepository: SampleRepository
+    private val sampleRepository: SampleRepository
 ) {
     @Transactional
     fun saveData(userId: String) {
