@@ -3,8 +3,8 @@ package com.kotlin.boot.game.controller
 import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.service.GameService
 import com.kotlin.boot.global.dto.BaseResponse
-import io.swagger.annotations.ApiModelProperty
 import io.swagger.annotations.ApiParam
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -14,15 +14,15 @@ class GameController(
 ) {
     @PostMapping("/participate")
     fun joinGame(
-        @ModelAttribute gameDto: JoinGameDto
+        @ModelAttribute @Validated gameDto: JoinGameDto
     ): BaseResponse {
-        return gameService.playGame(gameDto)
+        return gameService.participateInGame(gameDto)
     }
 
     @PostMapping("/pick/draw")
-    fun playGame() {
+    fun playGame() =
+        gameService.playLotto()
 
-    }
 
     @PostMapping("/create/game/round")
     fun createGameRound() = gameService.createGameRound()
@@ -35,5 +35,5 @@ class GameController(
         @RequestParam
         @ApiParam(value = "전화번호로 유저 조회 ")
         phoneNumber: String
-    ) = gameService.getPlayerParticipantInfo(round, phoneNumber)
+    ) = gameService.gerParticipateGameInfos(round, phoneNumber)
 }

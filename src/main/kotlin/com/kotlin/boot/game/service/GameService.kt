@@ -8,11 +8,9 @@ import com.kotlin.boot.game.repository.infra.GameResultRepository
 import com.kotlin.boot.global.dto.BaseResponse
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
-import com.kotlin.boot.global.utils.convertYYYYmmDD
 import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import java.time.LocalDateTime
 import java.util.*
 
 @Service
@@ -21,37 +19,43 @@ class GameService(
     private val gameUserRepository: PlayGameUserRepository,
     private val gameResultRepository: GameResultRepository
 ) {
-
-    @Transactional
+    @Transactional(noRollbackFor = [Exception::class])
     fun playLotto() {
-        val today = LocalDateTime.now().convertYYYYmmDD()
+        val normalNumber = StringBuilder()
+        getAutoRandom(5)
+            .sorted()
+            .forEach {
+                normalNumber.append("$it,")
+            }
 
-        val randomNumbers = getAutoRandom(5)
-        val bonusNumber = getAutoRandom(1)
-        //todo policy 관리하지 말고 이거 게임 수행 하고 나면 자동으로 터미네이트 하고 다음 게임 생성하도록
-
+        gameResultRepository.findByStatus().ofEnd(
+            normalNumber.toString().removeSuffix(","),
+            getAutoRandom(1)[0]
+        )
         gameResultRepository.save(GameResultEntity.ofAutoStart())
+
+//       추첨하는 로직 생성 해야한다.
     }
 
     @Transactional(readOnly = true)
-    fun getPlayerParticipantInfo(round: Long?, phoneNumber: String): List<GameEntity> {
+    fun gerParticipateGameInfos(round: Long?, phoneNumber: String): List<GameEntity> {
         gameUserRepository.findByPhoneNumber(phoneNumber)?.let {
             return gameRepository.findByUserIdAndPlayRound(
                 it.userId,
-                round ?: (gameResultRepository.findByStatus()?.id!!)
+                round ?: (gameResultRepository.findByStatus().id!!)
             )
         } ?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND, "휴대전화번호를 확인 하세요.")
     }
 
     @Transactional
     fun createGameRound() {
-        gameResultRepository.findByStatus()?.let {
+        gameResultRepository.findByStatus().let {
             throw BadRequestException(ErrorReason.ACTIVE_GAME_IS_EXIST, "ACTIVE GAME IS EXIST")
-        } ?: gameResultRepository.save(GameResultEntity.ofAutoStart())
+        }
     }
 
     @Transactional
-    fun playGame(joinGameDto: JoinGameDto): BaseResponse {
+    fun participateInGame(joinGameDto: JoinGameDto): BaseResponse {
         val entryNumberList = joinGameDto.numbers
         val numberList = when {
             entryNumberList.isNullOrEmpty() -> getAutoRandom(5)
@@ -79,10 +83,7 @@ class GameService(
         val submitNumbers = sb.toString().removeSuffix(".")
         //회원 정보 조회
         gameUserRepository.findByPhoneNumber(joinGameDto.phoneNumber)?.let {
-            val currentRoundInfo = gameResultRepository.findByStatus() ?: throw BadRequestException(
-                ErrorReason.CURRENT_ROUND_GAME_NOT_FOUND,
-                "CURRENT_ROUND_GAME_NOT_FOUND"
-            )
+            val currentRoundInfo = gameResultRepository.findByStatus()
             gameRepository.save(
                 GameEntity.of(
                     it,

@@ -43,14 +43,14 @@ class GameServiceTest(
     fun getPlayGameNumberException() {
         val req = JoinGameDto(listOf(7, 1, 2, 4), "0109991122")
         assertThrows(RuntimeException::class.java) {
-            gameService.playGame(req)
+            gameService.participateInGame(req)
         }
     }
 
     @Test
     fun getPlayGameNumber() {
         val req = JoinGameDto(listOf(7, 1, 2, 4, 12, 44), "01099992222")
-        gameService.playGame(req)
+        gameService.participateInGame(req)
         val result = playGameUserRepository.findByPhoneNumber("01099992222")
         assertEquals(result?.nickName, "똥개개똥개")
     }

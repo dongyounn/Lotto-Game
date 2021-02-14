@@ -3,14 +3,15 @@ package com.kotlin.boot.game.controller.dto
 import javax.validation.constraints.Size
 
 data class JoinGameDto(
-        val numbers: List<Long>?,
-        val phoneNumber: String
+    @Size(max = 5)
+    val numbers: List<Long>?,
+    val phoneNumber: String
 )
 
-enum class AutoYnEnum{
-        Y,N
+enum class AutoYnEnum {
+    Y, N
 }
 
-enum class GameStatusEnum{
-        ACTIVE, TERMINATED
+enum class GameStatusEnum {
+    ACTIVE, TERMINATED
 }
