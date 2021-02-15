@@ -19,11 +19,6 @@ class GameController(
         return gameService.participateInGame(gameDto)
     }
 
-    @PostMapping("/pick/draw")
-    fun playGame() =
-        gameService.playLotto()
-
-
     @PostMapping("/create/game/round")
     fun createGameRound() = gameService.createGameRound()
 

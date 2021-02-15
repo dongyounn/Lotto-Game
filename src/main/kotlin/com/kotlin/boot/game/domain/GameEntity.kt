@@ -20,7 +20,9 @@ data class GameEntity(
     @Column(name = "USER_ID")
     val userId: String,
     @Column(name = "GAME_ROUND")
-    val playRound: Long
+    val playRound: Long,
+    @Column(name = "DRAW_RESULT")
+    var drawResult: Long? = 0
 ) : BaseDomain() {
     companion object {
         fun of(
@@ -35,5 +37,11 @@ data class GameEntity(
             playGameUserInfo.userId,
             playRound
         )
+    }
+
+    fun setDrawResult(
+        drawResult: Long
+    ) {
+        this.drawResult = drawResult
     }
 }

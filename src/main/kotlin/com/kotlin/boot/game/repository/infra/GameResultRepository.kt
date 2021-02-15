@@ -6,4 +6,5 @@ import org.springframework.data.repository.CrudRepository
 
 interface GameResultRepository : CrudRepository<GameResultEntity, Long> {
     fun findByStatus(status: GameStatusEnum = GameStatusEnum.ACTIVE): GameResultEntity
+    fun findByStatusAndBonusNumberIsNotNull(status:GameStatusEnum = GameStatusEnum.ACTIVE):GameResultEntity?
 }
