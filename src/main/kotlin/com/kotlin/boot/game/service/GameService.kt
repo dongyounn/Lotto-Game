@@ -9,6 +9,7 @@ import com.kotlin.boot.global.dto.BaseResponse
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.util.*
@@ -19,23 +20,8 @@ class GameService(
     private val gameUserRepository: PlayGameUserRepository,
     private val gameResultRepository: GameResultRepository
 ) {
-    @Transactional(noRollbackFor = [Exception::class])
-    fun playLotto() {
-        val normalNumber = StringBuilder()
-        getAutoRandom(5)
-            .sorted()
-            .forEach {
-                normalNumber.append("$it,")
-            }
 
-        gameResultRepository.findByStatus().ofEnd(
-            normalNumber.toString().removeSuffix(","),
-            getAutoRandom(1)[0]
-        )
-        gameResultRepository.save(GameResultEntity.ofAutoStart())
-
-//       추첨하는 로직 생성 해야한다.
-    }
+    private val log = LoggerFactory.getLogger(this::class.java)
 
     @Transactional(readOnly = true)
     fun gerParticipateGameInfos(round: Long?, phoneNumber: String): List<GameEntity> {
@@ -49,9 +35,9 @@ class GameService(
 
     @Transactional
     fun createGameRound() {
-        gameResultRepository.findByStatus().let {
+        gameResultRepository.findByStatusAndBonusNumberIsNotNull()?.let {
             throw BadRequestException(ErrorReason.ACTIVE_GAME_IS_EXIST, "ACTIVE GAME IS EXIST")
-        }
+        } ?: gameResultRepository.save(GameResultEntity.ofAutoStart())
     }
 
     @Transactional
@@ -73,14 +59,17 @@ class GameService(
         }
         val sb = StringBuilder()
         numberList.sorted().forEach {
-            if (it > 45 || it < 1) throw BadRequestException(
-                ErrorReason.INVALID_INPUT_DATA,
-                "### 번호 -> 최소값 : 1 , 최대값 : 45"
-            )
+            if (it >= 46 || it < 1) {
+                log.info("번호 : >>> $numberList")
+                throw BadRequestException(
+                    ErrorReason.INVALID_INPUT_DATA,
+                    "### 번호 -> 최소값 : 1 , 최대값 : 45"
+                )
+            }
             sb.append("$it,")
         }
 
-        val submitNumbers = sb.toString().removeSuffix(".")
+        val submitNumbers = sb.toString().removeSuffix(",")
         //회원 정보 조회
         gameUserRepository.findByPhoneNumber(joinGameDto.phoneNumber)?.let {
             val currentRoundInfo = gameResultRepository.findByStatus()
@@ -134,7 +123,7 @@ class GameService(
             var number: Long
             do {
                 number = random.nextInt(45).toLong()
-            } while (numberList.contains(number))
+            } while (numberList.contains(number) || number == 0L)
             numberList.add(number)
         }
         return numberList
@@ -146,7 +135,7 @@ class GameService(
             var number: Long
             do {
                 number = random.nextInt(45).toLong()
-            } while (numberList.contains(number))
+            } while (numberList.contains(number) || number == 0L)
             numberList.add(number)
         }
         return numberList
