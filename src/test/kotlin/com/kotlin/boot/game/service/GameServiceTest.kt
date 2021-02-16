@@ -8,13 +8,15 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.RepeatedTest
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.annotation.Repeat
 import org.springframework.transaction.annotation.Transactional
+import java.util.*
 
 @SpringBootTest
-@Transactional
 class GameServiceTest(
     @Autowired private val gameService: GameService,
     @Autowired private val playGameUserRepository: PlayGameUserRepository
@@ -53,5 +55,11 @@ class GameServiceTest(
         gameService.participateInGame(req)
         val result = playGameUserRepository.findByPhoneNumber("01099992222")
         assertEquals(result?.nickName, "똥개개똥개")
+    }
+
+    @Test
+    @RepeatedTest(value = 10000)
+    fun makeDummyData() {
+        gameService.participateInGame(JoinGameDto(Collections.emptyList(), "01012344121"))
     }
 }

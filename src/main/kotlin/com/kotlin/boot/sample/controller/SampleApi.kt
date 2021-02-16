@@ -12,6 +12,7 @@ class SampleApi(
 ) {
 
     @PostMapping("/db/post")
+    @Deprecated(message = "DEPRECATED", level = DeprecationLevel.HIDDEN)
     fun postTest(
             @RequestParam userId: String
     ) {
@@ -19,6 +20,7 @@ class SampleApi(
     }
 
     @GetMapping("/db/get")
+    @Deprecated(message = "DEPRECATED", level = DeprecationLevel.HIDDEN)
     fun getTest(
             @RequestParam userId: String
     ) = sampleService.findData(userId)

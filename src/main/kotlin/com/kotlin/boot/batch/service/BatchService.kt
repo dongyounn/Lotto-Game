@@ -27,6 +27,7 @@ class BatchService(
 
         val currentRoundInfo = gameResultRepository.findByStatus()
         var bonusMatching = false
+
         val currentRoundPlayerInfos = gameRepository.findByPlayRound(currentRoundInfo.id!!)
         currentRoundPlayerInfos.let { gameInfos ->
             gameInfos.forEach {
