@@ -8,6 +8,7 @@ import com.kotlin.boot.game.repository.infra.GameResultRepository
 import com.kotlin.boot.global.dto.BaseResponse
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
+import com.kotlin.boot.global.utils.NumberUtils
 import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
@@ -18,7 +19,8 @@ import java.util.*
 class GameService(
     private val gameRepository: GameRepository,
     private val gameUserRepository: PlayGameUserRepository,
-    private val gameResultRepository: GameResultRepository
+    private val gameResultRepository: GameResultRepository,
+    private val numberUtils: NumberUtils
 ) {
 
     private val log = LoggerFactory.getLogger(this::class.java)
@@ -44,7 +46,7 @@ class GameService(
     fun participateInGame(joinGameDto: JoinGameDto): BaseResponse {
         val entryNumberList = joinGameDto.numbers
         val numberList = when {
-            entryNumberList.isNullOrEmpty() -> getAutoRandom(5)
+            entryNumberList.isNullOrEmpty() -> numberUtils.getAutoNumber(5)
             entryNumberList.size < 6 -> {
                 checkInputNumbers(entryNumberList as ArrayList<Long>)
                 getHalfAutoRandom(
@@ -115,19 +117,6 @@ class GameService(
         val random = Random()
         return random.nextInt(45).toLong()
     }*/
-
-    private fun getAutoRandom(count: Long): List<Long> {
-        val random = Random()
-        val numberList = ArrayList<Long>()
-        for (i in 0 until count) {
-            var number: Long
-            do {
-                number = random.nextInt(45).toLong()
-            } while (numberList.contains(number) || number == 0L)
-            numberList.add(number)
-        }
-        return numberList
-    }
 
     private fun getHalfAutoRandom(count: Long, numberList: ArrayList<Long>): List<Long> {
         val random = Random()
