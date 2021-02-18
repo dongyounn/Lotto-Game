@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=Kotlin%20Study&fontSize=90&animation=fadeIn&fontAlignY=38)
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=LOTTO%20GAME&fontSize=90&animation=fadeIn&fontAlignY=38)
 <p align='center'> Kotlin Lotto Game API </p>
 
 ## Kooto = Kotlin + Lotto
