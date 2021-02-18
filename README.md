@@ -1,6 +1,5 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=Kotlin%20Study&fontSize=90&animation=fadeIn&fontAlignY=38)
-
-### 코틀린 공부
+<p align='center'> Kotlin Lotto Game API </p>
 
 ## Kooto = Kotlin + Lotto
 ### 코틀린을 사용해 로또를 게임을 만들어 봅시다
