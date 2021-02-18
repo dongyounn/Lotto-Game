@@ -30,8 +30,6 @@
     <logger name="org.hibernate" level="WARN"/>
     <logger name="io.netty" level="WARN"/>
     <logger name="org.aspectj.weaver" level="WARN"/>
-    <logger name="com.konasl.commonlib.springweb.resttemplate.monitor.PoolLogScheduled" level="DEBUG"/>
-
     <root level="DEBUG">
         <appender-ref ref="FILE"/>
         <appender-ref ref="CONSOLE"/>
