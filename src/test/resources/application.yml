@@ -41,6 +41,16 @@ undertow:
     timeout: 300000
 
 
+work:
+  thread:
+    pool:
+      size: 100
+
+db:
+  encrypt:
+    enable: true
+    password: true
+
 management:
   endpoint:
     health:

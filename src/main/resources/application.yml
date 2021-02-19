@@ -2,7 +2,7 @@ spring:
   datasource:
     hikari:
       username: springboot
-      password: springboot
+      password: kkk
       jdbc-url: jdbc:oracle:thin:@localhost:1521:XE
       driver-class-name: oracle.jdbc.OracleDriver
       validationTimeout: 10000
@@ -39,6 +39,17 @@ undertow:
     timeout: 300000
   norequest:
     timeout: 300000
+
+
+work:
+  thread:
+    pool:
+      size: 100
+
+db:
+  encrypt:
+    enable: true
+    password: true
 
 management:
   endpoint:
