@@ -11,12 +11,12 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
     database: ORACLE
-    show-sql: true
-    generate-ddl: true
+    show-sql: false
+    generate-ddl: false
     properties:
       hibernate:
-        format_sql: true
-        use_sql_comments: true
+        format_sql: false
+        use_sql_comments: false
     hibernate:
       naming:
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy

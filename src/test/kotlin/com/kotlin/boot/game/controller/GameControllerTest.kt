@@ -1,6 +1,5 @@
 package com.kotlin.boot.game.controller
 
-import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.repository.infra.GameResultRepository
 import org.junit.jupiter.api.RepeatedTest
 import org.junit.jupiter.api.Test
@@ -13,15 +12,13 @@ import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
-import java.util.*
 import javax.transaction.Transactional
 
 @RunWith(SpringRunner::class)
 @SpringBootTest
 @AutoConfigureMockMvc
 class GameControllerTest(
-    @Autowired private val mvc: MockMvc,
-    @Autowired private val gameResultRepository: GameResultRepository
+    @Autowired private val mvc: MockMvc
 ) {
 
     @Test
@@ -35,7 +32,7 @@ class GameControllerTest(
     }
 
     @Test
-//    @RepeatedTest(value = 1000000)
+    @RepeatedTest(value = 100000)
     fun playGame() {
         mvc.perform(
             MockMvcRequestBuilders.post("/lotto/participate")

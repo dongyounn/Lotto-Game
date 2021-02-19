@@ -25,7 +25,7 @@ class BatchService(
 
     @Transactional(noRollbackFor = [Exception::class])
     fun playLotto() {
-        val randomNumber = numberUtils.getAutoNumber(5).sorted()
+        val randomNumber = numberUtils.getAutoNumber(4).sorted()
         val normalNumber = StringBuilder()
 
         randomNumber.forEach {

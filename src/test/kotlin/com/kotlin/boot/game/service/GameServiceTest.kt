@@ -51,7 +51,7 @@ class GameServiceTest(
 
     @Test
     fun getPlayGameNumber() {
-        val req = JoinGameDto(listOf(7, 1, 2, 4, 12, 44), "01099992222")
+        val req = JoinGameDto(listOf(7, 1, 2, 4), "01099992222")
         gameService.participateInGame(req)
         val result = playGameUserRepository.findByPhoneNumber("01099992222")
         assertEquals(result?.nickName, "똥개개똥개")
