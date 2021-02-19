@@ -4,7 +4,8 @@ import com.kotlin.boot.game.domain.GameResultEntity
 import com.kotlin.boot.game.repository.infra.GameDataCustomRepository
 import com.kotlin.boot.game.repository.infra.GameRepository
 import com.kotlin.boot.game.repository.infra.GameResultRepository
-import com.kotlin.boot.global.utils.CustomPageRequest
+import com.kotlin.boot.global.exception.BadRequestException
+import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.global.utils.NumberUtils
 import org.slf4j.LoggerFactory
 import org.springframework.data.domain.PageRequest
@@ -36,6 +37,7 @@ class BatchService(
         val currentRoundInfo = gameResultRepository.findByStatus()
         val round = currentRoundInfo.id!!
         val gameCount = gameRepository.countByPlayRound(round)
+        if (gameCount == 0L) throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "게임 참가자가 없습니다. ")
         log.info("## 전체 게임 횟수 : $gameCount")
         log.info("## 배치 사이즈 : $batchSize")
         val pagingSize = gameCount.div(batchSize).plus(1)
