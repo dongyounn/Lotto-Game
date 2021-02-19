@@ -14,15 +14,16 @@ class BatchService(
     private val gameRepository: GameRepository,
     private val numberUtils: NumberUtils
 ) {
-    //코드가 더럽다....
+
     @Transactional(noRollbackFor = [Exception::class])
     fun playLotto() {
-        val normalNumber = StringBuilder()
         val randomNumber = numberUtils.getAutoNumber(5).sorted()
+        val normalNumber = StringBuilder()
 
         randomNumber.forEach {
             normalNumber.append("$it,")
         }
+
         val regularNumber = normalNumber.toString().removeSuffix(",")
 
         val currentRoundInfo = gameResultRepository.findByStatus()
@@ -38,20 +39,22 @@ class BatchService(
                         matchingCount++
                     }
                 }
+                val sb = StringBuilder()
+                matchingNumbers.forEach { resultNumber -> sb.append(resultNumber) }
                 it?.setDrawResult(
                     when (matchingCount) {
                         4 -> 1
                         3 -> 2
                         2 -> 3
                         else -> 0
-                    }
+                    },
+                    matchingNumbers.toString()
                 )
             }
         }
         currentRoundInfo.ofEnd(
             regularNumber
         )
-
         /*라운드 초기화 */
         gameResultRepository.save(GameResultEntity.ofAutoStart())
     }
