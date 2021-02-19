@@ -24,36 +24,32 @@ class BatchService(
             normalNumber.append("$it,")
         }
         val regularNumber = normalNumber.toString().removeSuffix(",")
-        val bonusNumber = numberUtils.getAutoNumber(1)[0]
 
         val currentRoundInfo = gameResultRepository.findByStatus()
-        var bonusMatching = false
 
         val currentRoundPlayerInfos = gameRepository.findByPlayRound(currentRoundInfo.id!!)
         currentRoundPlayerInfos.let { gameInfos ->
             gameInfos.forEach {
                 var matchingCount = 0
+                val matchingNumbers = ArrayList<String>()
                 it?.gameNumber?.split(",")?.forEach { number ->
                     if (randomNumber.contains(number.toLong())) {
+                        matchingNumbers.add(number)
                         matchingCount++
                     }
-                    bonusMatching = number.toLong() == bonusNumber
                 }
                 it?.setDrawResult(
                     when (matchingCount) {
-                        7 -> 1
-                        6 -> (if (bonusMatching) 2 else 3).toLong()
-                        5 -> 4
-                        4 -> 5
-                        3 -> 6
+                        4 -> 1
+                        3 -> 2
+                        2 -> 3
                         else -> 0
                     }
                 )
             }
         }
         currentRoundInfo.ofEnd(
-            regularNumber,
-            bonusNumber
+            regularNumber
         )
 
         /*라운드 초기화 */

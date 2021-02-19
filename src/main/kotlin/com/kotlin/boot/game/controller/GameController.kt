@@ -23,7 +23,7 @@ class GameController(
     }
 
     @PostMapping("/create/game/round")
-    @Deprecated(message = "DEPRECATED", level = DeprecationLevel.HIDDEN)
+    @ApiOperation(value = "최초 게임 1회 방 만들때만 사용")
     fun createGameRound() = gameService.createGameRound()
 
     @GetMapping("/game/info")

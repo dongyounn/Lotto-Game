@@ -13,8 +13,6 @@ data class GameResultEntity(
     var id: Long? = null,
     @Column(name = "NORMAL_NUMBER")
     var normalNumber: String? = null,
-    @Column(name = "BONUS_NUMBER")
-    var bonusNumber: Long? = null,
     @Enumerated(EnumType.STRING)
     @Column(name = "STATUS")
     var status: GameStatusEnum,
@@ -34,11 +32,9 @@ data class GameResultEntity(
     }
 
     fun ofEnd(
-        normalNumber: String,
-        bonusNumber: Long
+        normalNumber: String
     ) {
         this.normalNumber = normalNumber
-        this.bonusNumber = bonusNumber
         this.status = GameStatusEnum.TERMINATED
     }
 }

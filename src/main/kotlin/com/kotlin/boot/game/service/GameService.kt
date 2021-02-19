@@ -37,7 +37,7 @@ class GameService(
 
     @Transactional
     fun createGameRound() {
-        gameResultRepository.findByStatusAndBonusNumberIsNotNull()?.let {
+        gameResultRepository.findByStatusAndNormalNumberIsNotNull()?.let {
             throw BadRequestException(ErrorReason.ACTIVE_GAME_IS_EXIST, "ACTIVE GAME IS EXIST")
         } ?: gameResultRepository.save(GameResultEntity.ofAutoStart())
     }
@@ -46,17 +46,17 @@ class GameService(
     fun participateInGame(joinGameDto: JoinGameDto): BaseResponse {
         val entryNumberList = joinGameDto.numbers
         val numberList = when {
-            entryNumberList.isNullOrEmpty() -> numberUtils.getAutoNumber(5)
-            entryNumberList.size < 6 -> {
+            entryNumberList.isNullOrEmpty() -> numberUtils.getAutoNumber(4)
+            entryNumberList.size < 5 -> {
                 checkInputNumbers(entryNumberList as ArrayList<Long>)
                 getHalfAutoRandom(
-                    (6 - entryNumberList.size).toLong(),
+                    (4 - entryNumberList.size).toLong(),
                     entryNumberList
                 )
             }
             else -> throw BadRequestException(
                 ErrorReason.INVALID_INPUT_DATA,
-                "### 번호는 5개만 입력해주세요"
+                "### 번호는 4개만 입력해주세요"
             )
         }
         val sb = StringBuilder()
@@ -103,20 +103,6 @@ class GameService(
                 )
         }
     }
-
-/*    fun getRandomNumber(length: Long): String {
-        val random = Random()
-        val sb = StringBuilder()
-        for (i in 0 until length) {
-            sb.append(random.nextInt(10))
-        }
-        return sb.toString()
-    }
-
-    private fun getRandom(): Long {
-        val random = Random()
-        return random.nextInt(45).toLong()
-    }*/
 
     private fun getHalfAutoRandom(count: Long, numberList: ArrayList<Long>): List<Long> {
         val random = Random()

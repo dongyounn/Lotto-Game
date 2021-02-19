@@ -17,6 +17,8 @@ data class GameEntity(
     val nickName: String,
     @Column(name = "GAME_NUMBER")
     val gameNumber: String,
+    @Column(name = "MATCH_NUMBER")
+    var matchNumber: String?,
     @Column(name = "USER_ID")
     val userId: String,
     @Column(name = "GAME_ROUND")
@@ -34,14 +36,17 @@ data class GameEntity(
             playGameUserInfo.phoneNumber,
             playGameUserInfo.nickName,
             gameNumber,
+            null,
             playGameUserInfo.userId,
             playRound
         )
     }
 
     fun setDrawResult(
-        drawResult: Long
+        drawResult: Long,
+        matchingNumber: String
     ) {
         this.drawResult = drawResult
+        this.matchNumber = matchingNumber
     }
 }

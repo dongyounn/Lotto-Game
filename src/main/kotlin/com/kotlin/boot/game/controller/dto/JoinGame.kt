@@ -3,7 +3,7 @@ package com.kotlin.boot.game.controller.dto
 import javax.validation.constraints.Size
 
 data class JoinGameDto(
-    @Size(max = 5)
+    @Size(max = 4)
     val numbers: List<Long>?,
     val phoneNumber: String
 )
