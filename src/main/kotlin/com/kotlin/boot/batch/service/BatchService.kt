@@ -64,7 +64,7 @@ class BatchService(
                             2 -> 3
                             else -> 0
                         },
-                        matchingNumbers.toString().removeSuffix(",")
+                        sb.toString().removeSuffix(",")
                     )
                 }
             }
