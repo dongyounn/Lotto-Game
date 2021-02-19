@@ -27,9 +27,9 @@ spring:
       jdbc:
         batch_size: 40
 server:
-  port: 10340
+  port: 18080
   servlet:
-    context-path: /dyshin
+    context-path: /kotoo
   undertow:
     io-threads: 32
     worker-threads: 256
@@ -39,17 +39,6 @@ undertow:
     timeout: 300000
   norequest:
     timeout: 300000
-
-
-work:
-  thread:
-    pool:
-      size: 100
-
-db:
-  encrypt:
-    enable: true
-    password: true
 
 management:
   endpoint:

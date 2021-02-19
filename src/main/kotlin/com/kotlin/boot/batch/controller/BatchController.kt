@@ -12,7 +12,7 @@ class BatchController(
     private val batchService: BatchService
 ) {
     @PostMapping("/pick/draw")
-    @ApiOperation(value = "게임 추천 배치")
+    @ApiOperation(value = "게임 추첨 배치")
     fun playGame() =
         batchService.playLotto()
 

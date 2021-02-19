@@ -7,4 +7,18 @@
 
 ### 토이 프로젝트 특성상 퇴근 후 하루에 30분 정도의 시간을 투자하여 프로젝트를 만들어보자
 
-1. 기능 : 
+1. API List
+    1. 회원가입 API - ``/user/join``
+    1. 회원정보 수정 API - ``/user/change/info``
+    1. 회원정보 조회 API - ``/user/user/infos``
+    1. 최초 게임 생성 API - ``/lotto/create/game/round``
+    1. 게임 참여 API - ``/lotto/participate``
+    1. 게임 참여 정보 조회 API - ``/lotto/game/info``
+    1. 현재 라운드 게임 추첨 API - ``/batch/pick/draw``
+
+2. API DOC
+    
+
+
+
+
