@@ -17,7 +17,7 @@
     1. 현재 라운드 게임 추첨 API - ``/batch/pick/draw``
 
 2. API DOC
-    1. ``https://app.swaggerhub.com/apis/shindongyoun/Kotto/1.0.0``
+    1. https://app.swaggerhub.com/apis/shindongyoun/Kotto/1.0.0
 
 
 
