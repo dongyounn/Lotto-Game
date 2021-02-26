@@ -1,6 +1,5 @@
 package com.kotlin.boot.global.utils
 import org.springframework.data.domain.PageRequest
-import org.springframework.data.domain.Pageable
 import org.springframework.data.domain.Sort
 
 const val MAX_ROW_SIZE = 3000

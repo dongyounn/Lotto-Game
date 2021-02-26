@@ -8,12 +8,9 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.RepeatedTest
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.annotation.Repeat
-import org.springframework.transaction.annotation.Transactional
 import java.util.*
 
 @SpringBootTest
@@ -58,7 +55,7 @@ class GameServiceTest(
     }
 
     @Test
-    @RepeatedTest(value = 10000)
+    @javax.transaction.Transactional
     fun makeDummyData() {
         gameService.participateInGame(JoinGameDto(Collections.emptyList(), "01012344121"))
     }

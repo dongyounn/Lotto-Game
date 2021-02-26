@@ -30,6 +30,7 @@ class GameControllerTest(
     }
 
     @Test
+    @Transactional
 //    @RepeatedTest(value = 100000)
     fun playGame() {
         mvc.perform(

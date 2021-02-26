@@ -48,10 +48,10 @@ class GameService(
         val numberList = when {
             entryNumberList.isNullOrEmpty() -> numberUtils.getAutoNumber(4)
             entryNumberList.size < 5 -> {
-                checkInputNumbers(entryNumberList as ArrayList<Long>)
+                checkInputNumbers(entryNumberList.toLongArray())
                 getHalfAutoRandom(
                     (4 - entryNumberList.size).toLong(),
-                    entryNumberList
+                    entryNumberList.toLongArray()
                 )
             }
             else -> throw BadRequestException(
@@ -90,11 +90,11 @@ class GameService(
         return BaseResponse.of(submitNumbers)
     }
 
-    fun checkInputNumbers(numberList: ArrayList<Long>) {
+    fun checkInputNumbers(numberList: LongArray) {
         for (target in numberList) {
             var count = 0
-            for (i in 0 until numberList.size) {
-                if (target == numberList[i]) count += 1
+            numberList.forEach {
+                if (target == it) count += 1
             }
             if (count > 1)
                 throw BadRequestException(
@@ -104,15 +104,16 @@ class GameService(
         }
     }
 
-    private fun getHalfAutoRandom(count: Long, numberList: ArrayList<Long>): List<Long> {
+    private fun getHalfAutoRandom(count: Long, numberList: LongArray): List<Long> {
         val random = Random()
+        val result = numberList.toMutableList()
         for (i in 0 until count) {
             var number: Long
             do {
                 number = random.nextInt(45).toLong()
             } while (numberList.contains(number) || number == 0L)
-            numberList.add(number)
+            result.add(number)
         }
-        return numberList
+        return result
     }
 }

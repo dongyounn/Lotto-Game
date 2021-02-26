@@ -1,7 +1,5 @@
 package com.kotlin.boot.global.utils
 
-import org.joda.time.format.DateTimeFormat
-import java.text.Format
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
