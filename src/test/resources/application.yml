@@ -2,7 +2,7 @@ spring:
   datasource:
     hikari:
       username: springboot
-      password: springboot
+      password: kkkkkkkkkk
       jdbc-url: jdbc:oracle:thin:@localhost:1521:XE
       driver-class-name: oracle.jdbc.OracleDriver
       validationTimeout: 10000
@@ -11,44 +11,27 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
     database: ORACLE
-    show-sql: false
-    generate-ddl: false
+    show-sql: true
+    generate-ddl: true
     properties:
       hibernate:
-        format_sql: false
-        use_sql_comments: false
+        format_sql: true
+        use_sql_comments: true
     hibernate:
       naming:
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
       ddl-auto: validate
-      lock:
-        time: 50000
-      jdbc:
-        batch_size: 40
 server:
   port: 18080
   servlet:
-    context-path: /dyshin
+    context-path: /kotto
   undertow:
     io-threads: 32
     worker-threads: 256
 
-undertow:
-  idle:
-    timeout: 300000
-  norequest:
-    timeout: 300000
-
-
-work:
-  thread:
-    pool:
-      size: 100
-
 db:
-  encrypt:
-    enable: true
+  change:
     password: true
 
 management:
@@ -63,9 +46,3 @@ management:
       exposure:
         include: shutdown, health
       base-path: /
-
-
-info.git.buildDate: 2021-02-09 22\:21\:04
-info.git.hash: 20b1745
-info.version: 4.26.1.00
-

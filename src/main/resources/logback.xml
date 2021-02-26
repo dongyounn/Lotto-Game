@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="true" scanPeriod="60 seconds" >
+<configuration scan="true" scanPeriod="60 seconds">
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -30,7 +30,6 @@
     <logger name="org.hibernate" level="WARN"/>
     <logger name="io.netty" level="WARN"/>
     <logger name="org.aspectj.weaver" level="WARN"/>
-    <logger name="com.konasl.commonlib.springweb.resttemplate.monitor.PoolLogScheduled" level="DEBUG"/>
 
     <root level="DEBUG">
         <appender-ref ref="FILE"/>

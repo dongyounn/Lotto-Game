@@ -2,7 +2,7 @@ spring:
   datasource:
     hikari:
       username: springboot
-      password: kkk
+      password: kkkkkkkkkk
       jdbc-url: jdbc:oracle:thin:@localhost:1521:XE
       driver-class-name: oracle.jdbc.OracleDriver
       validationTimeout: 10000
@@ -22,10 +22,6 @@ spring:
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
       ddl-auto: validate
-      lock:
-        time: 50000
-      jdbc:
-        batch_size: 40
 server:
   port: 18080
   servlet:
@@ -34,21 +30,8 @@ server:
     io-threads: 32
     worker-threads: 256
 
-undertow:
-  idle:
-    timeout: 300000
-  norequest:
-    timeout: 300000
-
-
-work:
-  thread:
-    pool:
-      size: 100
-
 db:
-  encrypt:
-    enable: true
+  change:
     password: true
 
 management:

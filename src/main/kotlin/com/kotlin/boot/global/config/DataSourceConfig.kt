@@ -16,7 +16,7 @@ import javax.persistence.EntityManagerFactory
 class DataSourceConfig(
 ) {
 
-    @Value("\${db.encrypt.password}")
+    @Value("\${db.change.password}")
     private val encryptPassword: Boolean = false
 
     @Bean
