@@ -14,36 +14,24 @@ buildscript {
 }
 
 plugins {
-    kotlin("jvm") version "1.3.61"
-    kotlin("kapt") version "1.3.61"
-    kotlin("plugin.spring") version "1.3.61"
-    kotlin("plugin.jpa") version "1.3.61"
+    kotlin("jvm") version "1.4.30"
+    kotlin("kapt") version "1.4.30"
+    kotlin("plugin.spring") version "1.4.30"
+    kotlin("plugin.jpa") version "1.4.30"
     id("org.springframework.boot") version "2.1.8.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
     id("com.gorylenko.gradle-git-properties") version "1.5.1"
-}
-val developmentOnly: Configuration? by configurations.creating
-configurations {
-    runtimeClasspath {
-        extendsFrom(developmentOnly)
-    }
-    compileOnly {
-        extendsFrom(configurations.annotationProcessor.get())
-    }
 }
 
 configurations.forEach {
     it.exclude("org.springframework.boot", "spring-boot-starter-tomcat")
 }
-
-
 repositories {
     jcenter()
 }
 
-
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
+//    implementation(kotlin("stdlib-jdk8"))
     implementation("com.querydsl:querydsl-jpa:4.2.1")
     implementation("com.querydsl:querydsl-apt:4.2.1")
     implementation("com.querydsl:querydsl-sql-spring:4.2.1")
@@ -54,12 +42,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-undertow")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.hibernate", "hibernate-core", "5.4.4.Final")
     implementation("io.springfox", "springfox-swagger2", "2.9.2")
     implementation("io.springfox", "springfox-swagger-ui", "2.9.2")
-    implementation("org.modelmapper", "modelmapper", "2.3.2")
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("ojdbc7-12.1.0.2.jar"))))
-    developmentOnly?.let { it("org.springframework.boot:spring-boot-devtools") }
     kapt("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.junit.jupiter", "junit-jupiter-api")

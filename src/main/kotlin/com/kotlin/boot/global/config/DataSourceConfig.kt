@@ -15,27 +15,17 @@ import javax.persistence.EntityManagerFactory
 @EnableTransactionManagement
 class DataSourceConfig(
 ) {
-
-    @Value("\${db.change.password}")
-    private val encryptPassword: Boolean = false
-
     @Bean
     @Primary
     internal fun getDataSource(hikariProperties: HikariProperties): HikariDataSource {
-        var password = hikariProperties.password
-        if (encryptPassword) {
-            password = "springboot"
-        }
-
         val hikariConfig = HikariConfig()
         hikariConfig.username = hikariProperties.username
-        hikariConfig.password = password
+        hikariConfig.password = hikariProperties.password
         hikariConfig.jdbcUrl = hikariProperties.jdbcUrl
         hikariConfig.driverClassName = hikariProperties.driverClassName
         hikariConfig.validationTimeout = hikariProperties.validationTimeout
         hikariConfig.maximumPoolSize = hikariProperties.maximumPoolSize
         hikariConfig.leakDetectionThreshold = hikariProperties.leakDetectionThreshold
-
         return HikariDataSource(hikariConfig)
     }
 

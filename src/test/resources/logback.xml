@@ -28,8 +28,6 @@
 
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.hibernate" level="WARN"/>
-    <logger name="io.netty" level="WARN"/>
-    <logger name="org.aspectj.weaver" level="WARN"/>
     <root level="INFO">
         <appender-ref ref="FILE"/>
         <appender-ref ref="CONSOLE"/>
