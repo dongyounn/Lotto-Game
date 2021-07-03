@@ -47,6 +47,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("ojdbc7-12.1.0.2.jar"))))
     kapt("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    runtimeOnly("com.h2database:h2")
     testImplementation("org.junit.jupiter", "junit-jupiter-api")
     testImplementation("org.mockito:mockito-core:3.1.0")
     testRuntimeOnly("org.junit.jupiter", "junit-jupiter-engine")

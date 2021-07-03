@@ -2,8 +2,8 @@
 create table PLAY_GAME_USER
 (
     USER_ID      VARCHAR2(10),
-    DOB          VARCHAR2(6),
-    USER_NAME    VARCHAR2(150),
+    SOCIAL_NO          VARCHAR2(50),
+    USER_NAME    VARCHAR2(50),
     PHONE_NUMBER VARCHAR2(50),
     VERIFY       VARCHAR2(10),
     CREATED      DATE,
