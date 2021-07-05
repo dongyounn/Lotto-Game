@@ -20,12 +20,7 @@ class PlayGameUserService(
     private val customSequenceRepository: CustomSequenceRepository,
     private val userInfoQueryFactory: UserInfoQueryFactory
 ) {
-    fun getUserInfo(userId: String): PlayGameUser {
-        return playGameUserRepository.findByUserId(userId)
-            ?: throw BadRequestException(
-                ErrorReason.INVALID_INPUT_DATA, "INVALID USER ID : $userId"
-            )
-    }
+    fun getUserInfo(prefix: String, suffix: String): PlayGameUser = userInfoQueryFactory.getUserInfo(prefix, suffix)
 
     @Transactional
     fun createNewUser(request: RegeditUserInfo) {
@@ -40,7 +35,7 @@ class PlayGameUserService(
     @Transactional
     fun updateUserInfo(request: ChangeUserInfo) {
         playGameUserRepository.findByPhoneNumber(request.phoneNumber)?.changeUserInfo(request)
-            ?: throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "USER INFO NOT FOUND")
+            ?: throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "유저정보 없음")
     }
 
     fun getUserInfos(

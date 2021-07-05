@@ -28,10 +28,16 @@ class UserInfoController(
     ) = playGameUserService.updateUserInfo(updateUserInfo)
 
     @GetMapping("/user/infos")
-    @ApiOperation(value = "유저정보 조회 API")
+    @ApiOperation(value = "유저정보 list 조회 API")
     fun getUserInfos(
         @Validated @ModelAttribute getUserInfo: GetUserInfo,
         @ModelAttribute customPageRequest: CustomPageRequest
     ) = playGameUserService.getUserInfos(getUserInfo, customPageRequest)
 
+    @GetMapping("/user/info")
+    @ApiOperation(value = "유저정보 단건 조회 API")
+    fun getUserInfo(
+        @RequestParam socialNoPrefix: String,
+        @RequestParam socialNoSuffix: String
+    ) = playGameUserService.getUserInfo(socialNoPrefix, socialNoSuffix)
 }

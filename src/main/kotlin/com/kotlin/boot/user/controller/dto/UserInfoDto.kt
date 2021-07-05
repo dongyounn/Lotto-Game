@@ -5,8 +5,9 @@ import org.hibernate.validator.constraints.Length
 
 data class RegeditUserInfo(
     @ApiModelProperty(value = "생년월일 YYYYMMDD", required = true)
-    @Length(min = 6, max = 6)
-    val dob: String,
+    val socialNoPrefix: String,
+    @ApiModelProperty(value = "주민번호 뒷자리", required = true)
+    val socialNoSuffix: String,
     @ApiModelProperty(value = "이름", required = true)
     val name: String,
     /*암호화 할 수 있는 방법은?*/
@@ -18,9 +19,6 @@ data class RegeditUserInfo(
 )
 
 data class ChangeUserInfo(
-    @ApiModelProperty(value = "생년월일 YYYYMMDD", required = true)
-    @Length(min = 6, max = 6)
-    val dob: String?,
     @ApiModelProperty(value = "이름", required = true)
     val name: String?,
     @ApiModelProperty(value = "휴대전화번호", required = true)
@@ -30,9 +28,6 @@ data class ChangeUserInfo(
 )
 
 data class GetUserInfo(
-    @ApiModelProperty(value = "생년월일 YYYYMMDD", required = false)
-    @Length(min = 6, max = 6)
-    val dob: String?,
     @ApiModelProperty(value = "이름", required = false)
     val name: String?,
     @ApiModelProperty(value = "휴대전화번호", required = false)

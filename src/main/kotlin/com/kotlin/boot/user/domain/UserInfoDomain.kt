@@ -1,21 +1,22 @@
 package com.kotlin.boot.user.domain
 
 import com.kotlin.boot.global.dto.BaseDomain
+import com.kotlin.boot.global.dto.StringCryptoConverter
 import com.kotlin.boot.global.dto.YesOrNoEnum
 import com.kotlin.boot.user.controller.dto.ChangeUserInfo
 import com.kotlin.boot.user.controller.dto.RegeditUserInfo
-import javax.persistence.Entity
-import javax.persistence.EnumType
-import javax.persistence.Enumerated
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 data class PlayGameUser(
     @Id
     val userId: String,
-    var dob: String,
+    @Convert(converter = StringCryptoConverter::class)
+    val socialNo: String,
+    @Convert(converter = StringCryptoConverter::class)
     var userName: String,
     var nickName: String,
+    @Convert(converter = StringCryptoConverter::class)
     val phoneNumber: String,
     @Enumerated(EnumType.STRING)
     var verify: YesOrNoEnum = YesOrNoEnum.N
@@ -25,14 +26,17 @@ data class PlayGameUser(
             userId: String,
             regeditUserInfo: RegeditUserInfo
         ) = PlayGameUser(
-            userId, regeditUserInfo.dob, regeditUserInfo.name, regeditUserInfo.nickName, regeditUserInfo.phoneNumber
+            userId,
+            "${regeditUserInfo.socialNoPrefix}-${regeditUserInfo.socialNoSuffix}",
+            regeditUserInfo.name,
+            regeditUserInfo.nickName,
+            regeditUserInfo.phoneNumber
         )
     }
 
     fun changeUserInfo(
         request: ChangeUserInfo
     ) {
-        this.dob = request.dob ?: this.dob
         this.userName = request.name ?: this.userName
         this.nickName = request.nickName ?: this.nickName
     }
