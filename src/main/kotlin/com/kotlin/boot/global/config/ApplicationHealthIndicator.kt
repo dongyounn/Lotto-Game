@@ -17,7 +17,7 @@ class ApplicationHealthIndicator : HealthIndicator {
     *  -Dspring.config.location=classpath:/build-info.properties,classpath:/application.yml,claspath:/logback.xml
     * */
 
-    @Value("\${info.version")
+    @Value("\${info.version}")
     private val appVersion: String? = null
 
     @Value("\${info.git.hash}")

@@ -8,16 +8,23 @@ import com.kotlin.boot.user.controller.dto.RegeditUserInfo
 import javax.persistence.*
 
 @Entity
+@Table(name = "play_game_user")
 data class PlayGameUser(
     @Id
+    @Column(name = "user_id")
     val userId: String,
+    @Column(name = "social_no")
     @Convert(converter = StringCryptoConverter::class)
     val socialNo: String,
+    @Column(name = "user_name")
     @Convert(converter = StringCryptoConverter::class)
     var userName: String,
+    @Column(name = "nick_name")
     var nickName: String,
+    @Column(name = "phone_number")
     @Convert(converter = StringCryptoConverter::class)
     val phoneNumber: String,
+    @Column(name = "verify")
     @Enumerated(EnumType.STRING)
     var verify: YesOrNoEnum = YesOrNoEnum.N
 ) : BaseDomain() {
