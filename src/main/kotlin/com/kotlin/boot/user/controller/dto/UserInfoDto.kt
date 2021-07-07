@@ -50,8 +50,7 @@ data class GetUserInfoResponse(
     val socialNo: String,
     var userName: String,
     var nickName: String,
-    val phoneNumber: String,
-    var verify: YesOrNoEnum = YesOrNoEnum.N
+    val phoneNumber: String
 ) {
     companion object {
         fun of(req: PlayGameUser) = GetUserInfoResponse(
@@ -59,8 +58,7 @@ data class GetUserInfoResponse(
             req.socialNo.removeRange(7, 15),
             req.userName,
             req.nickName,
-            req.phoneNumber.removeRange(7, 20),
-            req.verify
+            req.phoneNumber.removeRange(7, 20)
         )
     }
 }

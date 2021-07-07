@@ -5,7 +5,6 @@ import com.kotlin.boot.user.controller.dto.ChangeUserInfo
 import com.kotlin.boot.user.controller.dto.GetUserInfo
 import com.kotlin.boot.user.controller.dto.RegeditUserInfo
 import com.kotlin.boot.user.service.PlayGameUserService
-import io.swagger.annotations.ApiModelProperty
 import io.swagger.annotations.ApiOperation
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
@@ -35,7 +34,7 @@ class UserInfoController(
     ) = playGameUserService.getUserInfos(getUserInfo, customPageRequest)
 
     @GetMapping("/user/info")
-    @ApiOperation(value = "유저정보 단건 조회 API")
+    @ApiOperation(value = "유저정보 찾기 API (주민등록번호)")
     fun getUserInfo(
         @RequestParam socialNoPrefix: String,
         @RequestParam socialNoSuffix: String

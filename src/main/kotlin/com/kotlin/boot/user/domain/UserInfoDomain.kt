@@ -23,10 +23,7 @@ data class PlayGameUser(
     var nickName: String,
     @Column(name = "phone_number")
     @Convert(converter = StringCryptoConverter::class)
-    val phoneNumber: String,
-    @Column(name = "verify")
-    @Enumerated(EnumType.STRING)
-    var verify: YesOrNoEnum = YesOrNoEnum.N
+    val phoneNumber: String
 ) : BaseDomain() {
     companion object {
         fun of(

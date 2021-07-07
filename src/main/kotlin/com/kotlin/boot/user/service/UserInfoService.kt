@@ -22,7 +22,9 @@ class PlayGameUserService(
     private val customSequenceRepository: CustomSequenceRepository,
     private val userInfoQueryFactory: UserInfoQueryFactory
 ) {
-    fun getUserInfo(prefix: String, suffix: String): PlayGameUser = userInfoQueryFactory.getUserInfo(prefix, suffix)
+    fun getUserInfo(prefix: String, suffix: String): GetUserInfoResponse =
+        GetUserInfoResponse.of(userInfoQueryFactory.getUserInfo(prefix, suffix))
+
 
     @Transactional
     fun createNewUser(request: RegeditUserInfo): BaseResponse {
