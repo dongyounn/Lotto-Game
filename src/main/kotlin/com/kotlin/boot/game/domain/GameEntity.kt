@@ -1,6 +1,7 @@
 package com.kotlin.boot.game.domain
 
 import com.kotlin.boot.global.dto.BaseDomain
+import com.kotlin.boot.global.dto.StringCryptoConverter
 import com.kotlin.boot.user.domain.PlayGameUser
 import javax.persistence.*
 
@@ -11,6 +12,7 @@ data class GameEntity(
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "playGameIdGenerator")
     @SequenceGenerator(name = "playGameIdGenerator", sequenceName = "PLAY_GAME_HISTORY_SEQ", allocationSize = 1)
     var id: Long? = null,
+    @Convert(converter = StringCryptoConverter::class)
     @Column(name = "PLAYER_PHONE_NUMBER")
     val phoneNumber: String,
     @Column(name = "PLAYER_NICK_NAME")

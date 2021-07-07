@@ -5,5 +5,5 @@ enum class SequenceEnum (
         val prefix: String,
         val sequenceLength: Int
 ) {
-    USER_ID_GEN("SPRINGBOOT.USER_SEQ", "GU", 6),
+    USER_ID_GEN("USER_SEQ", "GU", 6),
 }

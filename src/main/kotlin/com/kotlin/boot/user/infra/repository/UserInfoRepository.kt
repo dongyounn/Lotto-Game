@@ -1,5 +1,7 @@
 package com.kotlin.boot.user.infra.repository
 
+import com.kotlin.boot.global.exception.BadRequestException
+import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.user.controller.dto.GetUserInfo
 import com.kotlin.boot.user.domain.PlayGameUser
 import com.kotlin.boot.user.domain.QPlayGameUser.playGameUser
@@ -22,18 +24,23 @@ class UserInfoQueryFactory(
     private val queryFactory: JPAQueryFactory
 ) : QuerydslRepositorySupport(PlayGameUser::class.java) {
 
+    fun getUserInfo(prefix: String, suffix: String): PlayGameUser {
+        return queryFactory
+            .selectFrom(playGameUser)
+            .where(playGameUser.socialNo.eq("$prefix-$suffix"))
+            .fetchOne() ?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND, "유저정보 없음")
+    }
+
     fun getUserInfos(request: GetUserInfo, pageRequest: PageRequest): PageImpl<PlayGameUser>? {
 
         val userName = request.name
         val nickName = request.nickName
-        val dob = request.dob
         val phoneNumber = request.phoneNumber
 
 
         val builder = BooleanBuilder()
         if (!userName.isNullOrEmpty()) builder.and(playGameUser.userName.eq(userName))
         if (!nickName.isNullOrEmpty()) builder.and(playGameUser.nickName.like("%$nickName%"))
-        if (!dob.isNullOrEmpty()) builder.and(playGameUser.dob.eq(dob))
         if (!phoneNumber.isNullOrEmpty()) builder.and(playGameUser.phoneNumber.eq(phoneNumber))
 
 
