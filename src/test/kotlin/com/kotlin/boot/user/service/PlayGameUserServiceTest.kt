@@ -31,7 +31,8 @@ internal class PlayGameUserServiceTest(
             PlayGameUser.of(
                 "1234",
                 RegeditUserInfo(
-                    dob = "990101",
+                    socialNoPrefix = "990101",
+                    "1111111",
                     name = "테스트",
                     phoneNumber = "01011111111",
                     nickName = "똥개개똥개"
@@ -47,17 +48,17 @@ internal class PlayGameUserServiceTest(
 
     @Test
     fun getUserInfo() {
-        val result = playGameUserService.getUserInfo("1234")
+        val result = playGameUserService.getUserInfo("990101", "1111111")
         Assertions.assertEquals(result.userId, "1234")
     }
 
     @Test
     fun getUserInfoByQueryDslTest() {
         val result = playGameUserService.getUserInfos(
-            GetUserInfo(null, null, null, "개개"),
+            GetUserInfo(null, null, "개개"),
             CustomPageRequest()
         )
-        Assertions.assertEquals(result?.content?.get(0)?.userId ?: NONE, "1234")
+        Assertions.assertEquals(result?.get(0)?.userId ?: NONE, "1234")
     }
 
     @Test
@@ -67,6 +68,7 @@ internal class PlayGameUserServiceTest(
                 customSequenceRepository.nextUserId(),
                 RegeditUserInfo(
                     "990101",
+                    "1111111",
                     "테스트",
                     "01011111111",
                     "똥개"
