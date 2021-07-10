@@ -28,20 +28,21 @@ class BatchService(
         val randomNumber = numberUtils.getAutoNumber(4).sorted()
         val normalNumber = StringBuilder()
 
-        randomNumber.forEach {
-            normalNumber.append("$it,")
-        }
+        val regularNumber = randomNumber
+            .forEach { normalNumber.append("$it,") }
+            .let { number -> number.toString().removeSuffix(",") }
 
-        val regularNumber = normalNumber.toString().removeSuffix(",")
 
         val currentRoundInfo = gameResultRepository.findByStatus()
-        val round = currentRoundInfo.id!!
-        val gameCount = gameRepository.countByPlayRound(round)
-        if (gameCount == 0L) throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "게임 참가자가 없습니다. ")
-        log.info("## 전체 게임 횟수 : $gameCount")
-        log.info("## 배치 사이즈 : $batchSize")
-        val pagingSize = gameCount.div(batchSize).plus(1)
+        var pagingSize: Long
         var currentPage = 0
+        gameRepository.countByPlayRound(currentRoundInfo.id!!).also {
+            if (it == 0L) throw BadRequestException(ErrorReason.INVALID_INPUT_DATA, "게임 참가자가 없습니다. ")
+            log.info("## 전체 게임 횟수 : $it")
+            log.info("## 배치 사이즈 : $batchSize")
+        }.let {
+            pagingSize = it.div(batchSize).plus(1)
+        }
 
         while (pagingSize > currentPage) {
             gameDataCustomRepository.getGameDataPagingData(
@@ -51,7 +52,7 @@ class BatchService(
                 gameInfos.forEach {
                     var matchingCount = 0
                     val matchingNumbers = ArrayList<String>()
-                    it?.gameNumber?.split(",")?.forEach { number ->
+                    it!!.gameNumber.split(",").forEach { number ->
                         if (randomNumber.contains(number.toLong())) {
                             matchingNumbers.add(number)
                             matchingCount++
@@ -59,7 +60,7 @@ class BatchService(
                     }
                     val sb = StringBuilder()
                     matchingNumbers.sorted().forEach { resultNumber -> sb.append("$resultNumber,") }
-                    it?.setDrawResult(
+                    it.setDrawResult(
                         when (matchingCount) {
                             4 -> 1
                             3 -> 2

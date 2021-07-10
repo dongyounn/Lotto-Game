@@ -49,7 +49,7 @@ internal class PlayGameUserServiceTest(
     @Test
     fun getUserInfo() {
         val result = playGameUserService.getUserInfo("990101", "1111111")
-        Assertions.assertEquals(result.userId, "1234")
+        assertEquals(result.userId, "1234")
     }
 
     @Test
@@ -58,7 +58,7 @@ internal class PlayGameUserServiceTest(
             GetUserInfo(null, null, "개개"),
             CustomPageRequest()
         )
-        Assertions.assertEquals(result?.get(0)?.userId ?: NONE, "1234")
+        assertEquals(result?.get(0)?.userId ?: NONE, "1234")
     }
 
     @Test
