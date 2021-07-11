@@ -2,6 +2,7 @@ package com.kotlin.boot.user.controller.dto
 
 import com.kotlin.boot.global.dto.StringCryptoConverter
 import com.kotlin.boot.global.dto.YesOrNoEnum
+import com.kotlin.boot.global.utils.masking
 import com.kotlin.boot.user.domain.PlayGameUser
 import io.swagger.annotations.ApiModelProperty
 import org.hibernate.validator.constraints.Length
@@ -55,10 +56,10 @@ data class GetUserInfoResponse(
     companion object {
         fun of(req: PlayGameUser) = GetUserInfoResponse(
             req.userId,
-            req.socialNo.removeRange(7, 15),
+            req.socialNo.masking(),
             req.userName,
             req.nickName,
-            req.phoneNumber.removeRange(7, 20)
+            req.phoneNumber.masking()
         )
     }
 }
