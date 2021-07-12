@@ -28,17 +28,24 @@ class PlayGameUserService(
 
     @Transactional
     fun createNewUser(request: RegeditUserInfo): BaseResponse {
-        customSequenceRepository.nextUserId().let {
-            playGameUserRepository.save(
-                PlayGameUser.of(
-                    it,
-                    request
-                )
-            )
-
-            return BaseResponse.ofSuccess(it)
-        }
-
+        /*유저 존재 여부 체크*/
+        userInfoQueryFactory.checkExistUser(request.socialNoPrefix, request.socialNoSuffix)
+            .let {
+                /*유저가 없으면 가입*/
+                if (!it) {
+                    customSequenceRepository.nextUserId().let { id ->
+                        playGameUserRepository.save(
+                            PlayGameUser.of(
+                                id,
+                                request
+                            )
+                        )
+                        return BaseResponse.ofSuccess(id)
+                    }
+                } else
+                    /*있으면 가입 불가*/
+                    throw BadRequestException(ErrorReason.USER_ALREADY_EXIST, "USER_ALREADY_EXIST")
+            }
     }
 
     @Transactional

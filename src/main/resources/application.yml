@@ -31,6 +31,13 @@ spring:
       minimum-idle: 1
       maximum-pool-size: 5
       pool-name: H2_DB
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          discriptor:
+            sql: trace
 #  datasource:
 #    hikari:
 #      username: springboot

@@ -31,6 +31,15 @@ class UserInfoQueryFactory(
             .fetchOne() ?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND, "유저정보 없음")
     }
 
+    fun checkExistUser (prefix: String, suffix: String): Boolean {
+        return queryFactory
+            .selectFrom(playGameUser)
+            .where(playGameUser.socialNo.eq("$prefix-$suffix"))
+            .fetchOne().let {
+                it != null
+            }
+    }
+
     fun getUserInfos(request: GetUserInfo, pageRequest: PageRequest): PageImpl<PlayGameUser>? {
 
         val userName = request.name

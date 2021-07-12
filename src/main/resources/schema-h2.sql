@@ -17,8 +17,9 @@ DROP TABLE IF EXISTS STORE_INFO CASCADE;
 --
 CREATE SEQUENCE user_seq;
 CREATE SEQUENCE STORE_ID_SEQ;
-CREATE SEQUENCE API_HISTORY_SEQ;
-CREATE SEQUENCE TRANSACTION_SEQ;
+CREATE SEQUENCE PLAY_GAME_RESULT_SEQ MINVALUE 2 ;
+CREATE SEQUENCE TRANSACTION_SEQ ;
+CREATE SEQUENCE PLAY_GAME_HISTORY_SEQ;
 
 create table PLAY_GAME_INFO
 (
@@ -62,3 +63,11 @@ create table PLAY_GAME_USER
 
 create unique index PLAY_GAME_USER_UNIQ_INDEX
     on PLAY_GAME_USER (PHONE_NUMBER);
+
+
+-- insert
+--         into
+--             play_game_user
+--             (CREATED, UPDATED, nick_name, phone_number, social_no, user_name, user_id)
+--         values
+--             (sysdate, sysdate, ?, ?, ?, ?, ?)

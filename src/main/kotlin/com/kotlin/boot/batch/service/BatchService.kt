@@ -4,9 +4,10 @@ import com.kotlin.boot.game.domain.GameResultEntity
 import com.kotlin.boot.game.repository.infra.GameDataCustomRepository
 import com.kotlin.boot.game.repository.infra.GameRepository
 import com.kotlin.boot.game.repository.infra.GameResultRepository
+import com.kotlin.boot.global.dto.GAME_BALL
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
-import com.kotlin.boot.global.utils.NumberUtils
+import com.kotlin.boot.global.utils.getAutoNumber
 import org.slf4j.LoggerFactory
 import org.springframework.data.domain.PageRequest
 import org.springframework.stereotype.Service
@@ -17,15 +18,14 @@ import java.util.*
 class BatchService(
     private val gameResultRepository: GameResultRepository,
     private val gameRepository: GameRepository,
-    private val gameDataCustomRepository: GameDataCustomRepository,
-    private val numberUtils: NumberUtils
+    private val gameDataCustomRepository: GameDataCustomRepository
 ) {
     private val batchSize = 100
     private val log = LoggerFactory.getLogger(this::class.java)
 
     @Transactional(noRollbackFor = [Exception::class])
     fun playLotto() {
-        val randomNumber = numberUtils.getAutoNumber(4).sorted()
+        val randomNumber = GAME_BALL.getAutoNumber().sorted()
         val normalNumber = StringBuilder()
 
         val regularNumber = randomNumber
