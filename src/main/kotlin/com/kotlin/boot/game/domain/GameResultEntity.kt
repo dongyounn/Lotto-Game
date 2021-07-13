@@ -27,6 +27,7 @@ data class GameResultEntity(
 
     }
 
+    /*todo event로 변경*/
     fun plusPlayerNo() {
         this.playerNo = this.playerNo.plus(1)
     }

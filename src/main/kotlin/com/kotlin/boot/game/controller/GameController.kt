@@ -21,14 +21,14 @@ class GameController(
     ): BaseResponse {
         return gameService.participateInGame(gameDto)
     }
-
-    @PostMapping("/create/game/round")
-    @ApiOperation(value = "최초 게임 1회 방 만들때만 사용")
-    fun createGameRound() = gameService.createGameRound()
+//
+//    @PostMapping("/create/game/round")
+//    @ApiOperation(value = "최초 게임 1회 방 만들때만 사용")
+//    fun createGameRound() = gameService.createGameRound()
 
     @GetMapping("/game/info")
     @ApiOperation(value = "게임 참여자 정보 조회")
-    fun createGameRound(
+    fun getGameRound(
         @RequestParam
         @ApiParam(value = "조회 하고자 하는 라운드, 미입력 시 현재 라운드로 조회 ")
         round: Long?,
@@ -36,4 +36,9 @@ class GameController(
         @ApiParam(value = "전화번호로 유저 조회 ")
         phoneNumber: String
     ) = gameService.gerParticipateGameInfos(round, phoneNumber)
+
+    @GetMapping("/game/round/{round}")
+    fun getGameRoundInfos(
+        @PathVariable round: Long
+    ) = gameService.getGameRoundInfos(round)
 }
