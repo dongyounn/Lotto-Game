@@ -1,26 +1,32 @@
 package com.kotlin.boot.game.service
 
+import com.kotlin.boot.event.CountPlus
+import com.kotlin.boot.game.controller.dto.GameInfo
 import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.domain.GameEntity
 import com.kotlin.boot.game.domain.GameResultEntity
 import com.kotlin.boot.game.repository.infra.GameRepository
+import com.kotlin.boot.game.repository.infra.GameResultLockRepository
 import com.kotlin.boot.game.repository.infra.GameResultRepository
 import com.kotlin.boot.global.dto.BaseResponse
+import com.kotlin.boot.global.dto.GAME_BALL
 import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
-import com.kotlin.boot.global.utils.NumberUtils
+import com.kotlin.boot.global.utils.getAutoNumber
+import com.kotlin.boot.global.utils.randomUtils
 import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import org.slf4j.LoggerFactory
+import org.springframework.context.ApplicationEventPublisher
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import java.util.*
 
 @Service
 class GameService(
     private val gameRepository: GameRepository,
     private val gameUserRepository: PlayGameUserRepository,
     private val gameResultRepository: GameResultRepository,
-    private val numberUtils: NumberUtils
+    private val eventPublisher: ApplicationEventPublisher,
+    private val gameResultLockRepository: GameResultLockRepository
 ) {
 
     private val log = LoggerFactory.getLogger(this::class.java)
@@ -46,7 +52,7 @@ class GameService(
     fun participateInGame(joinGameDto: JoinGameDto): BaseResponse {
         val entryNumberList = joinGameDto.numbers
         val numberList = when {
-            entryNumberList.isNullOrEmpty() -> numberUtils.getAutoNumber(4)
+            entryNumberList.isNullOrEmpty() -> GAME_BALL.getAutoNumber()
             entryNumberList.size < 5 -> {
                 checkInputNumbers(entryNumberList.toLongArray())
                 getHalfAutoRandom(
@@ -74,7 +80,7 @@ class GameService(
         val submitNumbers = sb.toString().removeSuffix(",")
         //회원 정보 조회
         gameUserRepository.findByPhoneNumber(joinGameDto.phoneNumber)?.let {
-            val currentRoundInfo = gameResultRepository.findByStatus()
+            val currentRoundInfo = gameResultLockRepository.findByStatus()
             gameRepository.save(
                 GameEntity.of(
                     it,
@@ -82,7 +88,7 @@ class GameService(
                     currentRoundInfo.id!!
                 )
             )
-            currentRoundInfo.plusPlayerNo()
+            eventPublisher.publishEvent(CountPlus(currentRoundInfo))
         } ?: throw BadRequestException(
             ErrorReason.USER_INFO_NOT_FOUND,
             "### 유저 정보를 찾을 수 없습니다. 해당 번호로 가입 먼저 진행하세요."
@@ -104,16 +110,13 @@ class GameService(
         }
     }
 
+    fun getGameRoundInfos(round: Long): List<GameInfo>? {
+        return gameRepository.findByPlayRound(round)?.map {
+            GameInfo.of(it)
+        }?.toList()
+    }
+
     private fun getHalfAutoRandom(count: Long, numberList: LongArray): List<Long> {
-        val random = Random()
-        val result = numberList.toMutableList()
-        for (i in 0 until count) {
-            var number: Long
-            do {
-                number = random.nextInt(45).toLong()
-            } while (numberList.contains(number) || number == 0L)
-            result.add(number)
-        }
-        return result
+        return count.randomUtils(numberList.toMutableList())
     }
 }
