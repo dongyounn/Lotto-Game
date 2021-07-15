@@ -24,7 +24,7 @@ class BatchService(
     private val log = LoggerFactory.getLogger(this::class.java)
 
     @Transactional(noRollbackFor = [Exception::class])
-    fun playLotto() {
+    fun playLotto(): String {
         val randomNumber = GAME_BALL.getAutoNumber().sorted()
         val normalNumber = StringBuilder()
 
@@ -79,5 +79,7 @@ class BatchService(
         )
         /*라운드 초기화 */
         gameResultRepository.save(GameResultEntity.ofAutoStart())
+
+        return randomNumber.toString()
     }
 }
