@@ -6,7 +6,7 @@ import javax.validation.constraints.Size
 data class JoinGameDto(
     @Size(max = 4)
     val numbers: List<Long>?,
-    val phoneNumber: String
+    val userId: String
 )
 
 enum class AutoYnEnum {

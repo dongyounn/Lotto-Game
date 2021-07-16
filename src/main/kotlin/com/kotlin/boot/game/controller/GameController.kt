@@ -21,10 +21,6 @@ class GameController(
     ): BaseResponse {
         return gameService.participateInGame(gameDto)
     }
-//
-//    @PostMapping("/create/game/round")
-//    @ApiOperation(value = "최초 게임 1회 방 만들때만 사용")
-//    fun createGameRound() = gameService.createGameRound()
 
     @GetMapping("/game/info")
     @ApiOperation(value = "게임 참여자 정보 조회")
@@ -33,12 +29,26 @@ class GameController(
         @ApiParam(value = "조회 하고자 하는 라운드, 미입력 시 현재 라운드로 조회 ")
         round: Long?,
         @RequestParam
-        @ApiParam(value = "전화번호로 유저 조회 ")
-        phoneNumber: String
-    ) = gameService.gerParticipateGameInfos(round, phoneNumber)
+        @ApiParam(value = "유저 아이디로 조회 ")
+        userId: String
+    ) = gameService.gerParticipateGameInfos(round, userId)
 
     @GetMapping("/game/round/{round}")
     fun getGameRoundInfos(
         @PathVariable round: Long
     ) = gameService.getGameRoundInfos(round)
+
+    @GetMapping("/game/round/count")
+    @ApiOperation(value = "현재 라운드 게임 정보")
+    fun getCount() = gameService.getRoundCount()
+
+    @GetMapping("/game/report/round/{round}")
+    @ApiOperation(value = "해당 라운드 리포트 관리")
+    fun getReport(
+        @PathVariable(required = true) round: Long
+    ) {
+
+    }
+
+
 }

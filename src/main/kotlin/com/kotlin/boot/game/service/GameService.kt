@@ -32,20 +32,15 @@ class GameService(
     private val log = LoggerFactory.getLogger(this::class.java)
 
     @Transactional(readOnly = true)
-    fun gerParticipateGameInfos(round: Long?, phoneNumber: String): List<GameEntity> {
-        gameUserRepository.findByPhoneNumber(phoneNumber)?.let {
-            return gameRepository.findByUserIdAndPlayRound(
-                it.userId,
-                round ?: (gameResultRepository.findByStatus().id!!)
-            )
-        } ?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND, "휴대전화번호를 확인 하세요.")
+    fun gerParticipateGameInfos(round: Long?, userId: String): List<GameEntity> {
+        return gameRepository.findByUserIdAndPlayRound(
+            userId,
+            round ?: (gameResultRepository.findByStatus().id!!)
+        )
     }
 
-    @Transactional
-    fun createGameRound() {
-        gameResultRepository.findByStatusAndNormalNumberIsNotNull()?.let {
-            throw BadRequestException(ErrorReason.ACTIVE_GAME_IS_EXIST, "ACTIVE GAME IS EXIST")
-        } ?: gameResultRepository.save(GameResultEntity.ofAutoStart())
+    fun getRoundCount(): GameResultEntity {
+        return gameResultRepository.findByStatus()
     }
 
     @Transactional
@@ -78,8 +73,9 @@ class GameService(
         }
 
         val submitNumbers = sb.toString().removeSuffix(",")
-        //회원 정보 조회
-        gameUserRepository.findByPhoneNumber(joinGameDto.phoneNumber)?.let {
+        //todo 회원 정보 조회
+
+        gameUserRepository.findByUserId(joinGameDto.userId)?.let {
             val currentRoundInfo = gameResultLockRepository.findByStatus()
             gameRepository.save(
                 GameEntity.of(
