@@ -1,6 +1,9 @@
 package com.kotlin.boot.game.controller.dto
 
 import com.kotlin.boot.game.domain.GameEntity
+import com.kotlin.boot.game.domain.GameResultEntity
+import com.kotlin.boot.global.dto.NONE
+import java.util.*
 import javax.validation.constraints.Size
 
 data class JoinGameDto(
@@ -26,5 +29,23 @@ data class GameInfo(
 ) {
     companion object {
         fun of(req: GameEntity) = GameInfo(req.userId, req.playRound, req.gameNumber, req.matchNumber, req.drawResult)
+    }
+}
+
+data class GameReport(
+    val drawNumber: String,
+    val playerCount: Long,
+    val round: Long,
+    val drawResult: Map<Long?, Int>?
+) {
+    companion object {
+        fun of(gameResult: GameResultEntity, drawResult: Map<Long?, Int>?) = GameReport(
+            gameResult.normalNumber ?: NONE,
+            gameResult.playerNo,
+            gameResult.id!!,
+            drawResult
+        )
+
+        fun ofNone() = GameReport(NONE, 0L, 0L, Collections.emptyMap())
     }
 }

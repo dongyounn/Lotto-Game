@@ -2,6 +2,7 @@ package com.kotlin.boot.game.service
 
 import com.kotlin.boot.event.CountPlus
 import com.kotlin.boot.game.controller.dto.GameInfo
+import com.kotlin.boot.game.controller.dto.GameReport
 import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.domain.GameEntity
 import com.kotlin.boot.game.domain.GameResultEntity
@@ -107,9 +108,22 @@ class GameService(
     }
 
     fun getGameRoundInfos(round: Long): List<GameInfo>? {
-        return gameRepository.findByPlayRound(round)?.map {
+        return gameRepository.findByPlayRound(round).map {
             GameInfo.of(it)
-        }?.toList()
+        }.toList()
+    }
+
+    fun getGameResultInfo(round: Long): GameReport? {
+        return gameRepository.findByPlayRound(round)
+            .groupingBy { gameEntity ->
+                gameEntity.drawResult
+            }
+            .eachCount()
+            .let {
+                gameResultRepository.findByIdAndStatus(round)?.let { gr ->
+                    GameReport.of(gr, it)
+                } ?: GameReport.ofNone()
+            }
     }
 
     private fun getHalfAutoRandom(count: Long, numberList: LongArray): List<Long> {

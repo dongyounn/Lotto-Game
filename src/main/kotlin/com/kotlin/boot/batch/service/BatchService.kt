@@ -75,7 +75,7 @@ class BatchService(
         }
 
         currentRoundInfo.ofEnd(
-            regularNumber
+            normalNumber.toString()
         )
         /*라운드 초기화 */
         gameResultRepository.save(GameResultEntity.ofAutoStart())
