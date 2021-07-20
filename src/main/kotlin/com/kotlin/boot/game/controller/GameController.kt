@@ -42,14 +42,11 @@ class GameController(
     @ApiOperation(value = "현재 라운드 게임 정보")
     fun getCount() = gameService.getRoundCount()
 
-//  todo 라운드 별 당첨자 리포트 필요
     @GetMapping("/game/report/round/{round}")
     @ApiOperation(value = "해당 라운드 리포트 관리")
     fun getReport(
         @PathVariable(required = true) round: Long
-    ) {
-
-    }
+    ) = gameService.getGameResultInfo(round)
 
 
 }
