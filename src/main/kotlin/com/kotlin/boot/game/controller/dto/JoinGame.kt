@@ -3,6 +3,7 @@ package com.kotlin.boot.game.controller.dto
 import com.kotlin.boot.game.domain.GameEntity
 import com.kotlin.boot.game.domain.GameResultEntity
 import com.kotlin.boot.global.dto.NONE
+import com.kotlin.boot.global.dto.UNKNOWN
 import java.util.*
 import javax.validation.constraints.Size
 
@@ -36,16 +37,16 @@ data class GameReport(
     val drawNumber: String,
     val playerCount: Long,
     val round: Long,
-    val drawResult: Map<Long?, Int>?
+    val drawResult: Map<Long, Int>?
 ) {
     companion object {
-        fun of(gameResult: GameResultEntity, drawResult: Map<Long?, Int>?) = GameReport(
+        fun of(gameResult: GameResultEntity, drawResult: Map<Long, Int>?) = GameReport(
             gameResult.normalNumber ?: NONE,
             gameResult.playerNo,
             gameResult.id!!,
             drawResult
         )
 
-        fun ofNone() = GameReport(NONE, 0L, 0L, Collections.emptyMap())
+        fun ofNone() = GameReport(UNKNOWN, 0L, 0L, Collections.emptyMap())
     }
 }

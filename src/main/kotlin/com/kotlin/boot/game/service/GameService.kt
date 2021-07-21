@@ -113,10 +113,10 @@ class GameService(
         }.toList()
     }
 
-    fun getGameResultInfo(round: Long): GameReport? {
+    fun getGameResultInfo(round: Long): GameReport {
         return gameRepository.findByPlayRound(round)
             .groupingBy { gameEntity ->
-                gameEntity.drawResult
+                gameEntity.drawResult!!
             }
             .eachCount()
             .let {
