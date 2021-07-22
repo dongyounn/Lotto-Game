@@ -24,10 +24,8 @@ data class GameResultEntity(
             playerNo = 0,
             status = GameStatusEnum.ACTIVE
         )
-
     }
 
-    /*todo event로 변경*/
     fun plusPlayerNo() {
         this.playerNo = this.playerNo.plus(1)
     }

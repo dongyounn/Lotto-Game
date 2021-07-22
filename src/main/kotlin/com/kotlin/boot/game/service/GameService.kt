@@ -29,7 +29,6 @@ class GameService(
     private val eventPublisher: ApplicationEventPublisher,
     private val gameResultLockRepository: GameResultLockRepository
 ) {
-
     private val log = LoggerFactory.getLogger(this::class.java)
 
     @Transactional(readOnly = true)
@@ -74,7 +73,6 @@ class GameService(
         }
 
         val submitNumbers = sb.toString().removeSuffix(",")
-        //todo 회원 정보 조회
 
         gameUserRepository.findByUserId(joinGameDto.userId)?.let {
             val currentRoundInfo = gameResultLockRepository.findByStatus()

@@ -47,6 +47,4 @@ class GameController(
     fun getReport(
         @PathVariable(required = true) round: Long
     ) = gameService.getGameResultInfo(round)
-
-
 }

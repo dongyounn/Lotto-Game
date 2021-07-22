@@ -13,7 +13,6 @@ import javax.persistence.QueryHint
 interface GameResultRepository : CrudRepository<GameResultEntity, Long> {
     fun findByIdAndStatus(id: Long, status: GameStatusEnum = GameStatusEnum.TERMINATED): GameResultEntity?
     fun findByStatus(status: GameStatusEnum = GameStatusEnum.ACTIVE): GameResultEntity
-    fun findByStatusAndNormalNumberIsNotNull(status: GameStatusEnum = GameStatusEnum.ACTIVE): GameResultEntity?
 }
 
 @Repository
