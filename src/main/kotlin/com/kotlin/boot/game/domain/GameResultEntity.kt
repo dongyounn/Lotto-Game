@@ -11,7 +11,7 @@ data class GameResultEntity(
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "playGameResultIdGenerator")
     @SequenceGenerator(name = "playGameResultIdGenerator", sequenceName = "PLAY_GAME_RESULT_SEQ", allocationSize = 1)
     var id: Long? = null,
-    @Column(name = "NORMAL_NUMBER")
+    @Column(name = "REGULAR_NUMBER")
     var normalNumber: String? = null,
     @Enumerated(EnumType.STRING)
     @Column(name = "STATUS")

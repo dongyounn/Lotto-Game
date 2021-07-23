@@ -25,7 +25,6 @@ class PlayGameUserService(
     fun getUserInfo(prefix: String, suffix: String): GetUserInfoResponse =
         GetUserInfoResponse.of(userInfoQueryFactory.getUserInfo(prefix, suffix))
 
-
     @Transactional
     fun createNewUser(request: RegeditUserInfo): BaseResponse {
         /*유저 존재 여부 체크*/
@@ -43,7 +42,7 @@ class PlayGameUserService(
                         return BaseResponse.ofSuccess(id)
                     }
                 } else
-                    /*있으면 가입 불가*/
+                /*있으면 가입 불가*/
                     throw BadRequestException(ErrorReason.USER_ALREADY_EXIST, "USER_ALREADY_EXIST")
             }
     }

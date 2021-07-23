@@ -28,7 +28,7 @@ class BatchService(
         val randomNumber = GAME_BALL.getAutoNumber().sorted()
         val normalNumber = StringBuilder()
 
-        val regularNumber = randomNumber
+        randomNumber
             .forEach { normalNumber.append("$it,") }
             .let { number -> number.toString().removeSuffix(",") }
 
@@ -74,9 +74,7 @@ class BatchService(
             currentPage++
         }
 
-        currentRoundInfo.ofEnd(
-            normalNumber.toString()
-        )
+        currentRoundInfo.ofEnd(normalNumber.toString())
         /*라운드 초기화 */
         gameResultRepository.save(GameResultEntity.ofAutoStart())
 

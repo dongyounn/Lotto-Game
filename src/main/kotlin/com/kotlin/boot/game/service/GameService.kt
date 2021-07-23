@@ -29,6 +29,7 @@ class GameService(
     private val eventPublisher: ApplicationEventPublisher,
     private val gameResultLockRepository: GameResultLockRepository
 ) {
+
     private val log = LoggerFactory.getLogger(this::class.java)
 
     @Transactional(readOnly = true)
