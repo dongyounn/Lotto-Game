@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import javax.transaction.Transactional
 
+//todo 유저 시나리오 변경으로 테스트 코드 현행화 필요
 @SpringBootTest
 @Transactional
 internal class PlayGameUserServiceTest(

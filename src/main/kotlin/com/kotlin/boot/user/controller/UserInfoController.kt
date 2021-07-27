@@ -34,9 +34,8 @@ class UserInfoController(
     ) = playGameUserService.getUserInfos(getUserInfo, customPageRequest)
 
     @GetMapping("/user/info")
-    @ApiOperation(value = "유저정보 찾기 API (주민등록번호)")
+    @ApiOperation(value = "유저정보 찾기 API - 휴대전화번호")
     fun getUserInfo(
-        @RequestParam socialNoPrefix: String,
-        @RequestParam socialNoSuffix: String
-    ) = playGameUserService.getUserInfo(socialNoPrefix, socialNoSuffix)
+        @RequestParam phoneNumber: String
+    ) = playGameUserService.getUserInfo(phoneNumber)
 }

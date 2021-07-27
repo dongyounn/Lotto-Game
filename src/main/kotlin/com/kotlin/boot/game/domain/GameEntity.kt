@@ -15,8 +15,6 @@ data class GameEntity(
     @Convert(converter = StringCryptoConverter::class)
     @Column(name = "PLAYER_PHONE_NUMBER")
     val phoneNumber: String,
-    @Column(name = "PLAYER_NICK_NAME")
-    val nickName: String,
     @Column(name = "GAME_NUMBER")
     val gameNumber: String,
     @Column(name = "MATCH_NUMBER")
@@ -36,7 +34,6 @@ data class GameEntity(
         ) = GameEntity(
             null,
             playGameUserInfo.phoneNumber,
-            playGameUserInfo.nickName,
             gameNumber,
             null,
             playGameUserInfo.userId,

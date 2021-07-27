@@ -22,13 +22,13 @@ class PlayGameUserService(
     private val customSequenceRepository: CustomSequenceRepository,
     private val userInfoQueryFactory: UserInfoQueryFactory
 ) {
-    fun getUserInfo(prefix: String, suffix: String): GetUserInfoResponse =
-        GetUserInfoResponse.of(userInfoQueryFactory.getUserInfo(prefix, suffix))
+    fun getUserInfo(phoneNumber: String): GetUserInfoResponse =
+        GetUserInfoResponse.of(userInfoQueryFactory.getUserInfo(phoneNumber))
 
     @Transactional
     fun createNewUser(request: RegeditUserInfo): BaseResponse {
         /*유저 존재 여부 체크*/
-        userInfoQueryFactory.checkExistUser(request.socialNoPrefix, request.socialNoSuffix)
+        userInfoQueryFactory.checkExistUserByPhoneNumber(request.phoneNumber)
             .let {
                 /*유저가 없으면 가입*/
                 if (!it) {

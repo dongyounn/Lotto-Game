@@ -9,7 +9,7 @@ import org.springframework.boot.runApplication
 * TODO ::
 *  Docker 써서 MySql 로 전환
 *  flyway 적용
-*  코루틴 사용
+*  코루틴 사용 - 비동기로 처리해야할 부분이 없어서 보류
 *  유저 시나리오 변경
 * */
 @SpringBootApplication(exclude = [RedisAutoConfiguration::class, RabbitAutoConfiguration::class])

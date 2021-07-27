@@ -24,32 +24,28 @@ class UserInfoQueryFactory(
     private val queryFactory: JPAQueryFactory
 ) : QuerydslRepositorySupport(PlayGameUser::class.java) {
 
-    fun getUserInfo(prefix: String, suffix: String): PlayGameUser {
+    fun getUserInfo(phoneNumber: String): PlayGameUser {
         return queryFactory
             .selectFrom(playGameUser)
-            .where(playGameUser.socialNo.eq("$prefix-$suffix"))
+            .where(playGameUser.phoneNumber.eq(phoneNumber))
             .fetchOne() ?: throw BadRequestException(ErrorReason.USER_INFO_NOT_FOUND, "유저정보 없음")
     }
 
-    fun checkExistUser (prefix: String, suffix: String): Boolean {
+    fun checkExistUserByPhoneNumber(phoneNumber: String): Boolean {
         return queryFactory
             .selectFrom(playGameUser)
-            .where(playGameUser.socialNo.eq("$prefix-$suffix"))
-            .fetchOne().let {
-                it != null
-            }
+            .where(playGameUser.phoneNumber.eq(phoneNumber))
+            .fetchOne() != null
     }
 
     fun getUserInfos(request: GetUserInfo, pageRequest: PageRequest): PageImpl<PlayGameUser>? {
 
         val userName = request.name
-        val nickName = request.nickName
         val phoneNumber = request.phoneNumber
 
 
         val builder = BooleanBuilder()
         if (!userName.isNullOrEmpty()) builder.and(playGameUser.userName.eq(userName))
-        if (!nickName.isNullOrEmpty()) builder.and(playGameUser.nickName.like("%$nickName%"))
         if (!phoneNumber.isNullOrEmpty()) builder.and(playGameUser.phoneNumber.eq(phoneNumber))
 
 
