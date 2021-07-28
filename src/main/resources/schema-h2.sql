@@ -25,8 +25,8 @@ create table PLAY_GAME_INFO
 (
     ID                  NUMBER not null
         primary key,
-    USER_ID             VARCHAR2(15),
-    PLAYER_NICK_NAME    VARCHAR2(150),
+--     USER_ID             VARCHAR2(15),
+--     PLAYER_NICK_NAME    VARCHAR2(150),
     PLAYER_PHONE_NUMBER VARCHAR2(50),
     GAME_NUMBER         VARCHAR2(50),
     GAME_ROUND          NUMBER,
@@ -48,23 +48,23 @@ create table PLAY_GAME_RESULT
     CREATED       DATE,
     UPDATED       DATE
 );
-
--- auto-generated definition
-create table PLAY_GAME_USER
-(
-    USER_ID      VARCHAR2(10),
-    SOCIAL_NO          VARCHAR2(50),
-    USER_NAME    VARCHAR2(50),
-    PHONE_NUMBER VARCHAR2(50),
-    VERIFY       VARCHAR2(10),
-    CREATED      DATE,
-    UPDATED      DATE,
-    NICK_NAME    VARCHAR2(150)
-);
-
-create unique index PLAY_GAME_USER_UNIQ_INDEX
-    on PLAY_GAME_USER (PHONE_NUMBER);
-
+--
+-- -- auto-generated definition
+-- create table PLAY_GAME_USER
+-- (
+--     USER_ID      VARCHAR2(10),
+--     SOCIAL_NO          VARCHAR2(50),
+--     USER_NAME    VARCHAR2(50),
+--     PHONE_NUMBER VARCHAR2(50),
+--     VERIFY       VARCHAR2(10),
+--     CREATED      DATE,
+--     UPDATED      DATE,
+--     NICK_NAME    VARCHAR2(150)
+-- );
+--
+-- create unique index PLAY_GAME_USER_UNIQ_INDEX
+--     on PLAY_GAME_USER (PHONE_NUMBER);
+--
 
 -- insert
 --         into

@@ -3,7 +3,6 @@ package com.kotlin.boot.game.controller
 import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.service.GameService
 import com.kotlin.boot.global.dto.BaseResponse
-import io.swagger.annotations.ApiModelProperty
 import io.swagger.annotations.ApiOperation
 import io.swagger.annotations.ApiParam
 import org.springframework.validation.annotation.Validated
@@ -29,9 +28,9 @@ class GameController(
         @ApiParam(value = "조회 하고자 하는 라운드, 미입력 시 현재 라운드로 조회 ")
         round: Long?,
         @RequestParam
-        @ApiParam(value = "유저 아이디로 조회 ")
-        userId: String
-    ) = gameService.gerParticipateGameInfos(round, userId)
+        @ApiParam(value = "유저 전화번호로 조회 ")
+        phoneNumber: String
+    ) = gameService.gerParticipateGameInfos(round, phoneNumber)
 
     @GetMapping("/game/round/{round}")
     fun getGameRoundInfos(

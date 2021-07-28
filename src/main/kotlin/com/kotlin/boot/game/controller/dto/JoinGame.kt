@@ -10,7 +10,7 @@ import javax.validation.constraints.Size
 data class JoinGameDto(
     @Size(max = 4)
     val numbers: List<Long>?,
-    val userId: String
+    val phoneNumber: String
 )
 
 enum class AutoYnEnum {
@@ -22,14 +22,13 @@ enum class GameStatusEnum {
 }
 
 data class GameInfo(
-    val userId: String,
     val round: Long,
     val gameNumber: String,
     val resultNumber: String?,
     val matchingCount: Long? = 0L
 ) {
     companion object {
-        fun of(req: GameEntity) = GameInfo(req.userId, req.playRound, req.gameNumber, req.matchNumber, req.drawResult)
+        fun of(req: GameEntity) = GameInfo(req.playRound, req.gameNumber, req.matchNumber, req.drawResult)
     }
 }
 
