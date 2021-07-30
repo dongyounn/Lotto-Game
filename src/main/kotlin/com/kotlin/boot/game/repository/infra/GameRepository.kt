@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport
 import org.springframework.stereotype.Repository
 
 interface GameRepository : JpaRepository<GameEntity, Long> {
-    fun findByUserIdAndPlayRound(userId: String, playRound: Long): List<GameEntity>
+    fun findByPhoneNumberAndPlayRound(phoneNumber: String, playRound: Long): List<GameEntity>
     fun findByPlayRound(playRound: Long): List<GameEntity>
     fun countByPlayRound(playRound: Long): Long
 }

@@ -19,8 +19,6 @@ data class GameEntity(
     val gameNumber: String,
     @Column(name = "MATCH_NUMBER")
     var matchNumber: String?,
-    @Column(name = "USER_ID")
-    val userId: String,
     @Column(name = "GAME_ROUND")
     val playRound: Long,
     @Column(name = "DRAW_RESULT")
@@ -28,15 +26,14 @@ data class GameEntity(
 ) : BaseDomain() {
     companion object {
         fun of(
-            playGameUserInfo: PlayGameUser,
+            phoneNumber: String,
             gameNumber: String,
             playRound: Long
         ) = GameEntity(
             null,
-            playGameUserInfo.phoneNumber,
+            phoneNumber,
             gameNumber,
             null,
-            playGameUserInfo.userId,
             playRound
         )
     }

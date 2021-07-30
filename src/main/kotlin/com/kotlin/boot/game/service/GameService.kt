@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class GameService(
     private val gameRepository: GameRepository,
-    private val gameUserRepository: PlayGameUserRepository,
+//    private val gameUserRepository: PlayGameUserRepository,
     private val gameResultRepository: GameResultRepository,
     private val eventPublisher: ApplicationEventPublisher,
     private val gameResultLockRepository: GameResultLockRepository
@@ -33,16 +33,14 @@ class GameService(
     private val log = LoggerFactory.getLogger(this::class.java)
 
     @Transactional(readOnly = true)
-    fun gerParticipateGameInfos(round: Long?, userId: String): List<GameEntity> {
-        return gameRepository.findByUserIdAndPlayRound(
-            userId,
-            round ?: (gameResultRepository.findByStatus().id!!)
-        )
-    }
+    fun gerParticipateGameInfos(round: Long?, phoneNumber: String) = gameRepository.findByPhoneNumberAndPlayRound(
+        phoneNumber.replace("-", ""),
+        round ?: (gameResultRepository.findByStatus().id!!)
+    )
 
-    fun getRoundCount(): GameResultEntity {
-        return gameResultRepository.findByStatus()
-    }
+
+    fun getRoundCount() = gameResultRepository.findByStatus()
+
 
     @Transactional
     fun participateInGame(joinGameDto: JoinGameDto): BaseResponse {
@@ -61,7 +59,7 @@ class GameService(
                 "### 번호는 4개만 입력해주세요"
             )
         }
-        val sb = StringBuilder()
+
         numberList.sorted().forEach {
             if (it >= 46 || it < 1) {
                 log.info("번호 : >>> $numberList")
@@ -70,25 +68,19 @@ class GameService(
                     "### 번호 -> 최소값 : 1 , 최대값 : 45"
                 )
             }
-            sb.append("$it,")
         }
 
-        val submitNumbers = sb.toString().removeSuffix(",")
+        val submitNumbers = numberList.joinToString()
 
-        gameUserRepository.findByUserId(joinGameDto.userId)?.let {
-            val currentRoundInfo = gameResultLockRepository.findByStatus()
-            gameRepository.save(
-                GameEntity.of(
-                    it,
-                    submitNumbers,
-                    currentRoundInfo.id!!
-                )
+        val currentRoundInfo = gameResultLockRepository.findByStatus()
+        gameRepository.save(
+            GameEntity.of(
+                joinGameDto.phoneNumber,
+                submitNumbers,
+                currentRoundInfo.id!!
             )
-            eventPublisher.publishEvent(CountPlus(currentRoundInfo))
-        } ?: throw BadRequestException(
-            ErrorReason.USER_INFO_NOT_FOUND,
-            "### 유저 정보를 찾을 수 없습니다. 해당 번호로 가입 먼저 진행하세요."
         )
+        eventPublisher.publishEvent(CountPlus(currentRoundInfo))
         return BaseResponse.of(submitNumbers)
     }
 
@@ -106,10 +98,10 @@ class GameService(
         }
     }
 
-    fun getGameRoundInfos(round: Long): List<GameInfo>? {
+    fun getGameRoundInfos(round: Long): List<GameInfo> {
         return gameRepository.findByPlayRound(round).map {
             GameInfo.of(it)
-        }.toList()
+        }
     }
 
     fun getGameResultInfo(round: Long): GameReport {
