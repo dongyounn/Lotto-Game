@@ -2,7 +2,6 @@ package com.kotlin.boot.game.domain
 
 import com.kotlin.boot.global.dto.BaseDomain
 import com.kotlin.boot.global.dto.StringCryptoConverter
-import com.kotlin.boot.user.domain.PlayGameUser
 import javax.persistence.*
 
 @Entity

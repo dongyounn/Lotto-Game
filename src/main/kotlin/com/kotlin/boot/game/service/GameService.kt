@@ -5,7 +5,6 @@ import com.kotlin.boot.game.controller.dto.GameInfo
 import com.kotlin.boot.game.controller.dto.GameReport
 import com.kotlin.boot.game.controller.dto.JoinGameDto
 import com.kotlin.boot.game.domain.GameEntity
-import com.kotlin.boot.game.domain.GameResultEntity
 import com.kotlin.boot.game.repository.infra.GameRepository
 import com.kotlin.boot.game.repository.infra.GameResultLockRepository
 import com.kotlin.boot.game.repository.infra.GameResultRepository
@@ -15,7 +14,6 @@ import com.kotlin.boot.global.exception.BadRequestException
 import com.kotlin.boot.global.exception.ErrorReason
 import com.kotlin.boot.global.utils.getAutoNumber
 import com.kotlin.boot.global.utils.randomUtils
-import com.kotlin.boot.user.infra.repository.PlayGameUserRepository
 import org.slf4j.LoggerFactory
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.stereotype.Service

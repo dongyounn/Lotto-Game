@@ -18,8 +18,6 @@ enum class ErrorReason(
     private val reason: String
 ) {
     INVALID_INPUT_DATA("0001", "001"),
-    USER_INFO_NOT_FOUND("0001", "002"),
-    USER_ALREADY_EXIST("0001", "005"),
     CURRENT_ROUND_GAME_NOT_FOUND("0001", "003"),
     ACTIVE_GAME_IS_EXIST("0001", "004")
     ;
