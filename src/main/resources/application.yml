@@ -1,73 +1,44 @@
 spring:
-  messages:
-    basename: i18n/messages
-    encoding: UTF-8
-    cache-duration: PT1H
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+  datasource:
+    hikari:
+      username: springboot
+      password: springboot
+      jdbc-url: jdbc:oracle:thin:@localhost:1521:XE
+      driver-class-name: oracle.jdbc.OracleDriver
+      validationTimeout: 10000
+      maximumPoolSize: 50
+      leakDetectionThreshold: 1
   jpa:
-    database: h2
-    open-in-view: true
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    database: ORACLE
     show-sql: true
-    hibernate:
-      ddl-auto: none
-      use-new-id-generator-mappings: true
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    generate-ddl: true
     properties:
-      hibernate.dialect: org.hibernate.dialect.H2Dialect
       hibernate:
         format_sql: true
         use_sql_comments: true
-  datasource:
-    platform: h2
-    driver-class-name: org.h2.Driver
-    url: "jdbc:h2:mem:store_manager;MODE=ORACLE;DB_CLOSE_DELAY=-1"
-    username: sa
-    password:
-    hikari:
-      minimum-idle: 1
-      maximum-pool-size: 5
-      pool-name: H2_DB
-logging:
-  level:
-    org:
-      hibernate:
-        type:
-          discriptor:
-            sql: trace
-#  datasource:
-#    hikari:
-#      username: springboot
-#      password: springboot
-#      jdbc-url: jdbc:oracle:thin:@localhost:1521:XE
-#      driver-class-name: oracle.jdbc.OracleDriver
-#      validationTimeout: 10000
-#      maximumPoolSize: 50
-#      leakDetectionThreshold: 1
-#  jpa:
-#    database-platform: org.hibernate.dialect.Oracle10gDialect
-#    database: ORACLE
-#    show-sql: true
-#    generate-ddl: true
-#    properties:
-#      hibernate:
-#        format_sql: true
-#        use_sql_comments: true
-#    hibernate:
-#      naming:
-#        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
-#        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-#      ddl-auto: validate
+    hibernate:
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      ddl-auto: validate
+      lock:
+        time: 50000
+      jdbc:
+        batch_size: 40
 server:
   port: 18080
   servlet:
-    context-path: /kotto
+    context-path: /kotoo
   undertow:
     io-threads: 32
     worker-threads: 256
+
+undertow:
+  idle:
+    timeout: 300000
+  norequest:
+    timeout: 300000
 
 management:
   endpoint:
@@ -82,4 +53,4 @@ management:
         include: shutdown, health
       base-path: /
 enc:
-  key: oingisprettyintheworld1234567890
+  key: MollyIsMyName0192837465
