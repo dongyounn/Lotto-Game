@@ -1,9 +1,7 @@
 package com.kotlin.boot.game.service
 
 import com.kotlin.boot.event.CountPlus
-import com.kotlin.boot.game.controller.dto.GameInfo
-import com.kotlin.boot.game.controller.dto.GameReport
-import com.kotlin.boot.game.controller.dto.JoinGameDto
+import com.kotlin.boot.game.controller.dto.*
 import com.kotlin.boot.game.domain.GameEntity
 import com.kotlin.boot.game.repository.infra.GameRepository
 import com.kotlin.boot.game.repository.infra.GameResultLockRepository
@@ -22,7 +20,6 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class GameService(
     private val gameRepository: GameRepository,
-//    private val gameUserRepository: PlayGameUserRepository,
     private val gameResultRepository: GameResultRepository,
     private val eventPublisher: ApplicationEventPublisher,
     private val gameResultLockRepository: GameResultLockRepository
@@ -34,10 +31,11 @@ class GameService(
     fun gerParticipateGameInfos(round: Long?, phoneNumber: String) = gameRepository.findByPhoneNumberAndPlayRound(
         phoneNumber.replace("-", ""),
         round ?: (gameResultRepository.findByStatus().id!!)
-    )
+    ).map {
+        GameInfoResponse.of(it)
+    }
 
-
-    fun getRoundCount() = gameResultRepository.findByStatus()
+    fun getRoundCount() = GameResultResponse.of(gameResultRepository.findByStatus())
 
 
     @Transactional

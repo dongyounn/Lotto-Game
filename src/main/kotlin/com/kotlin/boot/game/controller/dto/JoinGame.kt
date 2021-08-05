@@ -7,6 +7,31 @@ import com.kotlin.boot.global.dto.UNKNOWN
 import java.util.*
 import javax.validation.constraints.Size
 
+data class GameResultResponse(
+    var id: Long? = null,
+    var normalNumber: String? = null,
+    var status: GameStatusEnum,
+    var playerNo: Long
+) {
+    companion object {
+        fun of(req: GameResultEntity) = GameResultResponse(
+            req.id, req.normalNumber, req.status, req.playerNo
+        )
+    }
+}
+
+data class GameInfoResponse(
+    var id: Long? = null,
+    val phoneNumber: String,
+    val gameNumber: String,
+    var matchNumber: String?,
+    val playRound: Long,
+    var drawResult: Long? = 0
+){
+    companion object{
+        fun of(req:GameEntity) = GameEntity(req.id, req.phoneNumber, req.gameNumber, req.matchNumber, req.playRound, req.drawResult)
+    }
+}
 data class JoinGameDto(
     @Size(max = 4)
     val numbers: List<Long>?,
