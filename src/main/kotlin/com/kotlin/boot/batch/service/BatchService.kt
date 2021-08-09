@@ -25,13 +25,6 @@ class BatchService(
     @Transactional(noRollbackFor = [Exception::class])
     fun playLotto(): String {
         val randomNumber = GAME_BALL.getAutoNumber().sorted()
-        val normalNumber = StringBuilder()
-
-        randomNumber
-            .forEach { normalNumber.append("$it,") }
-            .let { number -> number.toString().removeSuffix(",") }
-
-
         val currentRoundInfo = gameResultRepository.findByStatus()
         var pagingSize: Long
         var currentPage = 0
@@ -57,23 +50,17 @@ class BatchService(
                             matchingCount++
                         }
                     }
-                    val sb = StringBuilder()
-                    matchingNumbers.sorted().forEach { resultNumber -> sb.append("$resultNumber,") }
+
                     it.setDrawResult(
-                        when (matchingCount) {
-                            4 -> 1
-                            3 -> 2
-                            2 -> 3
-                            else -> 0
-                        },
-                        sb.toString().removeSuffix(",")
+                        GAME_BALL.minus(matchingCount).plus(1),
+                        matchingNumbers.sorted().joinToString()
                     )
                 }
             }
             currentPage++
         }
 
-        currentRoundInfo.ofEnd(normalNumber.toString())
+        currentRoundInfo.ofEnd(randomNumber.joinToString())
         /*라운드 초기화 */
         gameResultRepository.save(GameResultEntity.ofAutoStart())
 
